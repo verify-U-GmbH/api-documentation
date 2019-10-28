@@ -1,5 +1,5 @@
-defmodule ServerWeb.Router do
-  use ServerWeb, :router
+defmodule Web.Router do
+  use Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule ServerWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ServerWeb do
+  scope "/", Web do
     pipe_through :browser
 
     get "/", IndexController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ServerWeb do
+  # scope "/api", Web do
   #   pipe_through :api
   # end
 end

@@ -1,12 +1,12 @@
-defmodule ServerWeb do
+defmodule Web do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ServerWeb, :controller
-      use ServerWeb, :view
+      use Web, :controller
+      use Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,20 +19,20 @@ defmodule ServerWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ServerWeb
+      use Phoenix.Controller, namespace: Web
 
       import Plug.Conn
-      import ServerWeb.Gettext
-      alias ServerWeb.Router.Helpers, as: Routes
+      import Web.Gettext
+      alias Web.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/server_web/",
+        root: "lib/web/",
         pattern: "**/*",
-        namespace: ServerWeb
+        namespace: Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
@@ -40,9 +40,9 @@ defmodule ServerWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import ServerWeb.ErrorHelpers
-      import ServerWeb.Gettext
-      alias ServerWeb.Router.Helpers, as: Routes
+      import Web.ErrorHelpers
+      import Web.Gettext
+      alias Web.Router.Helpers, as: Routes
     end
   end
 
@@ -57,7 +57,7 @@ defmodule ServerWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ServerWeb.Gettext
+      import Web.Gettext
     end
   end
 

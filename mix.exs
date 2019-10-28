@@ -18,7 +18,7 @@ defmodule Server.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Server.Application, []},
+      mod: {Main, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -38,7 +38,8 @@ defmodule Server.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      { :phoenix_markdown, "~> 1.0.0" }
     ]
   end
 end

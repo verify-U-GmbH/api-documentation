@@ -1,4 +1,4 @@
-defmodule ServerWeb.Endpoint do
+defmodule Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :server
 
   # Serve at "/" the static files from "priv/static" directory.
@@ -38,5 +38,5 @@ defmodule ServerWeb.Endpoint do
     key: "_server_key",
     signing_salt: "nYXcupQd"
 
-  plug ServerWeb.Router
+  plug Web.Router
 end
