@@ -30,7 +30,8 @@ defmodule ServerWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/server_web/templates",
+        root: "lib/server_web/",
+        pattern: "**/*",
         namespace: ServerWeb
 
       # Import convenience functions from controllers

@@ -1,0 +1,3 @@
+index
+
+<script>require('lib/server_web/index/index.js').default()</script>
