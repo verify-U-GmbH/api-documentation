@@ -4,15 +4,113 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Server · Phoenix Framework</title>
+    <title>verify-u API documentation</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
     <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/css/app.css") %>'/>
     <script type="text/javascript" src='<%= Routes.static_path(@conn, "/js/app.js") %>'></script>
   </head>
 
   <body>
-    <main role="main" class="container">
-      <%= render @view_module, @view_template, assigns %>
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom shadow-sm navbar-light">
+      <a class="navbar-brand" href="/">
+        <img class="navbar-brand__logo" src="/img/verify_logo.png">
+        API Docs
+      </a>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row">
+        <div class="sidenav">
+
+          <ul class="list-group list-group--sidenav-first">
+            <a href="/">
+              <li class="list-group-item">
+                Introduction
+              </li>
+            </a>
+          </ul>
+
+          <div class="sidenav__subheader">General</div>
+
+          <ul class="list-group">
+
+            <a href="/getting-started">
+              <li class="list-group-item">
+                Getting started
+              </li>
+            </a>
+
+            <a href="/authorization">
+              <li class="list-group-item">
+                Authorization
+              </li>
+            </a>
+
+            <a href="/errors">
+              <li class="list-group-item">
+                Errors
+              </li>
+            </a>
+          </ul>
+
+          <div class="sidenav__subheader">Oauth</div>
+
+          <ul class="list-group">
+
+            <a href="/channels">
+              <li class="list-group-item">
+                Channels
+              </li>
+            </a>
+
+            <a href="/scopes">
+              <li class="list-group-item">
+                Scopes
+              </li>
+            </a>
+
+          <div class="sidenav__subheader">API</div>
+
+          <ul class="list-group">
+            <a href="/identifications">
+              <li class="list-group-item">
+                Identifications
+              </li>
+            </a>
+
+            <a href="/passports">
+              <li class="list-group-item">
+                Passports
+              </li>
+            </a>
+
+            <a href="/liveness-videos">
+              <li class="list-group-item">
+                Liveness videos
+              </li>
+            </a>
+
+            <a href="/esigns">
+              <li class="list-group-item">
+                E-signatures
+              </li>
+            </a>
+          </ul>
+
+        </div>
+
+        <div class="content">
+          <div class="content__view">
+            <%= render @view_module, @view_template, assigns %>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <script>require("lib/web/layout/layout.js").default()</script>
 
   </body>
 </html>

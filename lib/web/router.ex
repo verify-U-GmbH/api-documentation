@@ -17,6 +17,7 @@ defmodule Web.Router do
     pipe_through :browser
 
     get "/", IndexController, :index
+    get "/:name", IndexController, :index
   end
 
   # Other scopes may use custom stacks.
