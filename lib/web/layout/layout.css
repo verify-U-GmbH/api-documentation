@@ -20,9 +20,6 @@ body {
 
 }
 
-main {
-    margin-top: 3.5rem;
-}
 
 .navbar {
     background-color: white;
@@ -56,8 +53,7 @@ main {
 
 .content__view {
     margin-left: 16rem;
-    padding-left: 1rem;
-    padding-top: 2rem;
+    padding: 3rem 2rem;
     height: 100%;
     bottom: 0;
 }
