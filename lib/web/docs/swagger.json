@@ -1,0 +1,410 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "1.0.0",
+    "title": "verify-u API"
+  },
+  "tags": [
+    {
+      "name": "identifications",
+      "description": ""
+    },
+    {
+      "name": "documents",
+      "description": ""
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/identifications": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "Returns a list of the 10 latest identifications",
+        "description": "",
+        "operationId": "getIdentificationsList",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/IdentificationsList"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/identifications/{jwt}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "Returns client profile data",
+        "description": "",
+        "operationId": "getIdentificationById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "jwt",
+            "in": "path",
+            "description": "JWT of identification",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ProfileData"
+            }
+          },
+          "404": {
+            "description": "Identification not found"
+          },
+          "500": {
+            "description": "Error"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/identifications/iddocument/{jwt}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "Returns client id document image",
+        "description": "",
+        "operationId": "getIdentificationIdDocumentById",
+        "produces": [
+          "image/png"
+        ],
+        "parameters": [
+          {
+            "name": "jwt",
+            "in": "path",
+            "description": "JWT of identification",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ID document image in PNG format",
+            "schema": {
+              "type": "file"
+            }
+          },
+          "401": {
+            "description": "Passport not allowed"
+          },
+          "404": {
+            "description": "Identification not found"
+          },
+          "500": {
+            "description": "Error"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/identifications/video/{jwt}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "Returns client liveness video",
+        "description": "",
+        "operationId": "getIdentificationVideoById",
+        "produces": [
+          "video/mp4"
+        ],
+        "parameters": [
+          {
+            "name": "jwt",
+            "in": "path",
+            "description": "JWT of identification",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Facetoface call video",
+            "schema": {
+              "type": "file"
+            }
+          },
+          "401": {
+            "description": "Video not allowed"
+          },
+          "404": {
+            "description": "Identification not found"
+          },
+          "500": {
+            "description": "Error"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/identifications/esign/{jwt}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "Returns client signed document",
+        "description": "",
+        "operationId": "getEsignById",
+        "produces": [
+          "application/pdf"
+        ],
+        "parameters": [
+          {
+            "name": "jwt",
+            "in": "path",
+            "description": "JWT of identification",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "signed document pdf",
+            "schema": {
+              "type": "file"
+            }
+          },
+          "401": {
+            "description": "Signed document not found"
+          },
+          "404": {
+            "description": "Identification not found"
+          },
+          "500": {
+            "description": "Error"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/documents/create": {
+      "post": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Transfers contract pdf document to be signed by customer",
+        "description": "",
+        "operationId": "data",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "pdf document data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Document"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "document id",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "400": {
+            "description": "Invalid file"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "IdentificationsList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "age_permission": {
+            "type": "boolean"
+          },
+          "date_created": {
+            "type": "string",
+            "format": "date"
+          },
+          "full_name_permission": {
+            "type": "boolean"
+          },
+          "gender_permission": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "passport_permission": {
+            "type": "boolean"
+          },
+          "state": {
+            "type": "string"
+          },
+          "video_permission": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "ProfileData": {
+      "type": "object",
+      "properties": {
+        "data_permissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DataPermissions"
+          }
+        },
+        "id_document": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IdDocument"
+          }
+        },
+        "identification": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Identification"
+          }
+        }
+      }
+    },
+    "DataPermissions": {
+      "type": "object",
+      "properties": {
+        "id_document_permission": {
+          "type": "boolean"
+        },
+        "video_permission": {
+          "type": "boolean"
+        }
+      }
+    },
+    "IdDocument": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "date_of_birth": {
+          "type": "string",
+          "format": "date"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "id_document_number": {
+          "type": "string"
+        },
+        "issue_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "expiration_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "mrz": {
+          "type": "string"
+        }
+      }
+    },
+    "Identification": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "date_created": {
+          "type": "string",
+          "format": "date"
+        },
+        "identification_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "rejected": {
+          "type": "boolean"
+        },
+        "rejection_cause": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      }
+    },
+    "Document": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string",
+          "format": "binary"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "host": "verify-u.com",
+  "basePath": "/api"
+}
