@@ -19,6 +19,9 @@
         <img class="navbar-brand__logo" src="/img/verify_logo.png">
         API Docs
       </a>
+      <a class="navbar-brand" href="#">
+        API Reference
+      </a>
     </nav>
 
     <main role="main" class="container-fluid">

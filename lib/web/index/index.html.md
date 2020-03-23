@@ -10,8 +10,8 @@ the needs of your enterprise.
 Our functionality can be generally divided into the following products, 
 which can be mixed and matched to your onboarding and/or compliance requirements:
 
-* Automatic identification (one-time or reusable)
-* Video identification (one-time or reusable)
+* Automatic identification
+* Video identification
 * eIDAS (EU 910/2014) qualified electronic signature issuance
 * Presence confirmation
 
@@ -24,24 +24,10 @@ In this scenario a client is redirected to identification provider's website
 for data processing. The client performs the necessary actions and is then 
 redirected back to company's website with results of identification. 
 
-This method of identification provides what most seamless experience for the user, 
+This method of identification provides what most seamless experience for the client, 
 but the data extracted from identification cannot be reused for other identifications. 
 One-time identification by definition implies redundancy of identifications, 
 which in turn slows down the average onboarding time for all parties involved.	
-
-***
-
-### Reusable identification <a name="reusable-identification"></a> 
-
-Reusable identification addresses the limitations of one-time identification by
-creating an account with identification provider's service for storage and control of
-personal data during client's identification session. On subsequent identifications with
-other businesses, the client is able to simply grant consent to any business to 
-process their personal data. 
-
-This method of identification is ideal for quick registration scenarios where 
-social login is employed and where only partial user data is required to confirm that 
-the user is a real person.
 
 ***
 
@@ -52,7 +38,7 @@ It consists of three steps:
 
 * Identification document upload (passport, driver's license, ID card) for picture and data extraction
 * Face detection for identification document photo comparison
-* Liveness detection for confirmation of user's presence
+* Liveness detection for confirmation of client's presence
 
 This method of identification is best used for onboarding scenarios where simplified due diligence
 can be used.
@@ -90,7 +76,7 @@ to amend the current contract and enter into new agreements.
 
 Presence confirmation is a way method of verifying that an existing client with a successful 
 identification is alive and present during an authorization action. 
-It consists of a liveness check similar to one used in [automatic identification](#reusable-identification)
+It consists of a liveness check similar to one used in [automatic identification]
 and is meant to be used in two-factor authentication scenarios, including 
 [PSD2 SCA](https://en.wikipedia.org/wiki/Strong_customer_authentication) 
-scenarios to confirm inherence of the user (something they are).
+scenarios to confirm inherence of the client (something they are).
