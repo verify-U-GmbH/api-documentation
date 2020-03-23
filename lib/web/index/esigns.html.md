@@ -4,7 +4,7 @@ Retrieves the contract document PDF signed by the customer by digital signature.
 
 #### Path
 ***
-`https://verify-u.com/api/identifications/esign/:id`
+`https://verify-u.com/api/identifications/esign/{jwt}`
 
 #### Parameters
 ***

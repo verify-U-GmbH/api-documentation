@@ -6,7 +6,7 @@ Provide the JWT Token from the identification.
 
 #### Path
 ***
-`https://verify-u.com/api/identifications/iddocument/:id`
+`https://verify-u.com/api/identifications/iddocument/{jwt}`
 
 #### Parameters
 ***

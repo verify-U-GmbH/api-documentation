@@ -6,7 +6,7 @@ Provide the JWT Token from the identification.
 
 #### Path
 ***
-`https://verify-u.com/api/identifications/video/:id`
+`https://verify-u.com/api/identifications/video/{jwt}`
 
 #### Parameters
 ***
