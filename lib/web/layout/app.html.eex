@@ -75,6 +75,12 @@
               </li>
             </a>
 
+            <a href="/customer-data">
+              <li class="list-group-item">
+                Customer data
+              </li>
+            </a>
+
           <div class="sidenav__subheader">API</div>
 
           <ul class="list-group">
@@ -99,6 +105,12 @@
             <a href="/esigns">
               <li class="list-group-item">
                 E-signatures
+              </li>
+            </a>
+
+            <a href="/documents">
+              <li class="list-group-item">
+                Documents
               </li>
             </a>
           </ul>

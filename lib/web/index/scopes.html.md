@@ -1,6 +1,6 @@
 # Scopes
 
-The following OAuth 2.0 scopes are used to limit access to client's information:
+The following OAuth 2.0 scopes are used:
 ***
 | Scope     	| Description 	|
 |-----------	|-------------	|
@@ -9,3 +9,4 @@ The following OAuth 2.0 scopes are used to limit access to client's information:
 | `f2f`       	|             	|
 | `giropay`   	|             	|
 | `esign`     	|             	|
+***
