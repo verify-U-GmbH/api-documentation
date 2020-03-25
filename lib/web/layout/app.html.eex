@@ -83,6 +83,12 @@
 
           <div class="sidenav__subheader">API</div>
 
+          <a href="/authentication">
+            <li class="list-group-item">
+              Authentication
+            </li>
+          </a>
+
           <ul class="list-group">
             <a href="/identifications">
               <li class="list-group-item">

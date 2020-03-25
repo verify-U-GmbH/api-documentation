@@ -1,6 +1,6 @@
 # Getting started
 
-verify-u implements the OAuth2 standard.
+verify-u implements the [OAuth 2.0](https://oauth.net/2/)-standard.
 
 The OAuth config can be reached at `https://selfid.verify-u.com/oauthconfig`
 
