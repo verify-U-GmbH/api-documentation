@@ -6,11 +6,11 @@ To create the authorization request you need to set the following parameters:
 
 ### Request Parameters
 
-| Field           	| Description                                                                                    	|
-|-----------------	|------------------------------------------------------------------------------------------------	|
-| `client_id`     	| Public identifier you received after registering your business                                 	|
-| `redirect_uri`  	| URI to return the user to after identification is complete                                     	|
-| `scope`         	| Identification channel which controls the flow                                                 	|
-| `response_type` 	| Tells the authorization server which grant to execute                                          	|
-| `state`         	| Random string used to prevent CSRF attacks.                                                    	|
-| `extras`        	| Additional customer information you want to provide during the identification                  	|
+| Field           	| Description                                                                                    	| Format   	|
+|-----------------	|------------------------------------------------------------------------------------------------	|----------	|
+| `client_id`     	| Public identifier you received after registering your business                                 	| `String` 	|
+| `redirect_uri`  	| URI to return the user to after identification is complete                                     	| `String` 	|
+| `scope`         	| Identification channel which controls the flow                                                 	| `String` 	|
+| `response_type` 	| Tells the authorization server that the application is initiating the authorization code flow. 	| `String` 	|
+| `state`         	| Random string used to prevent CSRF attacks.                                                    	| `String` 	|
+| `extras`        	| Additional [customer data](/customer-data) you want to provide during the identification         	| `Object` 	|
