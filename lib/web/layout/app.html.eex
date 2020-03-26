@@ -89,6 +89,12 @@
             </li>
           </a>
 
+          <a href="/http-status-codes">
+            <li class="list-group-item">
+              HTTP Status Codes
+            </li>
+          </a>
+
           <ul class="list-group">
             <a href="/identifications">
               <li class="list-group-item">
