@@ -51,12 +51,6 @@
                 Authorization
               </li>
             </a>
-
-            <a href="/errors">
-              <li class="list-group-item">
-                Errors
-              </li>
-            </a>
           </ul>
 
           <div class="sidenav__subheader">Oauth</div>
@@ -78,6 +72,12 @@
             <a href="/customer-data">
               <li class="list-group-item">
                 Customer data
+              </li>
+            </a>
+
+            <a href="/errors">
+              <li class="list-group-item">
+                Errors
               </li>
             </a>
 
