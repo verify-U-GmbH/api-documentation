@@ -24,3 +24,19 @@
     &response_type=code
     &state=random_state_1234
     ```
+
+4. Store JWT Token
+
+    After the customer finished the identification process, he is redirect back to your application with the following parameters appended:
+
+    ```
+    http://localhost:3333/?
+    token_type=bearer
+    &code=xxxxx.yyyyy.zzzzz
+    &state=random_state_99557
+    &scope=default
+    ```
+
+    Make sure you store the returned JWT (OAuth 2.0 Bearer Token), appended as `code` parameter to your `redirect_uri`. 
+
+    It is required to make calls to our [API](authentication) for identification details.
