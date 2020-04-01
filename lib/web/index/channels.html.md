@@ -4,12 +4,12 @@ The identification flow for the client and all its options is configured as an i
 
 It consists of the following attributes:
 
-### Type
+#### Type
 
 * SelfID
 * Face-2-Face
 
-### Data Permissions
+#### Data Permissions
 
 Data Permissions are granted by the client at the end of the identification process and received by the application.
 
@@ -24,7 +24,7 @@ The available permissions to request from the client are:
 ##### Face-2-Face only
 * Address 
 
-### Identification documents
+#### Identification documents
 
 Available documents used by the client for identification are:
 

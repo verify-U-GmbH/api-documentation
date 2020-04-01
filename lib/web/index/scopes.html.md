@@ -1,12 +1,3 @@
 # Scopes
 
-The following OAuth 2.0 scopes are used:
-***
-| Scope     	| Description 	|
-|-----------	|-------------	|
-| `default`   	|             	|
-| `fasttrack` 	|             	|
-| `f2f`       	|             	|
-| `giropay`   	|             	|
-| `esign`     	|             	|
-***
+Use the [identification channel](https://app.verify-u.com/business/channel) name as OAuth 2.0 scope parameter
