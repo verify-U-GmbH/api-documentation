@@ -17,7 +17,7 @@
     Build the target URL like the following and direct the user’s browser to it:
 
     ```
-    http://app.verify-u.com/auth?
+    https://app.verify-u.com/auth?
     redirect_uri=https://example-app.com/callback
     &client_id=EXAMPLE_ID
     &scope=default
@@ -30,7 +30,7 @@
     After the customer finished the identification process, he is redirect back to your application with the following parameters appended:
 
     ```
-    http://localhost:3333/?
+    https://example-app.com/callback?
     token_type=bearer
     &code=xxxxx.yyyyy.zzzzz
     &state=random_state_99557
