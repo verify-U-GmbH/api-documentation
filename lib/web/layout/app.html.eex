@@ -19,7 +19,7 @@
         <img class="navbar-brand__logo" src="/img/verify_logo.png">
         API Docs
       </a>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/reference" target="_blank">
         API Reference
       </a>
     </nav>
