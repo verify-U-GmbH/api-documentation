@@ -1,13 +1,10 @@
-
 .sidenav {
     position: fixed;
-    width: 16rem;
     height: 100%;
     overflow: hidden;
     overflow-y: scroll;
-    font-weight: bold;
-    font-size: 14px;
-    background-color: var(--gray-100);
+    @apply mb-8 ml-4 text-sm;
+    @apply w-56;
 }
 
 .sidenav .list-group {
@@ -15,34 +12,21 @@
 }
 
 .sidenav__subheader {
+    @apply font-bold;
     text-transform: uppercase;
     color: var(--gray-500);
-    margin: 0.75rem 1.25rem 0.25rem;
-    padding-top: 1.5rem;
-    padding-left: 3px;
-    border-top: 1px solid var(--gray-300);
+    @apply pt-4;
+    @apply mb-1 ml-2 mr-4;
 }
 
-.sidenav .list-group-item {
-    border: none;
-    border-radius: 0;
-    color: var(--gray-800);
-    background-color: var(--gray-100);
-    box-sizing: border-box !important;
+.sidenav__link {
+    @apply font-bold;
+    @apply text-gray-800;
+    @apply flex p-2;    
 }
 
-.sidenav a {
-    padding-left: 3px;
-}
-
-.sidenav a.active {
-    border-left: 3px solid var(--brand);
-    padding-left: 0;
-    box-sizing: border-box !important;
-}
-
-.sidenav a.active li {
-    color: var(--brand);
+.sidenav__link.active {
+    @apply text-blue-600;
 }
 
 

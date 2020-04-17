@@ -1,6 +1,7 @@
 # Getting started
 
-1. First, you need a verify-u business account. [Register now](http://app.verify-u.com/auth/register).
+<hr />
+1. First, you need a verify-u business account. [Register now](https://app.verify-u.com/auth/register).
 
 2. To setup the identification flow to your needs, add [identification channels](channels) in your business dashboard.
 

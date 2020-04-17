@@ -5,131 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>verify-u API documentation</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
     <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/css/app.css") %>'/>
     <script type="text/javascript" src='<%= Routes.static_path(@conn, "/js/app.js") %>'></script>
   </head>
 
-  <body>
-    <nav id="navbar" class="navbar navbar-expand-lg border-bottom shadow-sm navbar-light">
-      <a class="navbar-brand" href="/">
-        <img class="navbar-brand__logo" src="/img/verify_logo.png">
-        API Docs
+  <body class="container mx-auto">
+    <nav class="fixed z-50 flex w-full pt-4 pb-4 bg-white border-b bt-white bg-whi">
+      <a class="flex mx-4" href="/">
+        <img class="w-24" src="/img/verify_logo.png">
+        <span class="mx-2 font-bold text-gray-700">DOCUMENTATION</span>
       </a>
-      <a class="navbar-brand" href="/reference" target="_blank">
+      
+      <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/reference">
         API Reference
       </a>
     </nav>
 
-    <main role="main" class="container-fluid">
-      <div class="row">
-        <div id="sidenav" class="sidenav">
-
-          <ul class="list-group list-group--sidenav-first">
-            <a href="/">
-              <li class="list-group-item">
-                Introduction
-              </li>
+    <main role="main" class="mt-flex">
+      <div class="flex">
+        <div class="pt-2 pb-32 sidenav">
+          <section class="mt-16 sidenav__group">
+            <a class="sidenav__link" href="/">
+              Introduction
             </a>
-          </ul>
+          </section>
 
           <div class="sidenav__subheader">General</div>
 
-          <ul class="list-group">
+          <section class="sidenav__group">
 
-            <a href="/getting-started">
-              <li class="list-group-item">
-                Getting started
-              </li>
+            <a class="sidenav__link" href="/getting-started">
+              Getting started
             </a>
 
-            <a href="/authorization">
-              <li class="list-group-item">
-                Authorization
-              </li>
+            <a class="sidenav__link" href="/authorization">
+              Authorization
             </a>
-          </ul>
+          </section>
 
           <div class="sidenav__subheader">Oauth</div>
 
           <ul class="list-group">
 
-            <a href="/channels">
-              <li class="list-group-item">
-                Channels
-              </li>
+            <a class="sidenav__link" href="/channels">
+              Channels
             </a>
 
-            <a href="/scopes">
-              <li class="list-group-item">
-                Scopes
-              </li>
+            <a class="sidenav__link" href="/scopes">
+              Scopes
             </a>
 
-            <a href="/customer-data">
-              <li class="list-group-item">
-                Customer data
-              </li>
+            <a class="sidenav__link" href="/customer-data">
+              Customer data
             </a>
 
-            <a href="/errors">
-              <li class="list-group-item">
-                Errors
-              </li>
+            <a class="sidenav__link" href="/errors">
+              Errors
             </a>
 
           <div class="sidenav__subheader">API</div>
 
-          <a href="/authentication">
-            <li class="list-group-item">
-              Authentication
-            </li>
+          <a class="sidenav__link" href="/authentication">
+            Authentication
           </a>
 
-          <a href="/http-status-codes">
-            <li class="list-group-item">
-              HTTP Status Codes
-            </li>
+          <a class="sidenav__link" href="/http-status-codes">
+            HTTP Status Codes
           </a>
 
-          <ul class="list-group">
-            <a href="/identifications">
-              <li class="list-group-item">
-                Identifications
-              </li>
+          <section class="list-group">
+            <a class="sidenav__link" href="/identifications">
+              Identifications
             </a>
 
-            <a href="/passports">
-              <li class="list-group-item">
-                Passports
-              </li>
+            <a class="sidenav__link" href="/id-documents">
+              ID Documents
             </a>
 
-            <a href="/liveness-videos">
-              <li class="list-group-item">
-                Liveness videos
-              </li>
+            <a class="sidenav__link" href="/liveness-videos">
+              Liveness videos
             </a>
 
-            <a href="/esigns">
-              <li class="list-group-item">
-                E-signatures
-              </li>
+            <a class="sidenav__link" href="/esigns">
+              E-signatures
             </a>
 
-            <a href="/documents">
-              <li class="list-group-item">
-                Documents
-              </li>
+            <a class="sidenav__link" href="/documents">
+              Documents
             </a>
-          </ul>
+          </section>
 
         </div>
 
-        <div class="content">
+        <div class="mt-12">
           <div class="content__view">
             <%= render @view_module, @view_template, assigns %>
           </div>

@@ -19,7 +19,9 @@
     "clean-css-brunch": "2.10.0",
     "javascript-brunch": "2.10.0",
     "standard": "12.0.1",
-    "uglify-js-brunch": "2.10.0"
+    "uglify-js-brunch": "2.10.0",
+    "postcss-brunch": "^2.0",
+    "tailwindcss": "^1.2.0"
   },
   "standard": {
     "ignore": [

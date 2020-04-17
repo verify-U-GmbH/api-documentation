@@ -1,4 +1,4 @@
-# Passports
+# ID Documents
 
 Retrieves the ID document image file uploaded by the customer.
 
