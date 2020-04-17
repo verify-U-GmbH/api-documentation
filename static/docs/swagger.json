@@ -46,7 +46,7 @@
         ]
       }
     },
-    "/identifications/{jwt}": {
+    "/identifications/{id}": {
       "get": {
         "tags": [
           "identifications"
@@ -59,9 +59,9 @@
         ],
         "parameters": [
           {
-            "name": "jwt",
+            "name": "id",
             "in": "path",
-            "description": "JWT of identification",
+            "description": "identification id",
             "required": true,
             "type": "string"
           }
@@ -87,7 +87,7 @@
         ]
       }
     },
-    "/identifications/iddocument/{jwt}": {
+    "/identifications/iddocument/{id}": {
       "get": {
         "tags": [
           "identifications"
@@ -100,9 +100,9 @@
         ],
         "parameters": [
           {
-            "name": "jwt",
+            "name": "id",
             "in": "path",
-            "description": "JWT of identification",
+            "description": "identification id",
             "required": true,
             "type": "string"
           }
@@ -131,7 +131,7 @@
         ]
       }
     },
-    "/identifications/video/{jwt}": {
+    "/identifications/video/{id}": {
       "get": {
         "tags": [
           "identifications"
@@ -144,9 +144,9 @@
         ],
         "parameters": [
           {
-            "name": "jwt",
+            "name": "id",
             "in": "path",
-            "description": "JWT of identification",
+            "description": "identification id",
             "required": true,
             "type": "string"
           }
@@ -175,7 +175,7 @@
         ]
       }
     },
-    "/identifications/esign/{jwt}": {
+    "/identifications/esign/{id}": {
       "get": {
         "tags": [
           "identifications"
@@ -188,9 +188,9 @@
         ],
         "parameters": [
           {
-            "name": "jwt",
+            "name": "id",
             "in": "path",
-            "description": "JWT of identification",
+            "description": "identification id",
             "required": true,
             "type": "string"
           }
