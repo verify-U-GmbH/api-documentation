@@ -2,23 +2,30 @@
 
 Retrieves the last 10 identifications as a list.
 
-Provide the JWT Token from the identification.
+Provide the identification ID.
 
-#### Path
-***
+## Path
+
+---
+
 `https://verify-u.com/api/identifications`
 
-#### Parameters
+## Parameters
 
-***
+---
+
 No parameters required
 
-#### Returns
-***
+## Returns
+
+---
+
 List of the last 10 identifications
 
-#### Response
-***
+## Response
+
+---
+
 ```json
 [
   {
@@ -36,24 +43,32 @@ List of the last 10 identifications
 
 # Single Identification
 
-Retrieves a single identification by JWT.
+Retrieves a single identification by identification ID.
 
-Provide the JWT Token from the identification.
+Provide the identification ID.
 
-#### Path
-***
-`https://verify-u.com/api/identifications/{jwt}`
+## Path
 
-#### Parameters
-***
-`JWT Token`
+---
 
-#### Returns
-***
+`https://verify-u.com/api/identifications/{id}`
+
+## Parameters
+
+---
+
+`Identification ID`
+
+## Returns
+
+---
+
 Returns client profile data
 
-#### Response
-***
+## Response
+
+---
+
 ```json
 {
   "data_permissions": [
@@ -105,4 +120,3 @@ Returns client profile data
   ]
 }
 ```
-

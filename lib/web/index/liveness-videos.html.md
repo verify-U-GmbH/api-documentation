@@ -2,22 +2,30 @@
 
 Retrieves the video file from the facetoface call between agent and customer.
 
-Provide the JWT Token from the identification.
+Provide the identification ID.
 
-#### Path
-***
-`https://verify-u.com/api/identifications/video/{jwt}`
+## Path
 
-#### Parameters
-***
-`JWT Token`
+---
 
-#### Returns
-***
+`https://verify-u.com/api/identifications/video/{id}`
+
+## Parameters
+
+---
+
+`Identification ID`
+
+## Returns
+
+---
+
 Liveness video in MP4 or MKV format
 
-#### Response
-***
+## Response
+
+---
+
 Returns a binary file of the customers recorded video call.
 
 Returns an error otherwise.
