@@ -7,8 +7,10 @@ hr {
 }
 
 h1 {
+    @apply text-gray-900;
     @apply text-3xl;
-    @apply pb-2;
+    @apply font-bold;
+    @apply pb-3;
 }
 
 h2 {
@@ -21,6 +23,7 @@ h2 {
 p {
     @apply my-4;
     @apply leading-relaxed;
+    @apply text-gray-700;
 }
 
 p > a {

@@ -9,102 +9,106 @@
     <script type="text/javascript" src='<%= Routes.static_path(@conn, "/js/app.js") %>'></script>
   </head>
 
-  <body class="container mx-auto">
-    <nav class="fixed z-50 flex w-full pt-4 pb-4 bg-white border-b bt-white bg-whi">
-      <a class="flex mx-4" href="/">
-        <img class="w-24" src="/img/verify_logo.png">
-        <span class="mx-2 font-bold text-gray-700">DOCUMENTATION</span>
-      </a>
-      
-      <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/reference">
-        API Reference
-      </a>
-    </nav>
+  <body>
+    <div class="header-wrapper">
+      <nav class="container header">
+        <a class="header__brand" href="/">
+          <img class="w-24" src="/img/verify_logo.png">
+          <span class="mx-2 font-bold text-gray-700">DOCUMENTATION</span>
+        </a>
+        
+        <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/reference">
+          API Reference
+        </a>
+      </nav>
+    </div>
 
-    <main role="main" class="mt-flex">
-      <div class="flex">
-        <div class="pt-2 pb-32 sidenav">
-          <section class="mt-16 sidenav__group">
-            <a class="sidenav__link" href="/">
-              Introduction
-            </a>
-          </section>
+    <div class="container mx-auto">
+      <main role="main" class="mt-flex">
+        <div class="flex">
+          <div class="pt-2 pb-32 sidenav">
+            <section class="mt-16 sidenav__group">
+              <a class="sidenav__link" href="/">
+                Introduction
+              </a>
+            </section>
 
-          <div class="sidenav__subheader">General</div>
+            <div class="sidenav__subheader">General</div>
 
-          <section class="sidenav__group">
+            <section class="sidenav__group">
 
-            <a class="sidenav__link" href="/getting-started">
-              Getting started
-            </a>
+              <a class="sidenav__link" href="/getting-started">
+                Getting started
+              </a>
 
-            <a class="sidenav__link" href="/authorization">
-              Authorization
-            </a>
-          </section>
+              <a class="sidenav__link" href="/authorization">
+                Authorization
+              </a>
+            </section>
 
-          <div class="sidenav__subheader">Oauth</div>
+            <div class="sidenav__subheader">Oauth</div>
 
-          <ul class="list-group">
+            <ul class="list-group">
 
-            <a class="sidenav__link" href="/channels">
-              Channels
-            </a>
+              <a class="sidenav__link" href="/channels">
+                Channels
+              </a>
 
-            <a class="sidenav__link" href="/scopes">
-              Scopes
-            </a>
+              <a class="sidenav__link" href="/scopes">
+                Scopes
+              </a>
 
-            <a class="sidenav__link" href="/customer-data">
-              Customer data
-            </a>
+              <a class="sidenav__link" href="/customer-data">
+                Customer data
+              </a>
 
-            <a class="sidenav__link" href="/errors">
-              Errors
-            </a>
+              <a class="sidenav__link" href="/errors">
+                Errors
+              </a>
 
-          <div class="sidenav__subheader">API</div>
+            <div class="sidenav__subheader">API</div>
 
-          <a class="sidenav__link" href="/authentication">
-            Authentication
-          </a>
-
-          <a class="sidenav__link" href="/http-status-codes">
-            HTTP Status Codes
-          </a>
-
-          <section class="list-group">
-            <a class="sidenav__link" href="/identifications">
-              Identifications
+            <a class="sidenav__link" href="/authentication">
+              Authentication
             </a>
 
-            <a class="sidenav__link" href="/id-documents">
-              ID Documents
+            <a class="sidenav__link" href="/http-status-codes">
+              HTTP Status Codes
             </a>
 
-            <a class="sidenav__link" href="/liveness-videos">
-              Liveness videos
-            </a>
+            <section class="list-group">
+              <a class="sidenav__link" href="/identifications">
+                Identifications
+              </a>
 
-            <a class="sidenav__link" href="/esigns">
-              E-signatures
-            </a>
+              <a class="sidenav__link" href="/id-documents">
+                ID Documents
+              </a>
 
-            <a class="sidenav__link" href="/documents">
-              Documents
-            </a>
-          </section>
+              <a class="sidenav__link" href="/liveness-videos">
+                Liveness videos
+              </a>
 
-        </div>
+              <a class="sidenav__link" href="/esigns">
+                E-signatures
+              </a>
 
-        <div class="mt-12">
-          <div class="content__view">
-            <%= render @view_module, @view_template, assigns %>
+              <a class="sidenav__link" href="/documents">
+                Documents
+              </a>
+            </section>
+
+          </div>
+
+          <div class="mt-12">
+            <div class="content__view">
+              <%= render @view_module, @view_template, assigns %>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-
+      </main>
+    </div>
+    
     <script>require("lib/web/layout/layout.js").default()</script>
 
   </body>

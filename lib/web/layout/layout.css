@@ -16,31 +16,25 @@ html {
     height: 100%;
 }
 
-body {
-
+.header-wrapper {
+    @apply fixed;
+    @apply z-40;
+    @apply flex;
+    @apply w-full;
+    @apply bg-white;
+    @apply border-b;   
 }
 
-
-.navbar {
-    background-color: white;
+.header {
+    @apply z-50;
+    @apply flex;
+    @apply py-4;
+    @apply mx-auto;
 }
 
-.navbar-brand {
-    font-weight: bold;
-}
-
-.navbar-brand:hover {
-    color: var(--brand) !important;
-}
-
-.navbar-brand__logo {
-    width: 7.5rem;
-    margin-top: -3px;
-    margin-right: 1.5rem;
-}
-
-.list-group--sidenav-first {
-    margin-top: 1rem;
+.header__brand {
+    @apply flex;
+    @apply mx-4;
 }
 
 .content {
