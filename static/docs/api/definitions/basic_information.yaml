@@ -1,0 +1,13 @@
+type: object
+properties:
+  first_name:
+    type: string
+  last_name:
+    type: string
+  date_of_birth:
+    type: string
+    format: date
+  gender:
+    type: string
+  country:
+    type: string

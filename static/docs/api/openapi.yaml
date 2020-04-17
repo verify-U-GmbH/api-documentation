@@ -25,7 +25,7 @@ paths:
         '200':
           description: successful operation
           schema:
-            $ref: '#/definitions/IdentificationsList'
+            $ref: definitions/identifications_list.yaml
       security:
         - Bearer: []
   '/identifications/{id}':
@@ -47,7 +47,7 @@ paths:
         '200':
           description: successful operation
           schema:
-            $ref: '#/definitions/ProfileData'
+            $ref: definitions/profile_data.yaml
         '404':
           description: Identification not found
         '500':
@@ -153,7 +153,7 @@ paths:
           description: pdf document data
           required: true
           schema:
-            $ref: '#/definitions/Document'
+            $ref: '#/definitions/document'
       responses:
         '200':
           description: document id
@@ -168,134 +168,22 @@ securityDefinitions:
     name: Authorization
     in: header
 definitions:
-  IdentificationsList:
-    type: array
-    items:
-      type: object
-      properties:
-        age_permission:
-          type: boolean
-        date_created:
-          type: string
-          format: date
-        full_name_permission:
-          type: boolean
-        gender_permission:
-          type: boolean
-        id:
-          type: string
-        passport_permission:
-          type: boolean
-        state:
-          type: string
-        video_permission:
-          type: boolean
-  ProfileData:
-    type: object
-    properties:
-      data_permissions:
-        type: array
-        items:
-          $ref: '#/definitions/DataPermissions'
-      id_document:
-        type: array
-        items:
-          $ref: '#/definitions/IdDocument'
-      identification:
-        type: array
-        items:
-          $ref: '#/definitions/Identification'
-      basic_information:
-        type: array
-        items:
-          $ref: '#/definitions/BasicInformation'
-      address:
-        type: array
-        items:
-          $ref: '#/definitions/Address'
-  DataPermissions:
-    type: object
-    properties:
-      id_document_permission:
-        type: boolean
-      video_permission:
-        type: boolean
-  IdDocument:
-    type: object
-    properties:
-      country:
-        type: string
-      date_of_birth:
-        type: string
-        format: date
-      gender:
-        type: string
-      first_name:
-        type: string
-      last_name:
-        type: string
-      id_document_number:
-        type: string
-      issue_date:
-        type: string
-        format: date
-      expiration_date:
-        type: string
-        format: date
-      mrz:
-        type: string
-  Identification:
-    type: object
-    properties:
-      customer_id:
-        type: string
-        format: uuid
-      date_created:
-        type: string
-        format: date
-      identification_date:
-        type: string
-        format: date
-      rejected:
-        type: boolean
-      rejection_cause:
-        type: string
-      state:
-        type: string
-  BasicInformation:
-    type: object
-    properties:
-      first_name:
-        type: string
-      last_name:
-        type: string
-      date_of_birth:
-        type: string
-        format: date
-      gender:
-        type: string
-      country:
-        type: string
-  Address:
-    type: object
-    properties:
-      house_number:
-        type: string
-      street:
-        type: string
-      country:
-        type: string
-      postal_code:
-        type: string
-      city:
-        type: string
-  Document:
-    type: object
-    properties:
-      data:
-        type: string
-        format: binary
-      description:
-        type: string
+  identifications_list:
+    $ref: definitions/identifications_list.yaml
+  profile_data:
+    $ref: definitions/profile_data.yaml
+  data_permissions:
+    $ref: definitions/data_permissions.yaml
+  id_document:
+    $ref: definitions/id_document.yaml
+  identification:
+    $ref: definitions/identification.yaml
+  basic_information:
+    $ref: definitions/basic_information.yaml
+  address:
+    $ref: definitions/address.yaml
+  document:
+    $ref: definitions/document.yaml
+
 host: verify-u.com
 basePath: /api

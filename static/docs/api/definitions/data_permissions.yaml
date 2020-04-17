@@ -1,0 +1,6 @@
+type: object
+properties:
+  id_document_permission:
+    type: boolean
+  video_permission:
+    type: boolean

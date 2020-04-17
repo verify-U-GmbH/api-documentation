@@ -1,0 +1,23 @@
+type: object
+properties:
+  country:
+    type: string
+  date_of_birth:
+    type: string
+    format: date
+  gender:
+    type: string
+  first_name:
+    type: string
+  last_name:
+    type: string
+  id_document_number:
+    type: string
+  issue_date:
+    type: string
+    format: date
+  expiration_date:
+    type: string
+    format: date
+  mrz:
+    type: string

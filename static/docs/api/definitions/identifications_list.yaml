@@ -1,0 +1,21 @@
+type: array
+items:
+  type: object
+  properties:
+    age_permission:
+      type: boolean
+    date_created:
+      type: string
+      format: date
+    full_name_permission:
+      type: boolean
+    gender_permission:
+      type: boolean
+    id:
+      type: string
+    passport_permission:
+      type: boolean
+    state:
+      type: string
+    video_permission:
+      type: boolean

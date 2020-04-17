@@ -1,0 +1,17 @@
+type: object
+properties:
+  customer_id:
+    type: string
+    format: uuid
+  date_created:
+    type: string
+    format: date
+  identification_date:
+    type: string
+    format: date
+  rejected:
+    type: boolean
+  rejection_cause:
+    type: string
+  state:
+    type: string

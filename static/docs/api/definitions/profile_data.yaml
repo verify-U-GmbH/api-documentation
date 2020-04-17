@@ -1,0 +1,22 @@
+type: object
+properties:
+  data_permissions:
+    type: array
+    items:
+        $ref: data_permissions.yaml
+  id_document:
+    type: array
+    items:
+      $ref: id_document.yaml
+  identification:
+    type: array
+    items:
+      $ref: identification.yaml
+  basic_information:
+    type: array
+    items:
+      $ref: basic_information.yaml
+  address:
+    type: array
+    items:
+      $ref: address.yaml

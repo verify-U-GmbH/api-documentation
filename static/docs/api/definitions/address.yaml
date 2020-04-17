@@ -1,0 +1,12 @@
+type: object
+properties:
+  house_number:
+    type: string
+  street:
+    type: string
+  country:
+    type: string
+  postal_code:
+    type: string
+  city:
+    type: string
