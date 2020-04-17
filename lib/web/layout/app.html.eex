@@ -101,8 +101,12 @@
           </div>
 
           <div class="mt-12">
-            <div class="content__view">
-              <%= render @view_module, @view_template, assigns %>
+            <div class="flex content__view">
+              <div class="w-3/4 content__view-main">
+                <%= render @view_module, @view_template, assigns %>
+              </div>
+              <div id="content-nav" class="w-1/4 pl-16 content__view-nav">
+              </div>
             </div>
           </div>
         </div>
