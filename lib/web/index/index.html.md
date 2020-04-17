@@ -3,7 +3,9 @@
 ## Start onboarding customers using our API and client libraries
 
 **verify-u** is an online platform for personal identity verification,
-e-signature issuance. It consist of customizable [OAuth 2.0](https://oauth.net/2/)-based 
+e-signature issuance. 
+
+It consist of customizable [OAuth 2.0](https://oauth.net/2/)-based 
 flow for client processing and a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) 
 API for data extraction, ensuring maximum flexibility in delivering a compliant identification solution for 
 the needs of your enterprise.

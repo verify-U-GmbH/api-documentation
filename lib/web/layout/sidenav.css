@@ -1,10 +1,12 @@
 .sidenav {
     position: fixed;
     height: 100%;
-    overflow: hidden;
-    overflow-y: scroll;
-    @apply mb-8 ml-4 text-sm;
+    overflow: auto;
+    @apply mb-8;
+    @apply ml-4;
+    @apply text-sm;
     @apply w-56;
+    @apply border-r;
 }
 
 .sidenav .list-group {
@@ -16,13 +18,16 @@
     text-transform: uppercase;
     color: var(--gray-500);
     @apply pt-4;
-    @apply mb-1 ml-2 mr-4;
+    @apply mb-1;
+    @apply ml-2;
+    @apply mr-4;
 }
 
 .sidenav__link {
     @apply font-bold;
     @apply text-gray-800;
-    @apply flex p-2;    
+    @apply flex;
+    @apply p-2;    
 }
 
 .sidenav__link.active {
