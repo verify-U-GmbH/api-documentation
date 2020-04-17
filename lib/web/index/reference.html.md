@@ -22,7 +22,7 @@
     </nav>
     
     <div class="">
-        <redoc spec-url='/docs/swagger.json'></redoc>
+        <redoc spec-url='/docs/api/openapi.yaml'></redoc>
     </div>
 <script src="/js/redoc.standalone.js">
 </script>
