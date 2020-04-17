@@ -1,0 +1,23 @@
+post:
+  tags:
+    - documents
+  summary: Transfers contract pdf document to be signed by customer
+  description: ""
+  operationId: data
+  produces:
+    - application/json
+  parameters:
+    - in: body
+      name: body
+      description: pdf document data
+      required: true
+      schema:
+        $ref: ../definitions/document.yaml
+  responses:
+    "200":
+      description: document id
+      schema:
+        type: string
+        format: uuid
+    "400":
+      description: Invalid file

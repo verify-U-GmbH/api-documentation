@@ -1,0 +1,27 @@
+get:
+  tags:
+    - identifications
+  summary: Returns client id document image
+  description: ""
+  operationId: getIdentificationIdDocumentById
+  produces:
+    - image/png
+  parameters:
+    - name: id
+      in: path
+      description: identification id
+      required: true
+      type: string
+  responses:
+    "200":
+      description: ID document image in PNG format
+      schema:
+        type: file
+    "401":
+      description: Passport not allowed
+    "404":
+      description: Identification not found
+    "500":
+      description: Error
+  security:
+    - Bearer: []

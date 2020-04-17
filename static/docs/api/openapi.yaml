@@ -1,189 +1,34 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
-  description: ''
+  description: ""
   version: 1.0.0
   title: verify-u API
 tags:
   - name: identifications
-    description: ''
+    description: ""
   - name: documents
-    description: ''
+    description: ""
 schemes:
   - https
   - http
 paths:
   /identifications:
-    get:
-      tags:
-        - identifications
-      summary: Returns a list of the 10 latest identifications
-      description: ''
-      operationId: getIdentificationsList
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: successful operation
-          schema:
-            $ref: definitions/identifications_list.yaml
-      security:
-        - Bearer: []
-  '/identifications/{id}':
-    get:
-      tags:
-        - identifications
-      summary: Returns client profile data
-      description: ''
-      operationId: getIdentificationById
-      produces:
-        - application/json
-      parameters:
-        - name: id
-          in: path
-          description: identification id
-          required: true
-          type: string
-      responses:
-        '200':
-          description: successful operation
-          schema:
-            $ref: definitions/profile_data.yaml
-        '404':
-          description: Identification not found
-        '500':
-          description: Error
-      security:
-        - Bearer: []
-  '/identifications/iddocument/{id}':
-    get:
-      tags:
-        - identifications
-      summary: Returns client id document image
-      description: ''
-      operationId: getIdentificationIdDocumentById
-      produces:
-        - image/png
-      parameters:
-        - name: id
-          in: path
-          description: identification id
-          required: true
-          type: string
-      responses:
-        '200':
-          description: ID document image in PNG format
-          schema:
-            type: file
-        '401':
-          description: Passport not allowed
-        '404':
-          description: Identification not found
-        '500':
-          description: Error
-      security:
-        - Bearer: []
-  '/identifications/video/{id}':
-    get:
-      tags:
-        - identifications
-      summary: Returns client liveness video
-      description: ''
-      operationId: getIdentificationVideoById
-      produces:
-        - video/mp4
-      parameters:
-        - name: id
-          in: path
-          description: identification id
-          required: true
-          type: string
-      responses:
-        '200':
-          description: Facetoface call video
-          schema:
-            type: file
-        '401':
-          description: Video not allowed
-        '404':
-          description: Identification not found
-        '500':
-          description: Error
-      security:
-        - Bearer: []
-  '/identifications/esign/{id}':
-    get:
-      tags:
-        - identifications
-      summary: Returns client signed document
-      description: ''
-      operationId: getEsignById
-      produces:
-        - application/pdf
-      parameters:
-        - name: id
-          in: path
-          description: identification id
-          required: true
-          type: string
-      responses:
-        '200':
-          description: signed document pdf
-          schema:
-            type: file
-        '401':
-          description: Signed document not found
-        '404':
-          description: Identification not found
-        '500':
-          description: Error
-      security:
-        - Bearer: []
+    $ref: paths/identifications.yaml
+  /identifications/{id}:
+    $ref: paths/identifications_id.yaml
+  /identifications/iddocument/{id}:
+    $ref: paths/identifications_iddocument_id.yaml
+  /identifications/video/{id}:
+    $ref: paths/identifications_video_id.yaml
+  /identifications/esign/{id}:
+    $ref: paths/identifications_esign_id.yaml
   /documents/create:
-    post:
-      tags:
-        - documents
-      summary: Transfers contract pdf document to be signed by customer
-      description: ''
-      operationId: data
-      produces:
-        - application/json
-      parameters:
-        - in: body
-          name: body
-          description: pdf document data
-          required: true
-          schema:
-            $ref: '#/definitions/document'
-      responses:
-        '200':
-          description: document id
-          schema:
-            type: string
-            format: uuid
-        '400':
-          description: Invalid file
+    $ref: paths/documents_create.yaml
 securityDefinitions:
   Bearer:
     type: apiKey
     name: Authorization
     in: header
-definitions:
-  identifications_list:
-    $ref: definitions/identifications_list.yaml
-  profile_data:
-    $ref: definitions/profile_data.yaml
-  data_permissions:
-    $ref: definitions/data_permissions.yaml
-  id_document:
-    $ref: definitions/id_document.yaml
-  identification:
-    $ref: definitions/identification.yaml
-  basic_information:
-    $ref: definitions/basic_information.yaml
-  address:
-    $ref: definitions/address.yaml
-  document:
-    $ref: definitions/document.yaml
 
 host: verify-u.com
 basePath: /api

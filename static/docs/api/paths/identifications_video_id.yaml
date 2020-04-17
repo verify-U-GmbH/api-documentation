@@ -1,0 +1,27 @@
+get:
+  tags:
+    - identifications
+  summary: Returns client liveness video
+  description: ""
+  operationId: getIdentificationVideoById
+  produces:
+    - video/mp4
+  parameters:
+    - name: id
+      in: path
+      description: identification id
+      required: true
+      type: string
+  responses:
+    "200":
+      description: Facetoface call video
+      schema:
+        type: file
+    "401":
+      description: Video not allowed
+    "404":
+      description: Identification not found
+    "500":
+      description: Error
+  security:
+    - Bearer: []

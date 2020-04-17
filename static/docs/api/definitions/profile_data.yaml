@@ -3,7 +3,7 @@ properties:
   data_permissions:
     type: array
     items:
-        $ref: data_permissions.yaml
+      $ref: data_permissions.yaml
   id_document:
     type: array
     items:
