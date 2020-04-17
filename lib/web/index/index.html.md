@@ -1,10 +1,11 @@
 # Introduction
 
+## Start onboarding customers using our API and client libraries
 
-**verify-u** is an online platform for identity verification,
-e-signature issuance, and presence confirmation. It consist of [OAuth 2.0](https://oauth.net/2/)-based 
-flow and a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) 
-API for maximum flexibility in delivering a compliant identification solution for 
+**verify-u** is an online platform for personal identity verification,
+e-signature issuance. It consist of customizable [OAuth 2.0](https://oauth.net/2/)-based 
+flow for client processing and a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) 
+API for data extraction, ensuring maximum flexibility in delivering a compliant identification solution for 
 the needs of your enterprise.
 
 Our functionality can be generally divided into the following products, 
@@ -13,7 +14,6 @@ which can be mixed and matched to your onboarding and/or compliance requirements
 * Automatic identification
 * Video identification
 * eIDAS (EU 910/2014) qualified electronic signature issuance
-* Presence confirmation
 
 To tailor the platform to your specific use-case, please review each concept below: 
 
@@ -22,12 +22,7 @@ To tailor the platform to your specific use-case, please review each concept bel
 One-time identification is the most commonly used method to onboard a client. 
 In this scenario a client is redirected to identification provider's website 
 for data processing. The client performs the necessary actions and is then 
-redirected back to company's website with results of identification. 
-
-This method of identification provides what most seamless experience for the client, 
-but the data extracted from identification cannot be reused for other identifications. 
-One-time identification by definition implies redundancy of identifications, 
-which in turn slows down the average onboarding time for all parties involved.	
+redirected back to company's website with results of identification. 	
 
 ***
 
@@ -79,4 +74,4 @@ identification is alive and present during an authorization action.
 It consists of a liveness check similar to one used in [automatic identification]
 and is meant to be used in two-factor authentication scenarios, including 
 [PSD2 SCA](https://en.wikipedia.org/wiki/Strong_customer_authentication) 
-scenarios to confirm inherence of the client (something they are).
+scenarios to confirm **inherence** of the client (something they are).

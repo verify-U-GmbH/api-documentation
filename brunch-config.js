@@ -24,16 +24,18 @@ module.exports = {
   },
 
   npm: {
-    enabled: true,
-    whitelist: ['jquery', 'bootstrap'],
-    globals: {
-      $: 'jquery'
-    }
+    enabled: true
   },
 
   plugins: {
     babel: {
       ignore: [/vendor/]
+    },
+    postcss: {
+      processors: [
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
     }
   },
 

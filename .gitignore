@@ -26,7 +26,7 @@ server-*.tar
 npm-debug.log
 
 # The directory NPM downloads your dependencies sources to.
-/assets/node_modules/
+/node_modules
 
 # Since we are building assets from assets/,
 # we ignore priv/static. You may want to comment
@@ -34,5 +34,5 @@ npm-debug.log
 /priv/static/
 
 .idea
-
+/.elixir_ls
 *.iml
