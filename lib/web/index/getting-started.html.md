@@ -9,8 +9,8 @@
 
     * Your application redirects your customer to our authorization endpoint, with the identification flow described as scope
     * The customer proceeds with the verify-u identification
-    * After identification he is redirected back to your application, with a JSON Web Token (JWT) parameter appended to the destination URI
-    * Your application's backend uses the JWT as an access token to retrieve api responses for this identification
+    * After identification he is redirected back to your application, with a identification ID parameter appended to the destination URI
+    * Your application's backend uses the identification ID as request parameter to retrieve API responses for this identification
 
 3. Create authorization request
 
@@ -26,18 +26,18 @@
     &state=random_state_1234
     ```
 
-4. Store JWT Token
+4. Store identification ID
 
-    After the customer finished the identification process, he is redirect back to your application with the following parameters appended:
+    After the customer finished the identification process, he is redirected back to your application with the following parameters appended:
 
     ```
     https://example-app.com/callback?
     token_type=bearer
-    &code=xxxxx.yyyyy.zzzzz
+    &code=123e4567-e89b-12d3-a456-426655440000
     &state=random_state_99557
     &scope=default
     ```
 
-    Make sure you store the returned JWT (OAuth 2.0 Bearer Token), appended as `code` parameter to your `redirect_uri`. 
+    Make sure you store the returned identification ID, appended as `code` parameter to your `redirect_uri`. 
 
     It is required to make calls to our [API](authentication) for identification details.
