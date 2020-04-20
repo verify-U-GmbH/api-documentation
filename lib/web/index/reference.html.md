@@ -21,6 +21,7 @@
     <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/">
       Documentation
     </a>
+
   </nav>
 
   <div id="redoc-container"></div>
@@ -29,7 +30,8 @@
   </script>
   <script>
     Redoc.init('/docs/api/openapi.yaml', {
-      scrollYOffset: 50
+      scrollYOffset: 50,
+      hideLoading: true
     }, document.getElementById('redoc-container'))
   </script>
 </body>
