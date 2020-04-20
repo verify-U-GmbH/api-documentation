@@ -12,6 +12,9 @@ RUN mix local.hex --force \
 
 # set build ENV
 ENV MIX_ENV=prod
+ENV APP_HOME /app
+RUN mkdir -p $APP_HOME
+WORKDIR $APP_HOME
 
 # install mix dependencies
 COPY mix.exs mix.lock ./
@@ -31,10 +34,6 @@ RUN mix phx.digest
 # build project
 COPY lib lib
 RUN mix compile
-
-ENV APP_HOME /app
-RUN mkdir -p $APP_HOME
-WORKDIR $APP_HOME
    
 EXPOSE 4000
 
