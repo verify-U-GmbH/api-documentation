@@ -10,7 +10,7 @@ For these requests, set your request header to
 
 ---
 
-`https://verify-u.com/api/documents/create/`
+POST `https://verify-u.com/api/documents/create/`
 
 ### Parameters
 

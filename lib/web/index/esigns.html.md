@@ -6,7 +6,7 @@
 
 ---
 
-`https://verify-u.com/api/identifications/esign/{id}`
+GET `https://verify-u.com/api/identifications/esign/{id}`
 
 ### Parameters
 

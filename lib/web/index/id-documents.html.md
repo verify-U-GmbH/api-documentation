@@ -8,7 +8,7 @@ Provide the identification ID.
 
 ---
 
-`https://verify-u.com/api/identifications/iddocument/{id}`
+GET `https://verify-u.com/api/identifications/iddocument/{id}`
 
 ### Parameters
 

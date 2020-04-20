@@ -6,7 +6,7 @@
 
 ---
 
-`https://verify-u.com/api/identifications/{id}`
+GET `https://verify-u.com/api/identifications/{id}`
 
 ### Parameters
 
@@ -21,6 +21,8 @@
 Returns client profile data
 
 ### Response
+
+Example:
 
 ---
 

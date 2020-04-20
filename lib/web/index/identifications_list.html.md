@@ -6,7 +6,7 @@
 
 ---
 
-`https://verify-u.com/api/identifications`
+GET `https://verify-u.com/api/identifications`
 
 ### Parameters
 
@@ -14,13 +14,15 @@
 
 No parameters required
 
-#### Returns
+### Returns
 
 ---
 
 List of the last 10 identifications
 
 ### Response  
+
+Example:
 
 ---
 
