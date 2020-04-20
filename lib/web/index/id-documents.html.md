@@ -1,28 +1,28 @@
 # ID Documents
 
-Retrieves the ID document image file uploaded by the customer.
+## Retrieves the ID document image file uploaded by the customer.
 
 Provide the identification ID.
 
-## Path
+### Path
 
 ---
 
 `https://verify-u.com/api/identifications/iddocument/{id}`
 
-## Parameters
+### Parameters
 
 ---
 
 `Identification ID`
 
-## Returns
+### Returns
 
 ---
 
 ID document in PNG format
 
-## Response
+### Response
 
 ---
 

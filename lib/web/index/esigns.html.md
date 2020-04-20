@@ -1,26 +1,26 @@
 # E-signatures
 
-Retrieves the contract document PDF signed by the customer by digital signature.
+## Retrieves the contract document PDF signed by the customer by digital signature.
 
-## Path
+### Path
 
 ---
 
 `https://verify-u.com/api/identifications/esign/{id}`
 
-## Parameters
+### Parameters
 
 ---
 
 `Identification ID`
 
-## Returns
+### Returns
 
 ---
 
 Signed document in PDF format
 
-## Response
+### Response
 
 ---
 

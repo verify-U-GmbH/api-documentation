@@ -1,71 +1,26 @@
-# Identifications List
+# Single Identification  
 
-Retrieves the last 10 identifications as a list.
+## Retrieves a single identification by identification ID.
 
-Provide the identification ID.
-
-## Path
-
----
-
-`https://verify-u.com/api/identifications`
-
-## Parameters
-
----
-
-No parameters required
-
-## Returns
-
----
-
-List of the last 10 identifications
-
-## Response
-
----
-
-```json
-[
-  {
-    "age_permission": true,
-    "date_created": "2020-03-20",
-    "full_name_permission": true,
-    "gender_permission": true,
-    "id": "string",
-    "passport_permission": true,
-    "state": "string",
-    "video_permission": true
-  }
-]
-```
-
-# Single Identification
-
-Retrieves a single identification by identification ID.
-
-Provide the identification ID.
-
-## Path
+### Path
 
 ---
 
 `https://verify-u.com/api/identifications/{id}`
 
-## Parameters
+### Parameters
 
 ---
 
 `Identification ID`
 
-## Returns
+### Returns
 
 ---
 
 Returns client profile data
 
-## Response
+### Response
 
 ---
 

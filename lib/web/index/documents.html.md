@@ -1,14 +1,18 @@
 # Documents
 
-Send the contract document PDF to be signed by the customer.
+## Send the contract document PDF to be signed by the customer.
 
-## Path
+For these requests, set your request header to
+
+`Content-Type: multipart/form-data` 
+
+### Path
 
 ---
 
 `https://verify-u.com/api/documents/create/`
 
-## Parameters
+### Parameters
 
 ---
 
@@ -19,13 +23,13 @@ Send the contract document PDF to be signed by the customer.
 
 ---
 
-## Returns
+### Returns
 
 ---
 
 `document_id`
 
-## Response
+### Response
 
 ---
 

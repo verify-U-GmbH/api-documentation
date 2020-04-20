@@ -1,28 +1,28 @@
 # Liveness videos
 
-Retrieves the video file from the facetoface call between agent and customer.
+## Retrieves the video file from the facetoface call between agent and customer.
 
 Provide the identification ID.
 
-## Path
+### Path
 
 ---
 
 `https://verify-u.com/api/identifications/video/{id}`
 
-## Parameters
+### Parameters
 
 ---
 
 `Identification ID`
 
-## Returns
+### Returns
 
 ---
 
 Liveness video in MP4 or MKV format
 
-## Response
+### Response
 
 ---
 

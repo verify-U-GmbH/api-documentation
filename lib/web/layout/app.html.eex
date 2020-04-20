@@ -77,8 +77,12 @@
             </a>
 
             <section class="list-group">
+              <a class="sidenav__link" href="/identifications_list">
+                Identifications List
+              </a>
+
               <a class="sidenav__link" href="/identifications">
-                Identifications
+                Single Identification
               </a>
 
               <a class="sidenav__link" href="/id-documents">
