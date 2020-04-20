@@ -19,21 +19,18 @@ WORKDIR $APP_HOME
 # install mix dependencies
 COPY mix.exs mix.lock ./
 COPY config config
-RUN mix deps.get
-RUN mix deps.compile
+RUN mix deps.get && mix deps.compile
 
 # build assets
 COPY package.json package.json ./
 COPY brunch-config.js brunch-config.js ./
-
-RUN npm install 
-RUN npm run prod 
-RUN mix phx.digest 
-
-
-# build project
+COPY static static 
 COPY lib lib
-RUN mix compile
+
+RUN npm install \
+ && npm run prod \
+ && mix phx.digest \
+ && mix compile
    
 EXPOSE 4000
 
