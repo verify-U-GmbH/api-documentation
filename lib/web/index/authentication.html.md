@@ -1,16 +1,16 @@
 # Authentication
 
-## API calls require Bearer authentication.
+## API calls require Basic authentication.
 
-### Bearer Token
+### Basic authentication
 
-The Bearer `token` consists of your `secret_key` followed by a `:` (colon).
+The authentication string is simply a base64 encoded version of
 
-You need to encode this string in base64.
+`<public_key>:<secret_key>`
 
 Example: 
 
-`TEST_SECRET:` will be transformed to `VEVTVF9TRUNSRVQ6`
+`TEST_PUB:TEST_SECRET` will be transformed to `VEVTVF9QVUI6VEVTVF9TRUNSRVQ=`
 
 You can view your API keys in the [developer section](https://app.verify-u.com/business/developers) of the [verify-u dashboard](https://app.verify-u.com/business).
 
@@ -18,10 +18,10 @@ You can view your API keys in the [developer section](https://app.verify-u.com/b
 
 The content of the request header should look like:
 
-`Authorization: Bearer <token>`
+`Authorization: Basic <authentication_string>`
 
 ### Authenticated Request
 
 Example: 
 
-`curl "http://localhost:4000/api/identifications" -H "Authorization: Bearer VEVTVF9TRUNSRVQ6"`
+`curl "https://app.verify-u.com/api/identifications" -H "Authorization: Basic VEVTVF9QVUI6VEVTVF9TRUNSRVQ="`
