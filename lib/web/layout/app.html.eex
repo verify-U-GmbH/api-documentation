@@ -85,24 +85,24 @@
                 Identifications List
               </a>
 
-              <a class="sidenav__link" href="/identifications">
-                Single Identification
+              <a class="sidenav__link" href="/identification-details">
+                Identification details
               </a>
 
-              <a class="sidenav__link" href="/id-documents">
-                ID Documents
+              <a class="sidenav__link" href="/id-document">
+                ID Document
               </a>
 
-              <a class="sidenav__link" href="/liveness-videos">
-                Liveness videos
+              <a class="sidenav__link" href="/video">
+                Video
               </a>
 
               <a class="sidenav__link" href="/esigns">
                 E-signatures
               </a>
 
-              <a class="sidenav__link" href="/documents">
-                Documents
+              <a class="sidenav__link" href="/document">
+                Create Document
               </a>
             </section>
 

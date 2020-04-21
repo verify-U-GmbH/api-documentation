@@ -1,12 +1,12 @@
-# Single Identification
+# Identification details
 
 ---
 
-Retrieves a single identification by identification ID.
+Retrieves details for a single identification by identification ID.
 
 ### Path
 
-GET `https://verify-u.com/api/identifications/{id}`
+GET `https://verify-u.com/api/identifications/{identification_id}`
 
 ---
 
