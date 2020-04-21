@@ -108,7 +108,7 @@
 
           </div>
 
-          <div class="mt-12">
+          <div class="mt-16">
             <div class="flex content__view">
               <div class="w-3/4 content__view-main">
                 <%= render @view_module, @view_template, assigns %>

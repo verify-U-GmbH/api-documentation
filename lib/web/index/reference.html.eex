@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>verify-u API documentation</title>
+    <link rel="stylesheet" href='<%= Routes.static_path(@conn, "/css/app.css") %>'/>
+  </head>
+
+  <body class="flex flex-col">
+    <nav id="nav" class="fixed z-50 flex hidden block w-full py-4 bg-white border-b bt-white">
+      <a class="flex mx-4" href="/">
+        <img class="w-24 ml-1" src="/img/verify_logo.png">
+        <span class="mx-2 font-bold text-gray-700">API</span>
+      </a>
+
+      <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/">
+        Documentation
+      </a>
+
+    </nav>
+
+    <div id="redoc-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+    <script>
+      setTimeout(function () {
+        document.getElementById("nav").classList.remove("hidden")
+      }, 300)
+
+      Redoc.init('/docs/api/openapi.yaml', {
+        scrollYOffset: 50,
+        hideLoading: true
+      }, document.getElementById('redoc-container'))
+    </script>
+  </body>
+
+</html>
