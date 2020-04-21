@@ -1,30 +1,30 @@
 # Identifications List
 
-## Retrieves the last 10 identifications as a list
+---
+
+Retrieves the last 10 identifications as a list
 
 ### Path
 
----
-
 GET `https://verify-u.com/api/identifications`
+
+---
 
 ### Parameters
 
----
-
 No parameters required
+
+---
 
 ### Returns
 
----
-
 List of the last 10 identifications
 
-### Response  
+---
+
+### Response
 
 Example:
-
----
 
 ```json
 [

@@ -1,30 +1,30 @@
-# Single Identification  
+# Single Identification
 
-## Retrieves a single identification by identification ID.
+---
+
+Retrieves a single identification by identification ID.
 
 ### Path
 
----
-
 GET `https://verify-u.com/api/identifications/{id}`
+
+---
 
 ### Parameters
 
----
-
 `Identification ID`
+
+---
 
 ### Returns
 
----
-
 Returns client profile data
+
+---
 
 ### Response
 
 Example:
-
----
 
 ```json
 {

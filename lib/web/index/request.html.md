@@ -1,13 +1,17 @@
 # Request
 
-## All connections must be made over TLS 1.2.
+---
 
-### Methods
+All connections must be made over TLS 1.2.
 
-Most methods to retrieve data require a GET request. 
+### Methods <a name="methods"></a>
 
-Methods that submit data require a POST. 
+Most methods to retrieve data require a GET request.
 
-### Responses
+Methods that submit data require a POST.
+
+---
+
+### Responses <a name="responses"></a>
 
 The verify-u API uses the JSON data format for responses.

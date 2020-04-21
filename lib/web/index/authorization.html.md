@@ -1,10 +1,14 @@
 # Authorization
 
+---
+
 The OAuth config can be reached at `https://selfid.verify-u.com/oauthconfig`
 
 To create the authorization request you need to set the following parameters:
 
-## Request Parameters
+### Request Parameters <a name="request-parameters"></a>
+
+<br >
 
 | Field           | Description                                                                                    | Format   |
 | --------------- | ---------------------------------------------------------------------------------------------- | -------- |

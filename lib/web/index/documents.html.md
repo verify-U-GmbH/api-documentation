@@ -1,37 +1,39 @@
 # Documents
 
-## Send the contract document PDF to be signed by the customer.
+---
+
+Send the contract document PDF to be signed by the customer
 
 For these requests, set your request header to
 
-`Content-Type: multipart/form-data` 
+`Content-Type: multipart/form-data`
+
+---
 
 ### Path
 
----
-
 POST `https://verify-u.com/api/documents/create/`
 
-### Parameters
-
 ---
+
+### Parameters
 
 | Field         | Description                  | Format |
 | ------------- | ---------------------------- | ------ |
 | `description` | document description / title | String |
 | `data`        | contract PDF                 | binary |
 
+<br >
+
 ---
 
 ### Returns
 
----
-
 `document_id`
 
-### Response
-
 ---
+
+### Response
 
 Returns a document_id after the file was successfully saved.
 
