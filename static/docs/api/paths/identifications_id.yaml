@@ -13,7 +13,7 @@ get:
         type: string
         format: uuid
       required: true
-      description: ID of the identification to get
+      description: ID of the identification
   responses:
     "200":
       description: successful operation

@@ -3,19 +3,14 @@ post:
     - documents
   summary: documents/create
   description: "Transfers a contract document PDF to be signed by the customer"
-  operationId: data
+  operationId: createDocument
+  consumes:
+    - multipart/form-data
   produces:
     - application/json
   parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-        format: uuid
-      required: true
-      description: ID of the identification to get
-    - in: body
-      name: body
+    - in: formData
+      name: formData
       description: contract document pdf file
       required: true
       schema:

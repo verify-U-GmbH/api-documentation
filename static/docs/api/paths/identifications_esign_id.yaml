@@ -1,7 +1,6 @@
 get:
   tags:
     - identifications
-    - e-signature
   summary: identifications/esign/{id}
   description: "Returns the contract document signed by the customer by digital signature"
   operationId: getEsignById
@@ -14,7 +13,7 @@ get:
         type: string
         format: uuid
       required: true
-      description: ID of the identification to get
+      description: ID of the identification
   responses:
     "200":
       description: signed document pdf

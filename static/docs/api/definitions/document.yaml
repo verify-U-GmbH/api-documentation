@@ -1,7 +1,9 @@
 type: object
 properties:
   data:
-    type: string
+    type: file
     format: binary
+    description: contract document in PDF format
   description:
     type: string
+    description: description / title of the contract document
