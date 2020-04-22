@@ -31,7 +31,8 @@
 
       Redoc.init('/docs/api/openapi.yaml', {
         scrollYOffset: 50,
-        hideLoading: true
+        hideLoading: true,
+        expandResponses: "200"
       }, document.getElementById('redoc-container'))
     </script>
   </body>
