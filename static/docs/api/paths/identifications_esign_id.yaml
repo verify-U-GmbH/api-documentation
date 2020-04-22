@@ -1,17 +1,20 @@
 get:
   tags:
     - identifications
-  summary: Returns client signed document
-  description: ""
+    - e-signature
+  summary: identifications/esign/{id}
+  description: "Returns the contract document signed by the customer by digital signature"
   operationId: getEsignById
   produces:
     - application/pdf
   parameters:
-    - name: id
-      in: path
-      description: identification id
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
       required: true
-      type: string
+      description: ID of the identification to get
   responses:
     "200":
       description: signed document pdf
@@ -23,5 +26,3 @@ get:
       description: Identification not found
     "500":
       description: Error
-  security:
-    - Bearer: []

@@ -1,17 +1,19 @@
 get:
   tags:
     - identifications
-  summary: Returns client liveness video
-  description: ""
+  summary: identifications/video/{id}
+  description: "Returns Facetoface video record"
   operationId: getIdentificationVideoById
   produces:
     - video/mp4
   parameters:
-    - name: id
-      in: path
-      description: identification id
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
       required: true
-      type: string
+      description: ID of the identification to get
   responses:
     "200":
       description: Facetoface call video
@@ -23,5 +25,3 @@ get:
       description: Identification not found
     "500":
       description: Error
-  security:
-    - Bearer: []

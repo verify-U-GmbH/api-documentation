@@ -1,8 +1,8 @@
 get:
   tags:
     - identifications
-  summary: Returns a list of the 10 latest identifications
-  description: ""
+  summary: identifications
+  description: "Returns the last 10 identifications as a list"
   operationId: getIdentificationsList
   produces:
     - application/json
@@ -11,5 +11,3 @@ get:
       description: successful operation
       schema:
         $ref: ../definitions/identifications_list.yaml
-  security:
-    - Bearer: []

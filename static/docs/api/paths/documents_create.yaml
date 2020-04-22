@@ -1,15 +1,22 @@
 post:
   tags:
     - documents
-  summary: Transfers contract pdf document to be signed by customer
-  description: ""
+  summary: documents/create
+  description: "Transfers a contract document PDF to be signed by the customer"
   operationId: data
   produces:
     - application/json
   parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: ID of the identification to get
     - in: body
       name: body
-      description: pdf document data
+      description: contract document pdf file
       required: true
       schema:
         $ref: ../definitions/document.yaml

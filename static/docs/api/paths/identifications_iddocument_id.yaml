@@ -1,17 +1,19 @@
 get:
   tags:
     - identifications
-  summary: Returns client id document image
-  description: ""
+  summary: identifications/iddocument/{id}
+  description: "Returns client id document image"
   operationId: getIdentificationIdDocumentById
   produces:
     - image/png
   parameters:
-    - name: id
-      in: path
-      description: identification id
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
       required: true
-      type: string
+      description: ID of the identification to get
   responses:
     "200":
       description: ID document image in PNG format
@@ -23,5 +25,3 @@ get:
       description: Identification not found
     "500":
       description: Error
-  security:
-    - Bearer: []
