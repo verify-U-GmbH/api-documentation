@@ -1,17 +1,19 @@
 type: object
 properties:
-  customer_id:
-    type: string
-    format: uuid
   date_created:
     type: string
     format: date
+    description: Creation date
   identification_date:
     type: string
     format: date
+    description: Identification date
   rejected:
     type: boolean
+    description: Indicates wether identification has been rejected
   rejection_cause:
     type: string
+    description: Identification rejection cause
   state:
     type: string
+    description: Identification state parameter

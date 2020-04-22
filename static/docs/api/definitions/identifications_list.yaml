@@ -4,18 +4,26 @@ items:
   properties:
     age_permission:
       type: boolean
+      description: Permission to access age of customer
     date_created:
       type: string
       format: date
+      description: Creation date
     full_name_permission:
       type: boolean
+      description: Permission to access full name of customer
     gender_permission:
       type: boolean
+      description: Permission to access gender of customer
     id:
       type: string
+      description: Identification ID
     passport_permission:
       type: boolean
+      description: Permission to access ID document data of customer
     state:
       type: string
+      description: Identification state parameter
     video_permission:
       type: boolean
+      description: Permission to access Facetoface video recording
