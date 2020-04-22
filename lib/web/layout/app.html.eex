@@ -81,26 +81,6 @@
             </a>
 
             <section class="list-group">
-              <a class="sidenav__link" href="/identifications_list">
-                Identifications List
-              </a>
-
-              <a class="sidenav__link" href="/identification-details">
-                Identification details
-              </a>
-
-              <a class="sidenav__link" href="/id-document">
-                ID Document
-              </a>
-
-              <a class="sidenav__link" href="/video">
-                Video
-              </a>
-
-              <a class="sidenav__link" href="/esigns">
-                E-signatures
-              </a>
-
               <a class="sidenav__link" href="/document">
                 Create Document
               </a>
