@@ -9,9 +9,8 @@ get:
   parameters:
     - in: path
       name: id
-      schema:
-        type: string
-        format: uuid
+      type: string
+      format: uuid
       required: true
       description: ID of the identification
   responses:

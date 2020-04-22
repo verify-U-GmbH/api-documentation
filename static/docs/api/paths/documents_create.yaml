@@ -9,8 +9,8 @@ post:
   produces:
     - application/json
   parameters:
-    - in: formData
-      name: formData
+    - in: body
+      name: body
       description: contract document pdf file
       required: true
       schema:
