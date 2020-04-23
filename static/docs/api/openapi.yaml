@@ -1,6 +1,18 @@
 swagger: "2.0"
 info:
-  description: ""
+  description: |
+    # Introduction
+    This API is documented in **OpenAPI format**.
+
+    # Basics
+    * API calls have to be secured with HTTPS.
+    * All data has to be submitted UTF-8 encoded.
+    * The reply is either sent JSON encoded or as binary data for files.
+
+    # Authentication
+    **verify-u** API uses Basic Authentication with secret key as username only.
+
+    Detailed information is provided at [Authentication](authentication)
   version: 1.0.0
   title: verify-u API
 tags:
