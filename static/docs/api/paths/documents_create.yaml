@@ -2,7 +2,9 @@ post:
   tags:
     - documents
   summary: documents/create
-  description: "Transfers a contract document PDF to be signed by the customer"
+  description:
+    "Transfers a contract document PDF to be signed by the customer.\n\n
+    Store the returned `document_id` and add it to the identification request for the corresponding user."
   operationId: createDocument
   consumes:
     - multipart/form-data

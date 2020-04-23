@@ -80,12 +80,6 @@
               HTTP Status Codes
             </a>
 
-            <section class="list-group">
-              <a class="sidenav__link" href="/document">
-                Create Document
-              </a>
-            </section>
-
           </div>
 
           <div class="mt-16">

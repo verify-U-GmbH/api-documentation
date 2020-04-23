@@ -5,7 +5,7 @@ info:
   title: verify-u API
 tags:
   - name: identifications
-    description: ""
+    description: "Methods to retrieve identification details"
   - name: documents
     description: ""
 schemes:
