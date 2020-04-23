@@ -1,14 +1,14 @@
 FROM elixir:1.10.0
 
 RUN mix local.hex --force \
- && mix archive.install --force hex phx_new 1.4.10 \
- && apt-get update \
- && curl -sL https://deb.nodesource.com/setup_10.x | bash \
- && apt-get install -y apt-utils \
- && apt-get install -y nodejs \
- && apt-get install -y build-essential \
- && apt-get install -y inotify-tools \
- && mix local.rebar --force 
+    && mix archive.install --force hex phx_new 1.4.10 \
+    && apt-get update \
+    && curl -sL https://deb.nodesource.com/setup_10.x | bash \
+    && apt-get install -y apt-utils \
+    && apt-get install -y nodejs \
+    && apt-get install -y build-essential \
+    && apt-get install -y inotify-tools \
+    && mix local.rebar --force 
 
 # set build ENV
 ENV MIX_ENV=prod
@@ -28,10 +28,19 @@ COPY static static
 COPY lib lib
 
 RUN npm install \
- && npm run prod \
- && mix phx.digest \
- && mix compile
-   
+    && npm run prod \
+    && mix phx.digest \
+    && mix compile
+
+RUN npm install -g @apidevtools/swagger-cli
+
+# generate api json from yaml
+RUN swagger-cli bundle \
+    -o static/docs/api/openapi.json \ 
+    -t json \
+    -r \
+    static/docs/api/openapi.yaml 
+
 EXPOSE 4000
 
 CMD ["mix", "phx.server"]
