@@ -68,7 +68,7 @@
 
             <div class="sidenav__subheader">API</div>
 
-            <a class="sidenav__link" href="/introduction">
+            <a class="sidenav__link" href="/api-introduction">
               Introduction
             </a>
 
