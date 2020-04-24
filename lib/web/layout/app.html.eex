@@ -68,13 +68,13 @@
 
             <div class="sidenav__subheader">API</div>
 
-            <a class="sidenav__link" href="/authentication">
-              Authentication
+            <a class="sidenav__link" href="/introduction">
+              Introduction
             </a>
 
-            <a class="sidenav__link" href="/request">
-              Request
-            </a>            
+            <a class="sidenav__link" href="/authentication">
+              Authentication
+            </a>        
 
             <a class="sidenav__link" href="/http-status-codes">
               HTTP Status Codes

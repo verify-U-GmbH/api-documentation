@@ -1,12 +1,10 @@
 # Authentication
 
-## All API calls require Basic authentication
+All API calls require Basic authentication
 
 ### Basic authentication <a name="basic-authentication"></a>
 
-The basic auth **username** is your `secret_key`, encoded in base64.
-
-No password value is used.
+When authenticating with your API `secret_key`, provide the key as the basic auth username encoded in base64 and leave the password empty.
 
 You can view your API keys in the [developer section](https://app.verify-u.com/business/developers) of the [verify-u dashboard](https://app.verify-u.com/business).
 

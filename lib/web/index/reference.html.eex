@@ -29,7 +29,7 @@
         document.getElementById("nav").classList.remove("hidden")
       }, 300)
 
-      Redoc.init('/docs/api/openapi.json', {
+      Redoc.init('/docs/api/openapi.yaml', {
         scrollYOffset: 50,
         hideLoading: true,
         expandResponses: "200"
