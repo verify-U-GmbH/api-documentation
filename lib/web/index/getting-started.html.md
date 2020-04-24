@@ -37,6 +37,26 @@ redirect_uri=https://example-app.com/callback
 
 ---
 
+### Pass customer information (Optional) <a name="pass-customer-information"></a>
+
+Some identification flows require you to pass additional customer information with the authorization request.
+This is accomplished by appending the the [customer data](customer-data) object as an additional parameter named: `extras` 
+
+```
+https://app.verify-u.com/auth?
+redirect_uri=https://example-app.com/callback
+&client_id=EXAMPLE_ID
+&scope=default
+&response_type=code
+&state=random_state_1234
+&extras={'document_id': 'b1fd52e4-5211-4d13-afa9-a3b741204579', 'msisdn': '918369110173'}
+```
+
+<br >
+
+
+---
+
 ### Store identification ID <a name="store-identification-id"></a>
 
 After the customer finished the identification process, he is redirected back to your application with the following parameters appended:
@@ -51,4 +71,4 @@ token_type=bearer
 
 Make sure you store the returned identification ID, appended as `code` parameter to your `redirect_uri`.
 
-It is required to make calls to our [API](authentication) for identification details.
+It is required to make calls to our [API](api-introduction) for identification details.
