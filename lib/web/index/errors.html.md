@@ -8,11 +8,11 @@ If your authorization request could not be fulfilled, one of the following error
 
 <br >
 
-| Message             | Description                  |
-| ------------------- | ---------------------------- |
-| `Client id invalid` | Client id could not be found |
+#### **Client id invalid**
 
-<br >
+Client id could not be found.
+
+Check the [developer](https://app.verify-u.com/business/developers) page to make sure your API public key is used as Client id.
 
 ---
 
@@ -20,9 +20,24 @@ If your authorization request could not be fulfilled, one of the following error
 
 <br >
 
-| Message                       | Description                            |
-| ----------------------------- | -------------------------------------- |
-| `id_channel_not_found`        | Id channel by this name does not exist |
-| `id_channel_disabled`         | Id channel has been disabled           |
-| `id_channel_blocked`          | Id channel has been blocked            |
-| `id_channel_pending_approval` | Id channel is waiting for approval     |
+#### **ID channel name not found**
+
+Identification channel by this name does not exist.
+
+Check the [identification channel](https://app.verify-u.com/business/channel) page to make sure to use the right name.
+
+#### **ID channel disabled**
+
+Identification channel has been disabled.
+
+#### **ID channel blocked**
+
+Identification channel has been blocked.
+
+Please contact **verify-u** support.
+
+#### **ID channel pending approval**
+
+Identification channel is waiting for approval.
+
+Face-to-face Identification channels require prior approval by **verify-u**.
