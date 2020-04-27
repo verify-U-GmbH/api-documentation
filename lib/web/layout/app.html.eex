@@ -41,14 +41,15 @@
                 Getting started
               </a>
 
-              <a class="sidenav__link" href="/authorization">
-                Authorization
-              </a>
             </section>
 
             <div class="sidenav__subheader">Oauth</div>
 
             <ul class="list-group">
+
+              <a class="sidenav__link" href="/authorization">
+                Authorization
+              </a>              
 
               <a class="sidenav__link" href="/channels">
                 Channels

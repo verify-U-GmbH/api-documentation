@@ -2,7 +2,7 @@
 
 ---
 
-The OAuth config can be reached at `https://selfid.verify-u.com/oauthconfig`
+The OAuth config can be reached at [https://app.verify-u.com/oauthconfig](https://app.verify-u.com/oauthconfig)
 
 To create the authorization request you need to set the following parameters:
 
@@ -10,11 +10,42 @@ To create the authorization request you need to set the following parameters:
 
 <br >
 
-| Field           | Description                                                                                    | Format   |
-| --------------- | ---------------------------------------------------------------------------------------------- | -------- |
-| `client_id`     | Public API key you find at [developers page](https://app.verify-u.com/business/developers)     | `String` |
-| `redirect_uri`  | Your website URI to return the user to after identification is complete                        | `String` |
-| `scope`         | Name of your [identification channel](https://app.verify-u.com/business/channel)               | `String` |
-| `response_type` | Tells the authorization server that the application is initiating the authorization code flow. | `String` |
-| `state`         | Random string used to prevent CSRF attacks.                                                    | `String` |
-| `extras`        | Additional [customer data](/customer-data) you want to provide during the identification       | `Object` |
+#### **client_id**
+
+The Public API key for your application.
+
+You find this value at the [developer page](https://app.verify-u.com/business/developers).
+
+#### **redirect_uri**
+
+A website URI endpoint of your choice.
+
+This is where **verify-u** redirects the user after completing the identification flow.
+
+#### **scope**
+
+Name of your selected [identification channel](https://app.verify-u.com/business/channel).
+
+The selected identification channel controls the identification flow for your user.
+
+#### **response_type**
+
+Value must be: `code`
+
+Tells the authorization server that the application is initiating the authorization code flow.
+
+#### **state**
+
+A string of your choice that will be returned by **verify-u** as a URI parameter to your application.
+
+The state parameter can be used for correlating requests and responses.
+
+You can encode any information in it.
+
+It is also used for preventing [cross-site request forgery attacks](https://tools.ietf.org/html/rfc6749#section-10.12).
+
+#### **extras**
+
+Optional value.
+
+Additional [customer data](customer-data) you may need to provide for the identification flow.
