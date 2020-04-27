@@ -51,12 +51,12 @@
                 Authorization
               </a>              
 
-              <a class="sidenav__link" href="/channels">
-                Channels
+              <a class="sidenav__link" href="/identification-channels">
+                Identification channels
               </a>
 
-              <a class="sidenav__link" href="/customer-data">
-                Customer data
+              <a class="sidenav__link" href="/client-data">
+                Client data
               </a>
 
               <a class="sidenav__link" href="/errors">

@@ -1,8 +1,8 @@
-# Customer data
+# Client data
 
 ---
 
-You can send additional customer data, that is required for identification, via OAuth `extras` field.
+You can send additional client data, that is required for identification, via OAuth `extras` field.
 
 ### Example object <a name="example-extras"></a>
 
@@ -16,7 +16,7 @@ You can send additional customer data, that is required for identification, via 
 
 #### **document_id**
 
-Document ID of the contract document to be signed by your customer.
+Document ID of the contract document to be signed by your client.
 
 The document ID is returned as UUID by **verify-u** after making an API call to /documents/create.
 
@@ -26,13 +26,13 @@ Example: `b1fd52e4-5211-4d13-afa9-a3b741204579`
 
 #### **email**
 
-Customer email address.
+Client email address.
 
 Example: `jsmith@example.com`
 
 #### **msisdn**
 
-Customer mobile phone number.
+Client mobile phone number.
 
 Must be provided in international E.164 format, starting with a `+`.
 

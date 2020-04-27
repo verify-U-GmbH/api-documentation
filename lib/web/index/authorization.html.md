@@ -48,4 +48,4 @@ It is also used for preventing [cross-site request forgery attacks](https://tool
 
 Optional value.
 
-Additional [customer data](customer-data) you may need to provide for the identification flow.
+Additional [client data](client-data) you may need to provide for the identification flow.

@@ -10,8 +10,8 @@ To setup the identification flow to your needs, add [identification channels](ch
 
 **verify-u** implements the [OAuth 2.0](https://oauth.net/2/)-standard. The identification flow consists of the following steps:
 
-- Your application redirects your customer to our authorization endpoint, with the identification flow described as scope
-- The customer proceeds with the verify-u identification
+- Your application redirects your client to our authorization endpoint, with the identification flow described as scope
+- The client proceeds with the verify-u identification
 - After identification he is redirected back to your application, with a identification ID parameter appended to the destination URI
 - Your application's backend uses the identification ID as request parameter to retrieve API responses for this identification
 
@@ -37,10 +37,10 @@ redirect_uri=https://example-app.com/callback
 
 ---
 
-### Pass customer data (Optional) <a name="pass-customer-data"></a>
+### Pass client data (Optional) <a name="pass-client-data"></a>
 
-Some identification flows require you to pass additional customer data with the authorization request.
-This is accomplished by appending the the [customer data](customer-data) object as an additional parameter named: `extras`
+Some identification flows require you to pass additional client data with the authorization request.
+This is accomplished by appending the the [client data](client-data) object as an additional parameter named: `extras`
 
 ```
 https://app.verify-u.com/auth?
@@ -58,7 +58,7 @@ redirect_uri=https://example-app.com/callback
 
 ### Store identification ID <a name="store-identification-id"></a>
 
-After the customer finished the identification process, he is redirected back to your application with the following parameters appended:
+After the client finished the identification process, he is redirected back to your application with the following parameters appended:
 
 ```
 https://example-app.com/callback?
