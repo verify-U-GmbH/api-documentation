@@ -9,4 +9,4 @@ services:
         published: 4000
         protocol: tcp
         mode: host
-    stdin_open: true   
+
