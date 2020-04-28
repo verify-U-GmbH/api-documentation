@@ -2,5 +2,7 @@ type: object
 properties:
   id_document_permission:
     type: boolean
+    description: Permission to access uploaded ID document
   video_permission:
     type: boolean
+    description: Permission to access Facetoface video recording

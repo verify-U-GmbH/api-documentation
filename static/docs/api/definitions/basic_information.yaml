@@ -2,12 +2,17 @@ type: object
 properties:
   first_name:
     type: string
+    description: First name
   last_name:
     type: string
+    description: Last name
   date_of_birth:
     type: string
     format: date
+    description: Date of birth
   gender:
     type: string
+    description: Gender
   country:
     type: string
+    description: Residence country

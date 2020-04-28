@@ -27,9 +27,17 @@ p {
 }
 
 p > a {
-    @apply font-semibold text-blue-600;
+    @apply font-semibold;
+    @apply text-blue-600;
 }
 
 p > a:hover {
     @apply underline;
+}
+
+:target::before {
+    content: '';
+    display: block;
+    height:      75px;
+    margin-top: -75px;
 }

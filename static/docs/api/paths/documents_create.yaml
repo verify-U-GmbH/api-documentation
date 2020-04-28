@@ -1,15 +1,19 @@
 post:
   tags:
     - documents
-  summary: Transfers contract pdf document to be signed by customer
-  description: ""
-  operationId: data
+  summary: documents/create
+  description:
+    "Transfers a contract document PDF to be signed by the customer.\n\n
+    Store the returned `document_id` and add it to the identification request for the corresponding user."
+  operationId: createDocument
+  consumes:
+    - multipart/form-data
   produces:
     - application/json
   parameters:
     - in: body
       name: body
-      description: pdf document data
+      description: contract document pdf file
       required: true
       schema:
         $ref: ../definitions/document.yaml

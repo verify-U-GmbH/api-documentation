@@ -2,11 +2,16 @@ type: object
 properties:
   house_number:
     type: string
+    description: House number
   street:
     type: string
+    description: Street
   country:
     type: string
+    description: Residence country
   postal_code:
     type: string
+    description: Postal code
   city:
     type: string
+    description: City

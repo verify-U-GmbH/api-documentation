@@ -23,10 +23,6 @@ module.exports = {
     public: 'priv/static'
   },
 
-  npm: {
-    enabled: true
-  },
-
   plugins: {
     babel: {
       ignore: [/vendor/]

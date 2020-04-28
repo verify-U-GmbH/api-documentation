@@ -10,8 +10,8 @@ To setup the identification flow to your needs, add [identification channels](ch
 
 **verify-u** implements the [OAuth 2.0](https://oauth.net/2/)-standard. The identification flow consists of the following steps:
 
-- Your application redirects your customer to our authorization endpoint, with the identification flow described as scope
-- The customer proceeds with the verify-u identification
+- Your application redirects your client to our authorization endpoint, with the identification flow described as scope
+- The client proceeds with the verify-u identification
 - After identification he is redirected back to your application, with a identification ID parameter appended to the destination URI
 - Your application's backend uses the identification ID as request parameter to retrieve API responses for this identification
 
@@ -37,18 +37,43 @@ redirect_uri=https://example-app.com/callback
 
 ---
 
+### Pass client data (Optional) <a name="pass-client-data"></a>
+
+Some identification flows require you to pass additional client data with the authorization request.
+This is accomplished by appending the the [client data](client-data) object as an additional parameter named: `extras`
+
+```
+https://app.verify-u.com/auth?
+redirect_uri=https://example-app.com/callback
+&client_id=EXAMPLE_ID
+&scope=default
+&response_type=code
+&state=random_state_1234
+&extras={'document_id': 'b1fd52e4-5211-4d13-afa9-a3b741204579', 'msisdn': '918369110173'}
+```
+
+<br >
+
+---
+
 ### Store identification ID <a name="store-identification-id"></a>
 
-After the customer finished the identification process, he is redirected back to your application with the following parameters appended:
+After the client finished the identification process, he is redirected back to your application with the following parameters appended:
 
 ```
 https://example-app.com/callback?
 token_type=bearer
 &code=123e4567-e89b-12d3-a456-426655440000
-&state=random_state_99557
+&state=random_state_1234
 &scope=default
 ```
 
 Make sure you store the returned identification ID, appended as `code` parameter to your `redirect_uri`.
 
-It is required to make calls to our [API](authentication) for identification details.
+<br >
+
+---
+
+### Receive identification details <a name="receive-identification-details"></a>
+
+Make use of the identification ID in your calls to our [API](api-introduction) to receive the user details for this identification .

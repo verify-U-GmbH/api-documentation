@@ -41,25 +41,22 @@
                 Getting started
               </a>
 
-              <a class="sidenav__link" href="/authorization">
-                Authorization
-              </a>
             </section>
 
             <div class="sidenav__subheader">Oauth</div>
 
             <ul class="list-group">
 
-              <a class="sidenav__link" href="/channels">
-                Channels
+              <a class="sidenav__link" href="/authorization">
+                Authorization
+              </a>              
+
+              <a class="sidenav__link" href="/identification-channels">
+                Identification channels
               </a>
 
-              <a class="sidenav__link" href="/scopes">
-                Scopes
-              </a>
-
-              <a class="sidenav__link" href="/customer-data">
-                Customer data
+              <a class="sidenav__link" href="/client-data">
+                Client data
               </a>
 
               <a class="sidenav__link" href="/errors">
@@ -68,47 +65,21 @@
 
             <div class="sidenav__subheader">API</div>
 
-            <a class="sidenav__link" href="/authentication">
-              Authentication
+            <a class="sidenav__link" href="/api-introduction">
+              Introduction
             </a>
 
-            <a class="sidenav__link" href="/request">
-              Request
-            </a>            
+            <a class="sidenav__link" href="/authentication">
+              Authentication
+            </a>        
 
             <a class="sidenav__link" href="/http-status-codes">
               HTTP Status Codes
             </a>
 
-            <section class="list-group">
-              <a class="sidenav__link" href="/identifications_list">
-                Identifications List
-              </a>
-
-              <a class="sidenav__link" href="/identifications">
-                Single Identification
-              </a>
-
-              <a class="sidenav__link" href="/id-documents">
-                ID Documents
-              </a>
-
-              <a class="sidenav__link" href="/liveness-videos">
-                Liveness videos
-              </a>
-
-              <a class="sidenav__link" href="/esigns">
-                E-signatures
-              </a>
-
-              <a class="sidenav__link" href="/documents">
-                Documents
-              </a>
-            </section>
-
           </div>
 
-          <div class="mt-12">
+          <div class="mt-16">
             <div class="flex content__view">
               <div class="w-3/4 content__view-main">
                 <%= render @view_module, @view_template, assigns %>

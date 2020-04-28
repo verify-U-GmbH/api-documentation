@@ -3,5 +3,7 @@ properties:
   data:
     type: string
     format: binary
+    description: Contract document in PDF format
   description:
     type: string
+    description: Description or title of the contract document
