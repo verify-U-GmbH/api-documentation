@@ -28,11 +28,7 @@ COPY static static
 COPY lib lib
 
 RUN npm install \
-    && npm run prod \
-    && mix phx.digest \
-    && mix compile
-
-RUN npm install -g @apidevtools/swagger-cli
+    && npm install -g @apidevtools/swagger-cli
 
 # generate api json from yaml
 RUN swagger-cli bundle \
@@ -40,6 +36,10 @@ RUN swagger-cli bundle \
     -t json \
     -r \
     static/docs/api/openapi.yaml 
+
+RUN npm run prod \
+    && mix phx.digest \
+    && mix compile
 
 EXPOSE 4000
 
