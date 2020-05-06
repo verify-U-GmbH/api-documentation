@@ -12,13 +12,13 @@
   "devDependencies": {
     "babel-brunch": "7.0.1",
     "babel-preset-latest": "^6.24.1",
-    "brunch": "^2.10.17",
-    "clean-css-brunch": "2.10.0",
+    "brunch": "^3.0.0",
+    "clean-css-brunch": "^3.0.0",
     "javascript-brunch": "2.10.0",
-    "standard": "12.0.1",
-    "uglify-js-brunch": "2.10.0",
     "postcss-brunch": "^2.0",
-    "tailwindcss": "^1.2.0"
+    "standard": "12.0.1",
+    "tailwindcss": "^1.2.0",
+    "uglify-js-brunch": "2.10.0"
   },
   "standard": {
     "ignore": [
