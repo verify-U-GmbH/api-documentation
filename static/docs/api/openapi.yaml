@@ -18,8 +18,6 @@ info:
 tags:
   - name: identifications
     description: "Methods to retrieve identification details"
-  - name: documents
-    description: ""
 schemes:
   - https
   - http
