@@ -14,7 +14,8 @@ module.exports = {
     // This option sets where we should place non-css and non-js assets in.
     // By default, we set this to "/assets/static". Files in this directory
     // will be copied to `paths.public`, which is "priv/static" by default.
-    assets: /^(static)\/*/
+    assets: /static\//,
+    ignored: [/\.(spec|scenario)\.(js$)/]
   },
 
   paths: {
