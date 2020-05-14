@@ -36,13 +36,17 @@ Tells the authorization server that the application is initiating the authorizat
 
 #### **state**
 
+You can encode a `reference_id` of your choice which will help you couple a client with a specific identification.
+
+It is required to add a `uuid` afterwards, separated by a colon.
+
+Example:
+
+client_reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579
+
 A string of your choice that will be returned by **verify-u** as a URI parameter to your application.
 
-The state parameter can be used for correlating requests and responses.
-
-You can encode any information in it.
-
-It is also used for preventing [cross-site request forgery attacks](https://tools.ietf.org/html/rfc6749#section-10.12).
+The state parameter is used for correlating requests and responses and preventing [cross-site request forgery attacks](https://tools.ietf.org/html/rfc6749#section-10.12).
 
 #### **extras**
 

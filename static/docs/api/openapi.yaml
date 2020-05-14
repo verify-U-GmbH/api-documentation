@@ -28,14 +28,6 @@ paths:
     $ref: paths/identifications.yaml
   /identifications/{id}:
     $ref: paths/identifications_id.yaml
-  /identifications/iddocument/{id}:
-    $ref: paths/identifications_iddocument_id.yaml
-  /identifications/video/{id}:
-    $ref: paths/identifications_video_id.yaml
-  /identifications/esign/{id}:
-    $ref: paths/identifications_esign_id.yaml
-  /documents/create:
-    $ref: paths/documents_create.yaml
 securityDefinitions:
   basicAuth:
     type: basic

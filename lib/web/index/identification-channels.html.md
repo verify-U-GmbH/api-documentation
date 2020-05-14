@@ -2,17 +2,12 @@
 
 ---
 
-The identification flow for the client together with its options is  as an identification channel.  
+The identification flow for the client together with its options is an identification channel.  
 Configure your identification options as you need.
 
-### Identification Types <a name="identification-types"></a>
+### Identification Type <a name="identification-types"></a>
 
-Controls which general identification flow is used.
-
-- SelfID
-- Face-to-face
-
-<br >
+Controls the general identification flow used.
 
 ---
 
@@ -26,7 +21,6 @@ The available permissions to request from the client:
 - Gender
 - Nationality
 - Copy of identification document
-- Copy of Video recording
 - Address
 
 <br >

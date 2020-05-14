@@ -30,26 +30,7 @@ redirect_uri=https://example-app.com/callback
 &client_id=EXAMPLE_ID
 &scope=default
 &response_type=code
-&state=random_state_1234
-```
-
-<br >
-
----
-
-### Pass client data (Optional) <a name="pass-client-data"></a>
-
-Some identification flows require you to pass additional client data with the authorization request.
-This is accomplished by appending the the [client data](client-data) object as an additional parameter named: `extras`
-
-```
-https://app.verify-u.com/auth?
-redirect_uri=https://example-app.com/callback
-&client_id=EXAMPLE_ID
-&scope=default
-&response_type=code
-&state=random_state_1234
-&extras={'document_id': 'b1fd52e4-5211-4d13-afa9-a3b741204579', 'msisdn': '918369110173'}
+&state=reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579
 ```
 
 <br >
@@ -64,7 +45,7 @@ After the client finished the identification process, he is redirected back to y
 https://example-app.com/callback?
 token_type=bearer
 &code=123e4567-e89b-12d3-a456-426655440000
-&state=random_state_1234
+&state=reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579
 &scope=default
 ```
 
