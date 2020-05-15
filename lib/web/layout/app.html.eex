@@ -87,7 +87,9 @@
         </div>
       </main>
     </div>
-
+    <span class="text-gray-500" id="version">
+     v <%= Application.spec(:server, :vsn) %>
+    </span>
     <script>require("lib/web/layout/layout.js").default()</script>
 
   </body>
