@@ -1,22 +1,54 @@
 type: object
 properties:
-  data_permissions:
-    type: array
-    items:
-      $ref: data_permissions.yaml
-  id_document:
-    type: array
-    items:
-      $ref: id_document.yaml
-  identification:
-    type: array
-    items:
-      $ref: identification.yaml
-  basic_information:
-    type: array
-    items:
-      $ref: basic_information.yaml
   address:
-    type: array
-    items:
-      $ref: address.yaml
+    type: string
+    description: Address
+  date_created:
+    type: string
+    description: Date created
+  date_of_birth:
+    type: string
+    format: date
+    description: Date of birth
+  gender:
+    type: string
+    description: Gender
+  granted:
+    type: boolean
+    description: Permission Granted
+  id_channel_id:
+    type: string
+    description: Id Channel ID
+  id_document:
+    type: object
+    description: Id Document front´
+    $ref: ../definitions/id_document.yaml
+  id_document_back:
+    type: object
+    description: Id Document back
+    $ref: ../definitions/id_document.yaml
+  id_document_secondary:
+    type: object
+    description: Id Document secondary
+    $ref: ../definitions/id_document.yaml
+  first_name:
+    type: string
+    description: First name
+  last_name:
+    type: string
+    description: Last name
+  last_updated:
+    type: string
+    description: Last updated
+  primary_id_document_number:
+    type: string
+    description: Primary ID document number
+  rejected:
+    type: boolean
+    description: Rejected
+  rejection_cause:
+    type: string
+    description: Rejection cause
+  state:
+    type: string
+    description: State
