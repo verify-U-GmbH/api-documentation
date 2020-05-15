@@ -1,5 +1,5 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
     "description": "# Introduction\nThis API is documented in **OpenAPI format**.\n\n# Basics\n* API calls have to be secured with HTTPS.\n* All data has to be submitted UTF-8 encoded.\n* The reply is either sent JSON encoded or as binary data for files.\n\n# Authentication\n**verify-u** API uses Basic Authentication with secret key as username only.\n\nDetailed information is provided at [Authentication](authentication)\n",
     "version": "1.0.0",
@@ -11,10 +11,6 @@
       "description": "Methods to retrieve identification details"
     }
   ],
-  "schemes": [
-    "https",
-    "http"
-  ],
   "paths": {
     "/identifications": {
       "get": {
@@ -24,49 +20,50 @@
         "summary": "identifications",
         "description": "Returns the last 10 identifications as a list",
         "operationId": "getIdentificationsList",
-        "produces": [
-          "application/json"
-        ],
         "responses": {
           "200": {
             "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "age_permission": {
-                    "type": "boolean",
-                    "description": "Permission to access age of customer"
-                  },
-                  "date_created": {
-                    "type": "string",
-                    "format": "date",
-                    "description": "Creation date"
-                  },
-                  "full_name_permission": {
-                    "type": "boolean",
-                    "description": "Permission to access full name of customer"
-                  },
-                  "gender_permission": {
-                    "type": "boolean",
-                    "description": "Permission to access gender of customer"
-                  },
-                  "id": {
-                    "type": "string",
-                    "description": "Identification ID"
-                  },
-                  "passport_permission": {
-                    "type": "boolean",
-                    "description": "Permission to access ID document data of customer"
-                  },
-                  "state": {
-                    "type": "string",
-                    "description": "Identification state parameter"
-                  },
-                  "video_permission": {
-                    "type": "boolean",
-                    "description": "Permission to access Facetoface video recording"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "age_permission": {
+                        "type": "boolean",
+                        "description": "Permission to access age of customer"
+                      },
+                      "date_created": {
+                        "type": "string",
+                        "format": "date",
+                        "description": "Creation date"
+                      },
+                      "full_name_permission": {
+                        "type": "boolean",
+                        "description": "Permission to access full name of customer"
+                      },
+                      "gender_permission": {
+                        "type": "boolean",
+                        "description": "Permission to access gender of customer"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "Identification ID"
+                      },
+                      "passport_permission": {
+                        "type": "boolean",
+                        "description": "Permission to access ID document data of customer"
+                      },
+                      "state": {
+                        "type": "string",
+                        "description": "Identification state parameter"
+                      },
+                      "video_permission": {
+                        "type": "boolean",
+                        "description": "Permission to access Facetoface video recording"
+                      }
+                    }
                   }
                 }
               }
@@ -83,203 +80,271 @@
         "summary": "identifications/{id}",
         "description": "Returns client profile data for a single identification",
         "operationId": "getIdentificationById",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "in": "path",
             "name": "id",
-            "type": "string",
-            "format": "uuid",
             "required": true,
-            "description": "ID of the identification"
+            "description": "ID of the identification",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "successful operation",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "address": {
-                  "type": "string",
-                  "description": "Address"
-                },
-                "date_created": {
-                  "type": "string",
-                  "description": "Date created"
-                },
-                "date_of_birth": {
-                  "type": "string",
-                  "format": "date",
-                  "description": "Date of birth"
-                },
-                "gender": {
-                  "type": "string",
-                  "description": "Gender"
-                },
-                "granted": {
-                  "type": "boolean",
-                  "description": "Permission Granted"
-                },
-                "id_channel_id": {
-                  "type": "string",
-                  "description": "Id Channel ID"
-                },
-                "id_document": {
+            "content": {
+              "application/json": {
+                "schema": {
                   "type": "object",
-                  "description": "Id Document front´",
                   "properties": {
-                    "country": {
+                    "address": {
                       "type": "string",
-                      "description": "Issuing country"
+                      "nullable": true,
+                      "description": "Address",
+                      "example": "40 Mill Road, NEWPORT, NP14 0CV"
                     },
                     "date_created": {
                       "type": "string",
-                      "format": "date",
-                      "description": "Date created"
+                      "format": "timestamp",
+                      "description": "Date created",
+                      "example": 1589550707
                     },
-                    "document_type": {
+                    "date_of_birth": {
                       "type": "string",
-                      "description": "Issuing country"
-                    },
-                    "expiration_date": {
-                      "type": "string",
+                      "nullable": true,
                       "format": "date",
-                      "description": "Date of expiration"
+                      "description": "Date of birth",
+                      "example": "07.10.1978"
                     },
-                    "issue_date": {
+                    "gender": {
                       "type": "string",
-                      "format": "date",
-                      "description": "Date of issue"
+                      "nullable": true,
+                      "description": "Gender",
+                      "example": "M"
+                    },
+                    "id_channel_id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "description": "Id Channel ID",
+                      "example": "42b45084-a441-4e48-88e1-8424cae60f3b"
+                    },
+                    "id_document": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "Id Document front",
+                      "properties": {
+                        "country": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Issuing country",
+                          "example": "UK"
+                        },
+                        "date_created": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "timestamp",
+                          "description": "Date created",
+                          "example": 1589550707
+                        },
+                        "document_type": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Document type",
+                          "example": "ID_CARD"
+                        },
+                        "expiration_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of expiration",
+                          "example": "30.05.2028"
+                        },
+                        "issue_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of issue",
+                          "example": "30.05.2018"
+                        },
+                        "last_updated": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "timestamp",
+                          "description": "Last updated",
+                          "example": 1589550707
+                        },
+                        "mrz": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Machine-readable zone of document",
+                          "example": "P<GBRDOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<9138625549GBR4503093M1601013<<<<<<<<<<<<<<00"
+                        },
+                        "number": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Document number",
+                          "example": "C1544JKK40"
+                        }
+                      }
+                    },
+                    "id_document_back": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "Id Document back",
+                      "properties": {
+                        "country": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Issuing country",
+                          "example": "UK"
+                        },
+                        "date_created": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "timestamp",
+                          "description": "Date created",
+                          "example": 1589550707
+                        },
+                        "document_type": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Document type",
+                          "example": "ID_CARD"
+                        },
+                        "expiration_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of expiration",
+                          "example": "30.05.2028"
+                        },
+                        "issue_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of issue",
+                          "example": "30.05.2018"
+                        },
+                        "last_updated": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of issue"
+                        },
+                        "mrz": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Machine-readable zone of document"
+                        },
+                        "number": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Document number",
+                          "example": "C1544JKK40"
+                        }
+                      }
+                    },
+                    "id_document_secondary": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "Id Document secondary",
+                      "properties": {
+                        "country": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Issuing country",
+                          "example": "UK"
+                        },
+                        "date_created": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "timestamp",
+                          "description": "Date created",
+                          "example": 1589550707
+                        },
+                        "document_type": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Document type",
+                          "example": "RESIDENCE_PERMIT"
+                        },
+                        "expiration_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of expiration",
+                          "example": "30.05.2028"
+                        },
+                        "issue_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of issue",
+                          "example": "30.05.2018"
+                        },
+                        "last_updated": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date of issue"
+                        },
+                        "mrz": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Machine-readable zone of document"
+                        },
+                        "number": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Document number",
+                          "example": "C1544JKK40"
+                        }
+                      }
+                    },
+                    "first_name": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "First name",
+                      "example": "John"
+                    },
+                    "last_name": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "Last name",
+                      "example": "Doe"
                     },
                     "last_updated": {
                       "type": "string",
-                      "format": "date",
-                      "description": "Date of issue"
+                      "format": "timestamp",
+                      "description": "Last updated",
+                      "example": 1589550707
                     },
-                    "mrz": {
+                    "primary_id_document_number": {
                       "type": "string",
-                      "description": "Machine-readable zone of document"
+                      "nullable": true,
+                      "description": "Primary ID document number",
+                      "example": "C1544JKK40"
                     },
-                    "number": {
+                    "rejected": {
+                      "type": "boolean",
+                      "description": "Rejected",
+                      "example": true
+                    },
+                    "rejection_cause": {
                       "type": "string",
-                      "description": "Document number"
+                      "nullable": true,
+                      "description": "Rejection cause",
+                      "example": "Photo did not match client"
+                    },
+                    "state": {
+                      "type": "string",
+                      "description": "State",
+                      "example": "client_reference_id:940af6f8-1180-4f0c-975b-cba770087277"
                     }
                   }
-                },
-                "id_document_back": {
-                  "type": "object",
-                  "description": "Id Document back",
-                  "properties": {
-                    "country": {
-                      "type": "string",
-                      "description": "Issuing country"
-                    },
-                    "date_created": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date created"
-                    },
-                    "document_type": {
-                      "type": "string",
-                      "description": "Issuing country"
-                    },
-                    "expiration_date": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date of expiration"
-                    },
-                    "issue_date": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date of issue"
-                    },
-                    "last_updated": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date of issue"
-                    },
-                    "mrz": {
-                      "type": "string",
-                      "description": "Machine-readable zone of document"
-                    },
-                    "number": {
-                      "type": "string",
-                      "description": "Document number"
-                    }
-                  }
-                },
-                "id_document_secondary": {
-                  "type": "object",
-                  "description": "Id Document secondary",
-                  "properties": {
-                    "country": {
-                      "type": "string",
-                      "description": "Issuing country"
-                    },
-                    "date_created": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date created"
-                    },
-                    "document_type": {
-                      "type": "string",
-                      "description": "Issuing country"
-                    },
-                    "expiration_date": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date of expiration"
-                    },
-                    "issue_date": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date of issue"
-                    },
-                    "last_updated": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date of issue"
-                    },
-                    "mrz": {
-                      "type": "string",
-                      "description": "Machine-readable zone of document"
-                    },
-                    "number": {
-                      "type": "string",
-                      "description": "Document number"
-                    }
-                  }
-                },
-                "first_name": {
-                  "type": "string",
-                  "description": "First name"
-                },
-                "last_name": {
-                  "type": "string",
-                  "description": "Last name"
-                },
-                "last_updated": {
-                  "type": "string",
-                  "description": "Last updated"
-                },
-                "primary_id_document_number": {
-                  "type": "string",
-                  "description": "Primary ID document number"
-                },
-                "rejected": {
-                  "type": "boolean",
-                  "description": "Rejected"
-                },
-                "rejection_cause": {
-                  "type": "string",
-                  "description": "Rejection cause"
-                },
-                "state": {
-                  "type": "string",
-                  "description": "State"
                 }
               }
             }
@@ -294,16 +359,25 @@
       }
     }
   },
-  "securityDefinitions": {
-    "basicAuth": {
-      "type": "basic"
-    }
-  },
   "security": [
     {
       "basicAuth": []
     }
   ],
-  "host": "verify-u.com",
-  "basePath": "/api"
+  "servers": [
+    {
+      "url": "https://verify-u.com/api"
+    },
+    {
+      "url": "http://verify-u.com/api"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  }
 }
