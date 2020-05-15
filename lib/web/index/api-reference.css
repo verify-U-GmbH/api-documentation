@@ -1,0 +1,11 @@
+.api-content {
+    margin-top: 2rem;
+}
+
+.menu-content {
+    margin-top: 3.7rem !important;
+}
+
+a[href="https://github.com/Redocly/redoc"] {
+    display: none !important;
+}

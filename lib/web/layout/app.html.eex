@@ -16,8 +16,8 @@
           <img class="w-24 h-6" src="/img/verify_logo.png">
           <span class="mx-2 font-bold text-gray-700">DOCUMENTATION</span>
         </a>
-        
-        <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/reference">
+
+        <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/api-reference">
           API Reference
         </a>
       </nav>
@@ -49,7 +49,7 @@
 
               <a class="sidenav__link" href="/authorization">
                 Authorization
-              </a>              
+              </a>
 
               <a class="sidenav__link" href="/identification-channels">
                 Identification channels
@@ -67,7 +67,7 @@
 
             <a class="sidenav__link" href="/authentication">
               Authentication
-            </a>        
+            </a>
 
             <a class="sidenav__link" href="/http-status-codes">
               HTTP Status Codes
@@ -87,7 +87,7 @@
         </div>
       </main>
     </div>
-    
+
     <script>require("lib/web/layout/layout.js").default()</script>
 
   </body>
