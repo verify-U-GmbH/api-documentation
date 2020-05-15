@@ -1,0 +1,309 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "# Introduction\nThis API is documented in **OpenAPI format**.\n\n# Basics\n* API calls have to be secured with HTTPS.\n* All data has to be submitted UTF-8 encoded.\n* The reply is either sent JSON encoded or as binary data for files.\n\n# Authentication\n**verify-u** API uses Basic Authentication with secret key as username only.\n\nDetailed information is provided at [Authentication](authentication)\n",
+    "version": "1.0.0",
+    "title": "verify-u API"
+  },
+  "tags": [
+    {
+      "name": "identifications",
+      "description": "Methods to retrieve identification details"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/identifications": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "identifications",
+        "description": "Returns the last 10 identifications as a list",
+        "operationId": "getIdentificationsList",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "age_permission": {
+                    "type": "boolean",
+                    "description": "Permission to access age of customer"
+                  },
+                  "date_created": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Creation date"
+                  },
+                  "full_name_permission": {
+                    "type": "boolean",
+                    "description": "Permission to access full name of customer"
+                  },
+                  "gender_permission": {
+                    "type": "boolean",
+                    "description": "Permission to access gender of customer"
+                  },
+                  "id": {
+                    "type": "string",
+                    "description": "Identification ID"
+                  },
+                  "passport_permission": {
+                    "type": "boolean",
+                    "description": "Permission to access ID document data of customer"
+                  },
+                  "state": {
+                    "type": "string",
+                    "description": "Identification state parameter"
+                  },
+                  "video_permission": {
+                    "type": "boolean",
+                    "description": "Permission to access Facetoface video recording"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/identifications/{id}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "identifications/{id}",
+        "description": "Returns client profile data for a single identification",
+        "operationId": "getIdentificationById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "format": "uuid",
+            "required": true,
+            "description": "ID of the identification"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string",
+                  "description": "Address"
+                },
+                "date_created": {
+                  "type": "string",
+                  "description": "Date created"
+                },
+                "date_of_birth": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "Date of birth"
+                },
+                "gender": {
+                  "type": "string",
+                  "description": "Gender"
+                },
+                "granted": {
+                  "type": "boolean",
+                  "description": "Permission Granted"
+                },
+                "id_channel_id": {
+                  "type": "string",
+                  "description": "Id Channel ID"
+                },
+                "id_document": {
+                  "type": "object",
+                  "description": "Id Document front´",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "Issuing country"
+                    },
+                    "date_created": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date created"
+                    },
+                    "document_type": {
+                      "type": "string",
+                      "description": "Issuing country"
+                    },
+                    "expiration_date": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of expiration"
+                    },
+                    "issue_date": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of issue"
+                    },
+                    "last_updated": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of issue"
+                    },
+                    "mrz": {
+                      "type": "string",
+                      "description": "Machine-readable zone of document"
+                    },
+                    "number": {
+                      "type": "string",
+                      "description": "Document number"
+                    }
+                  }
+                },
+                "id_document_back": {
+                  "type": "object",
+                  "description": "Id Document back",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "Issuing country"
+                    },
+                    "date_created": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date created"
+                    },
+                    "document_type": {
+                      "type": "string",
+                      "description": "Issuing country"
+                    },
+                    "expiration_date": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of expiration"
+                    },
+                    "issue_date": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of issue"
+                    },
+                    "last_updated": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of issue"
+                    },
+                    "mrz": {
+                      "type": "string",
+                      "description": "Machine-readable zone of document"
+                    },
+                    "number": {
+                      "type": "string",
+                      "description": "Document number"
+                    }
+                  }
+                },
+                "id_document_secondary": {
+                  "type": "object",
+                  "description": "Id Document secondary",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "description": "Issuing country"
+                    },
+                    "date_created": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date created"
+                    },
+                    "document_type": {
+                      "type": "string",
+                      "description": "Issuing country"
+                    },
+                    "expiration_date": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of expiration"
+                    },
+                    "issue_date": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of issue"
+                    },
+                    "last_updated": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date of issue"
+                    },
+                    "mrz": {
+                      "type": "string",
+                      "description": "Machine-readable zone of document"
+                    },
+                    "number": {
+                      "type": "string",
+                      "description": "Document number"
+                    }
+                  }
+                },
+                "first_name": {
+                  "type": "string",
+                  "description": "First name"
+                },
+                "last_name": {
+                  "type": "string",
+                  "description": "Last name"
+                },
+                "last_updated": {
+                  "type": "string",
+                  "description": "Last updated"
+                },
+                "primary_id_document_number": {
+                  "type": "string",
+                  "description": "Primary ID document number"
+                },
+                "rejected": {
+                  "type": "boolean",
+                  "description": "Rejected"
+                },
+                "rejection_cause": {
+                  "type": "string",
+                  "description": "Rejection cause"
+                },
+                "state": {
+                  "type": "string",
+                  "description": "State"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Identification not found"
+          },
+          "500": {
+            "description": "Error"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "basicAuth": {
+      "type": "basic"
+    }
+  },
+  "security": [
+    {
+      "basicAuth": []
+    }
+  ],
+  "host": "verify-u.com",
+  "basePath": "/api"
+}
