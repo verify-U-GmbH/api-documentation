@@ -7,7 +7,7 @@ info:
     # Basics
     * API calls have to be secured with HTTPS.
     * All data has to be submitted UTF-8 encoded.
-    * The reply is either sent JSON encoded or as binary data for files.
+    * The reply is sent JSON encoded.
 
     # Authentication
     **verify-u** API uses Basic Authentication with secret key as username only.

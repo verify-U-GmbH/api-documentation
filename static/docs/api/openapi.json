@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "description": "# Introduction\nThis API is documented in **OpenAPI format**.\n\n# Basics\n* API calls have to be secured with HTTPS.\n* All data has to be submitted UTF-8 encoded.\n* The reply is either sent JSON encoded or as binary data for files.\n\n# Authentication\n**verify-u** API uses Basic Authentication with secret key as username only.\n\nDetailed information is provided at [Authentication](authentication)\n",
+    "description": "# Introduction\nThis API is documented in **OpenAPI format**.\n\n# Basics\n* API calls have to be secured with HTTPS.\n* All data has to be submitted UTF-8 encoded.\n* The reply is sent JSON encoded.\n\n# Authentication\n**verify-u** API uses Basic Authentication with secret key as username only.\n\nDetailed information is provided at [Authentication](authentication)\n",
     "version": "1.0.0",
     "title": "verify-u API"
   },
@@ -32,36 +32,38 @@
                     "properties": {
                       "age_permission": {
                         "type": "boolean",
-                        "description": "Permission to access age of customer"
+                        "description": "Permission to access age of customer",
+                        "example": true
                       },
                       "date_created": {
                         "type": "string",
-                        "format": "date",
-                        "description": "Creation date"
+                        "format": "timestamp",
+                        "description": "Creation date",
+                        "example": 1589550707
                       },
                       "full_name_permission": {
                         "type": "boolean",
-                        "description": "Permission to access full name of customer"
+                        "description": "Permission to access full name of customer",
+                        "example": true
                       },
                       "gender_permission": {
                         "type": "boolean",
-                        "description": "Permission to access gender of customer"
+                        "description": "Permission to access gender of customer",
+                        "example": true
                       },
                       "id": {
                         "type": "string",
-                        "description": "Identification ID"
+                        "description": "Identification ID",
+                        "example": "b8532da4-b9e4-439d-aaae-10cc750579bb"
                       },
                       "passport_permission": {
                         "type": "boolean",
-                        "description": "Permission to access ID document data of customer"
+                        "description": "Permission to access ID document data of customer",
+                        "example": true
                       },
                       "state": {
                         "type": "string",
                         "description": "Identification state parameter"
-                      },
-                      "video_permission": {
-                        "type": "boolean",
-                        "description": "Permission to access Facetoface video recording"
                       }
                     }
                   }
