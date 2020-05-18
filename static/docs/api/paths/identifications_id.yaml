@@ -2,22 +2,23 @@ get:
   tags:
     - identifications
   summary: identifications/{id}
-  description: "Returns client profile data for a single identification"
+  description: Returns client profile data for a single identification
   operationId: getIdentificationById
-  produces:
-    - application/json
   parameters:
     - in: path
       name: id
-      type: string
-      format: uuid
       required: true
       description: ID of the identification
+      schema:
+        type: string
+        format: uuid
   responses:
     "200":
       description: successful operation
-      schema:
-        $ref: ../definitions/profile_data.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/profile_data.yaml
     "404":
       description: Identification not found
     "500":

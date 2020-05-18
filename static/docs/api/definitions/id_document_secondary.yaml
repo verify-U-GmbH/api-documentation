@@ -14,7 +14,7 @@ properties:
     type: string
     nullable: true
     description: Document type
-    example: ID_CARD
+    example: RESIDENCE_PERMIT
   expiration_date:
     type: string
     nullable: true
@@ -30,14 +30,12 @@ properties:
   last_updated:
     type: string
     nullable: true
-    format: timestamp
-    description: Last updated
-    example: 1589550707
+    format: date
+    description: Date of issue
   mrz:
     type: string
     nullable: true
     description: Machine-readable zone of document
-    example: P<GBRDOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<9138625549GBR4503093M1601013<<<<<<<<<<<<<<00
   number:
     type: string
     nullable: true

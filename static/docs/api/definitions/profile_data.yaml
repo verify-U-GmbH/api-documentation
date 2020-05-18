@@ -2,53 +2,75 @@ type: object
 properties:
   address:
     type: string
+    nullable: true
     description: Address
+    example: 40 Mill Road, NEWPORT, NP14 0CV
   date_created:
     type: string
+    format: timestamp
     description: Date created
+    example: 1589550707
   date_of_birth:
     type: string
+    nullable: true
     format: date
     description: Date of birth
+    example: 07.10.1978
   gender:
     type: string
+    nullable: true
     description: Gender
-  granted:
-    type: boolean
-    description: Permission Granted
+    example: M
   id_channel_id:
     type: string
+    format: uuid
     description: Id Channel ID
+    example: 42b45084-a441-4e48-88e1-8424cae60f3b
   id_document:
     type: object
-    description: Id Document front´
+    nullable: true
+    description: Id Document front
     $ref: ../definitions/id_document.yaml
   id_document_back:
     type: object
+    nullable: true
     description: Id Document back
-    $ref: ../definitions/id_document.yaml
+    $ref: ../definitions/id_document_back.yaml
   id_document_secondary:
     type: object
+    nullable: true
     description: Id Document secondary
-    $ref: ../definitions/id_document.yaml
+    $ref: ../definitions/id_document_secondary.yaml
   first_name:
     type: string
+    nullable: true
     description: First name
+    example: John
   last_name:
     type: string
+    nullable: true
     description: Last name
+    example: Doe
   last_updated:
     type: string
+    format: timestamp
     description: Last updated
+    example: 1589550707
   primary_id_document_number:
     type: string
+    nullable: true
     description: Primary ID document number
+    example: C1544JKK40
   rejected:
     type: boolean
     description: Rejected
+    example: true
   rejection_cause:
     type: string
+    nullable: true
     description: Rejection cause
+    example: Photo did not match client
   state:
     type: string
     description: State
+    example: client_reference_id:940af6f8-1180-4f0c-975b-cba770087277

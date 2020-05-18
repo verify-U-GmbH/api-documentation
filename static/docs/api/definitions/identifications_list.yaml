@@ -5,25 +5,28 @@ items:
     age_permission:
       type: boolean
       description: Permission to access age of customer
+      example: true
     date_created:
       type: string
-      format: date
+      format: timestamp
       description: Creation date
+      example: 1589550707
     full_name_permission:
       type: boolean
       description: Permission to access full name of customer
+      example: true
     gender_permission:
       type: boolean
       description: Permission to access gender of customer
+      example: true
     id:
       type: string
       description: Identification ID
+      example: b8532da4-b9e4-439d-aaae-10cc750579bb	
     passport_permission:
       type: boolean
       description: Permission to access ID document data of customer
+      example: true
     state:
       type: string
       description: Identification state parameter
-    video_permission:
-      type: boolean
-      description: Permission to access Facetoface video recording
