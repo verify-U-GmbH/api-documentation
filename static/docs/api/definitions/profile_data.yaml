@@ -5,17 +5,22 @@ properties:
     nullable: true
     description: The client's address
     example: 40 Mill Road, NEWPORT, NP14 0CV
-  date_created:
+  created_at:
     type: string
-    format: timestamp
+    format: date
     description: Date at which the object was created
-    example: 1589550707
+    example: 2020-05-19
   date_of_birth:
     type: string
     nullable: true
     format: date
     description: The client's date of birth
     example: 07.10.1978
+  first_name:
+    type: string
+    nullable: true
+    description: The client's first name
+    example: John    
   gender:
     type: string
     nullable: true
@@ -41,21 +46,11 @@ properties:
     nullable: true
     description: The secondary ID document which complements the primary ID document
     $ref: ../definitions/id_document_secondary.yaml
-  first_name:
-    type: string
-    nullable: true
-    description: The client's first name
-    example: John
   last_name:
     type: string
     nullable: true
     description: The client's last name
     example: Doe
-  last_updated:
-    type: string
-    format: timestamp
-    description: Date at which the object was last updated
-    example: 1589550707
   primary_id_document_number:
     type: string
     nullable: true
@@ -74,3 +69,8 @@ properties:
     type: string
     description: The process state of the client's identification
     example: client_reference_id:940af6f8-1180-4f0c-975b-cba770087277
+  updated_at:
+    type: string
+    format: date
+    description: Date at which the object was last updated
+    example: 2020-05-19

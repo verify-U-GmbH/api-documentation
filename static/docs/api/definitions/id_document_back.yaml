@@ -4,12 +4,6 @@ properties:
     nullable: true
     description: Country which issued this ID document
     example: UK
-  created_at:
-    type: string
-    nullable: true
-    format: timestamp
-    description: Time at which the object was created
-    example: 1589550707
   document_type:
     type: string
     nullable: true
@@ -21,18 +15,18 @@ properties:
     format: date
     description: Date at which this ID document expires
     example: 30.05.2028
+  id:
+    type: string
+    nullable: true
+    format: uuid
+    description: ID of this ID document
+    example: c4d49f29-d351-416b-b261-6b42c46081fb 
   issue_date:
     type: string
     nullable: true
     format: date
     description: Date at which this ID document was issued
     example: 30.05.2018
-  updated_at:
-    type: string
-    nullable: true
-    format: timestamp
-    description: Time at which the object was last updated
-    example: 1589550707
   mrz:
     type: string
     nullable: true

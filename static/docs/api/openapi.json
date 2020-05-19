@@ -109,11 +109,11 @@
                       "description": "The client's address",
                       "example": "40 Mill Road, NEWPORT, NP14 0CV"
                     },
-                    "date_created": {
+                    "created_at": {
                       "type": "string",
-                      "format": "timestamp",
+                      "format": "date",
                       "description": "Date at which the object was created",
-                      "example": 1589550707
+                      "example": "2020-05-19T00:00:00.000Z"
                     },
                     "date_of_birth": {
                       "type": "string",
@@ -121,6 +121,12 @@
                       "format": "date",
                       "description": "The client's date of birth",
                       "example": "07.10.1978"
+                    },
+                    "first_name": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "The client's first name",
+                      "example": "John"
                     },
                     "gender": {
                       "type": "string",
@@ -145,13 +151,6 @@
                           "description": "Country which issued this ID document",
                           "example": "UK"
                         },
-                        "created_at": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "timestamp",
-                          "description": "Time at which the object was created",
-                          "example": 1589550707
-                        },
                         "document_type": {
                           "type": "string",
                           "nullable": true,
@@ -165,19 +164,19 @@
                           "description": "Date at which this ID document expires",
                           "example": "30.05.2028"
                         },
+                        "id": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "uuid",
+                          "description": "ID of this ID document",
+                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                        },
                         "issue_date": {
                           "type": "string",
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document was issued",
                           "example": "30.05.2018"
-                        },
-                        "updated_at": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "timestamp",
-                          "description": "Time at which the object was last updated",
-                          "example": 1589550707
                         },
                         "mrz": {
                           "type": "string",
@@ -204,13 +203,6 @@
                           "description": "Country which issued this ID document",
                           "example": "UK"
                         },
-                        "created_at": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "timestamp",
-                          "description": "Time at which the object was created",
-                          "example": 1589550707
-                        },
                         "document_type": {
                           "type": "string",
                           "nullable": true,
@@ -224,19 +216,19 @@
                           "description": "Date at which this ID document expires",
                           "example": "30.05.2028"
                         },
+                        "id": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "uuid",
+                          "description": "ID of this ID document",
+                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                        },
                         "issue_date": {
                           "type": "string",
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document was issued",
                           "example": "30.05.2018"
-                        },
-                        "updated_at": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "timestamp",
-                          "description": "Time at which the object was last updated",
-                          "example": 1589550707
                         },
                         "mrz": {
                           "type": "string",
@@ -263,13 +255,6 @@
                           "description": "Country which issued this ID document",
                           "example": "UK"
                         },
-                        "created_at": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "timestamp",
-                          "description": "Time at which the object was created",
-                          "example": 1589550707
-                        },
                         "document_type": {
                           "type": "string",
                           "nullable": true,
@@ -283,19 +268,12 @@
                           "description": "Date at which this ID document expires",
                           "example": "30.05.2028"
                         },
-                        "issue_date": {
+                        "id": {
                           "type": "string",
                           "nullable": true,
-                          "format": "date",
-                          "description": "Date at which this ID document was issued",
-                          "example": "30.05.2018"
-                        },
-                        "updated_at": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "timestamp",
-                          "description": "Time at which the object was last updated",
-                          "example": 1589550707
+                          "format": "uuid",
+                          "description": "ID of this ID document",
+                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
                         },
                         "mrz": {
                           "type": "string",
@@ -311,23 +289,11 @@
                         }
                       }
                     },
-                    "first_name": {
-                      "type": "string",
-                      "nullable": true,
-                      "description": "The client's first name",
-                      "example": "John"
-                    },
                     "last_name": {
                       "type": "string",
                       "nullable": true,
                       "description": "The client's last name",
                       "example": "Doe"
-                    },
-                    "last_updated": {
-                      "type": "string",
-                      "format": "timestamp",
-                      "description": "Date at which the object was last updated",
-                      "example": 1589550707
                     },
                     "primary_id_document_number": {
                       "type": "string",
@@ -350,6 +316,12 @@
                       "type": "string",
                       "description": "The process state of the client's identification",
                       "example": "client_reference_id:940af6f8-1180-4f0c-975b-cba770087277"
+                    },
+                    "updated_at": {
+                      "type": "string",
+                      "format": "date",
+                      "description": "Date at which the object was last updated",
+                      "example": "2020-05-19T00:00:00.000Z"
                     }
                   }
                 }
