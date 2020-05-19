@@ -2,44 +2,44 @@ properties:
   country:
     type: string
     nullable: true
-    description: Issuing country
+    description: Country which issued this ID document
     example: UK
-  date_created:
+  created_at:
     type: string
     nullable: true
     format: timestamp
-    description: Date created
+    description: Time at which the object was created
     example: 1589550707
   document_type:
     type: string
     nullable: true
-    description: Document type
+    description: Type of this ID document
     example: ID_CARD
   expiration_date:
     type: string
     nullable: true
     format: date
-    description: Date of expiration
+    description: Date at which this ID document expires
     example: 30.05.2028
   issue_date:
     type: string
     nullable: true
     format: date
-    description: Date of issue
+    description: Date at which this ID document was issued
     example: 30.05.2018
-  last_updated:
+  updated_at:
     type: string
     nullable: true
     format: timestamp
-    description: Last updated
+    description: Time at which the object was last updated
     example: 1589550707
   mrz:
     type: string
     nullable: true
-    description: Machine-readable zone of document
+    description: The 'machine-readable zone' entry of this ID document
     example: P<GBRDOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<9138625549GBR4503093M1601013<<<<<<<<<<<<<<00
   number:
     type: string
     nullable: true
-    description: Document number
+    description: The number of this ID document
     example: C1544JKK40

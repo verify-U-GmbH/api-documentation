@@ -3,74 +3,74 @@ properties:
   address:
     type: string
     nullable: true
-    description: Address
+    description: The client's address
     example: 40 Mill Road, NEWPORT, NP14 0CV
   date_created:
     type: string
     format: timestamp
-    description: Date created
+    description: Date at which the object was created
     example: 1589550707
   date_of_birth:
     type: string
     nullable: true
     format: date
-    description: Date of birth
+    description: The client's date of birth
     example: 07.10.1978
   gender:
     type: string
     nullable: true
-    description: Gender
+    description: The client's gender
     example: M
   id_channel_id:
     type: string
     format: uuid
-    description: Id Channel ID
+    description: The ID of the Id channel which was used for identification of the client
     example: 42b45084-a441-4e48-88e1-8424cae60f3b
   id_document:
     type: object
     nullable: true
-    description: Id Document front
+    description: The front side of the ID document
     $ref: ../definitions/id_document.yaml
   id_document_back:
     type: object
     nullable: true
-    description: Id Document back
+    description: The back side of the ID Document
     $ref: ../definitions/id_document_back.yaml
   id_document_secondary:
     type: object
     nullable: true
-    description: Id Document secondary
+    description: The secondary ID document which complements the primary ID document
     $ref: ../definitions/id_document_secondary.yaml
   first_name:
     type: string
     nullable: true
-    description: First name
+    description: The client's first name
     example: John
   last_name:
     type: string
     nullable: true
-    description: Last name
+    description: The client's last name
     example: Doe
   last_updated:
     type: string
     format: timestamp
-    description: Last updated
+    description: Date at which the object was last updated
     example: 1589550707
   primary_id_document_number:
     type: string
     nullable: true
-    description: Primary ID document number
+    description: The document number of the primary ID document
     example: C1544JKK40
   rejected:
     type: boolean
-    description: Rejected
+    description: Wether the client's positive identification was rejected
     example: true
   rejection_cause:
     type: string
     nullable: true
-    description: Rejection cause
+    description: Reason the client's positive identification was rejected
     example: Photo did not match client
   state:
     type: string
-    description: State
+    description: The process state of the client's identification
     example: client_reference_id:940af6f8-1180-4f0c-975b-cba770087277

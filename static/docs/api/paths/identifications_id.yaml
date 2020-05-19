@@ -2,13 +2,13 @@ get:
   tags:
     - identifications
   summary: identifications/{id}
-  description: Returns client profile data for a single identification
+  description: Returns the client's profile data collected during this identification
   operationId: getIdentificationById
   parameters:
     - in: path
       name: id
       required: true
-      description: ID of the identification
+      description: ID of the requested identification
       schema:
         type: string
         format: uuid
@@ -20,6 +20,6 @@ get:
           schema:
             $ref: ../definitions/profile_data.yaml
     "404":
-      description: Identification not found
+      description: Identification for this ID not found
     "500":
       description: Error

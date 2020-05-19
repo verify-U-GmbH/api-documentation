@@ -4,29 +4,30 @@ items:
   properties:
     age_permission:
       type: boolean
-      description: Permission to access age of customer
+      description: Wether the permission to access his age was granted by the client
       example: true
     date_created:
       type: string
       format: timestamp
-      description: Creation date
+      description: Time at which the object was created
       example: 1589550707
     full_name_permission:
       type: boolean
-      description: Permission to access full name of customer
+      description: Wether the permission to access his full name was granted by the client
       example: true
     gender_permission:
       type: boolean
-      description: Permission to access gender of customer
+      description: Wether the permission to access his gender was granted by the client
       example: true
     id:
       type: string
-      description: Identification ID
+      format: uuid
+      description: The unique ID of the client's identification
       example: b8532da4-b9e4-439d-aaae-10cc750579bb	
     passport_permission:
       type: boolean
-      description: Permission to access ID document data of customer
+      description: Wether the permission to access his ID document data was granted by the client
       example: true
     state:
       type: string
-      description: Identification state parameter
+      description: The process state of the client's identification

@@ -2,7 +2,11 @@ openapi: 3.0.0
 info:
   description: |
     # Introduction
-    This API is documented in **OpenAPI format**.
+    This API is documented in **OpenAPI 3.0 format**.
+
+    This API
+    * enables a user to retrieve a list of the last 10 identifications
+    * enables a user to retrieve profile data of a client's identification
 
     # Basics
     * API calls have to be secured with HTTPS.
