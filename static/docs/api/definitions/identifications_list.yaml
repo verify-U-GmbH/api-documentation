@@ -6,11 +6,15 @@ items:
       type: boolean
       description: Wether the permission to access his age was granted by the client
       example: true
-    date_created:
+    channel_name:
+      type: string
+      description: Name of the ID channel which was used for identification
+      example: default
+    created_at:
       type: string
       format: timestamp
       description: Time at which the object was created
-      example: 1589550707
+      example: 1589952294.9304
     full_name_permission:
       type: boolean
       description: Wether the permission to access his full name was granted by the client
@@ -23,11 +27,16 @@ items:
       type: string
       format: uuid
       description: The unique ID of the client's identification
-      example: b8532da4-b9e4-439d-aaae-10cc750579bb	
+      example: b8532da4-b9e4-439d-aaae-10cc750579bb
     passport_permission:
       type: boolean
       description: Wether the permission to access his ID document data was granted by the client
       example: true
     state:
       type: string
-      description: The process state of the client's identification
+      description: The state parameter provided for the client's identification
+      example: client_reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579
+    step:
+      type: integer
+      description: The process step of the client's identification
+      example: 3

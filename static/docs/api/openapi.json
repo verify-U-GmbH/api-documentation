@@ -35,11 +35,16 @@
                         "description": "Wether the permission to access his age was granted by the client",
                         "example": true
                       },
-                      "date_created": {
+                      "channel_name": {
+                        "type": "string",
+                        "description": "Name of the ID channel which was used for identification",
+                        "example": "default"
+                      },
+                      "created_at": {
                         "type": "string",
                         "format": "timestamp",
                         "description": "Time at which the object was created",
-                        "example": 1589550707
+                        "example": 1589952294.9304
                       },
                       "full_name_permission": {
                         "type": "boolean",
@@ -64,7 +69,13 @@
                       },
                       "state": {
                         "type": "string",
-                        "description": "The process state of the client's identification"
+                        "description": "The state parameter provided for the client's identification",
+                        "example": "client_reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579"
+                      },
+                      "step": {
+                        "type": "integer",
+                        "description": "The process step of the client's identification",
+                        "example": 3
                       }
                     }
                   }
@@ -113,7 +124,7 @@
                       "type": "string",
                       "format": "date",
                       "description": "Date at which the object was created",
-                      "example": "2020-05-19T00:00:00.000Z"
+                      "example": "2020-05-20T05:24:54.930400"
                     },
                     "date_of_birth": {
                       "type": "string",
@@ -314,7 +325,7 @@
                     },
                     "state": {
                       "type": "string",
-                      "description": "The process state of the client's identification",
+                      "description": "The state parameter provided for the client's identification",
                       "example": "client_reference_id:940af6f8-1180-4f0c-975b-cba770087277"
                     },
                     "updated_at": {

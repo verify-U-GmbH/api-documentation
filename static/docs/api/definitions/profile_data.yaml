@@ -9,7 +9,7 @@ properties:
     type: string
     format: date
     description: Date at which the object was created
-    example: 2020-05-19
+    example: "2020-05-20T05:24:54.930400"
   date_of_birth:
     type: string
     nullable: true
@@ -67,7 +67,7 @@ properties:
     example: Photo did not match client
   state:
     type: string
-    description: The process state of the client's identification
+    description: The state parameter provided for the client's identification
     example: client_reference_id:940af6f8-1180-4f0c-975b-cba770087277
   updated_at:
     type: string
