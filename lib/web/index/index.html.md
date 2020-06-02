@@ -6,12 +6,7 @@
 
 It consist of customizable [OAuth 2.0](https://oauth.net/2/)-based
 flow for client processing and a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
-API for data extraction, ensuring maximum flexibility in delivering a compliant identification solution for
-the needs of your enterprise.
-
-Our functionality can be mixed and matched to your onboarding and/or compliance requirements.
-
-Please review the concept below:
+API for data extraction. 
 
 ### Automatic identification <a name="automatic-identification"></a>
 
