@@ -2,11 +2,11 @@ type: object
 properties:
   state: 
     type: string
-    description: OAuth parameter in format `[client_reference_id]:[uuid]` supplied to identification gateway
+    description: OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway
   
   rejected:
     type: boolean
-    description: Indicates wether identification has been rejected
+    description: Indicates whether identification has been rejected
   
   rejection_cause:
     type: string
@@ -16,13 +16,13 @@ properties:
   id_document:
     type: object
     nullable: true
-    description: The front side of the ID document
+    description: Front side of the ID document
     $ref: ../definitions/id_document.yaml
 
   id_document_back:
     type: object
     nullable: true
-    description: The back side of the ID document
+    description: Back side of the ID document
     $ref: ../definitions/id_document.yaml  
 
   id_document_secondary:
@@ -34,8 +34,8 @@ properties:
   primary_id_document_number:
     type: string
     nullable: true
-    description: The document number of the primary ID document
-    example: C1544JKK40
+    description: Number of the primary ID document
+    example: ABC123456
   
   first_name:
     type: string
@@ -63,12 +63,12 @@ properties:
   address:
     type: string
     nullable: true
-    description: The client's address
+    description: The client's address in format provided by ID document
     example: 40 Mill Road, NEWPORT, NP14 0CV
 
   created_at:
     type: string
-    format: date
-    description: Time at which the object was created. Measured in seconds since the Unix epoch.
-    example: "2020-05-20T05:24:54.930400"
+    format: date-time
+    description: Time at which the object was created in notation as defined by RFC 3339, section 5.6
+    example: "202017-07-21T17:32:28Z"
   
