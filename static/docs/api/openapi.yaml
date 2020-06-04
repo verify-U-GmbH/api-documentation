@@ -30,8 +30,7 @@ paths:
 security:
   - basicAuth: []
 servers:
-  - url: https://verify-u.com/api
-  - url: http://verify-u.com/api
+  - url: https://verify-u.com/api  
 components:
   securitySchemes:
     basicAuth:
