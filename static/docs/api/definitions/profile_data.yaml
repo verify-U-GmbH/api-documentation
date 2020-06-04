@@ -36,16 +36,6 @@ properties:
     nullable: true
     description: The front side of the ID document
     $ref: ../definitions/id_document.yaml
-  id_document_back:
-    type: object
-    nullable: true
-    description: The back side of the ID Document
-    $ref: ../definitions/id_document_back.yaml
-  id_document_secondary:
-    type: object
-    nullable: true
-    description: The secondary ID document which complements the primary ID document
-    $ref: ../definitions/id_document_secondary.yaml
   last_name:
     type: string
     nullable: true

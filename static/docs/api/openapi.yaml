@@ -27,6 +27,8 @@ paths:
     $ref: paths/identifications.yaml
   /identifications/{id}:
     $ref: paths/identifications_id.yaml
+  /identifications/id-document/{id}:
+    $ref: paths/identifications_id_document_id.yaml    
 security:
   - basicAuth: []
 servers:

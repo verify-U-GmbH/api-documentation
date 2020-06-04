@@ -203,103 +203,6 @@
                         }
                       }
                     },
-                    "id_document_back": {
-                      "type": "object",
-                      "nullable": true,
-                      "description": "The back side of the ID Document",
-                      "properties": {
-                        "country": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "Country which issued this ID document",
-                          "example": "UK"
-                        },
-                        "document_type": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "Type of this ID document",
-                          "example": "ID_CARD"
-                        },
-                        "expiration_date": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "date",
-                          "description": "Date at which this ID document expires",
-                          "example": "30.05.2028"
-                        },
-                        "id": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "uuid",
-                          "description": "ID of this ID document",
-                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
-                        },
-                        "issue_date": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "date",
-                          "description": "Date at which this ID document was issued",
-                          "example": "30.05.2018"
-                        },
-                        "mrz": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "The 'machine-readable zone' entry of this ID document",
-                          "example": null
-                        },
-                        "number": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "The number of this ID document",
-                          "example": "C1544JKK40"
-                        }
-                      }
-                    },
-                    "id_document_secondary": {
-                      "type": "object",
-                      "nullable": true,
-                      "description": "The secondary ID document which complements the primary ID document",
-                      "properties": {
-                        "country": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "Country which issued this ID document",
-                          "example": "UK"
-                        },
-                        "document_type": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "Type of this ID document",
-                          "example": "RESIDENCE_PERMIT"
-                        },
-                        "expiration_date": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "date",
-                          "description": "Date at which this ID document expires",
-                          "example": "30.05.2028"
-                        },
-                        "id": {
-                          "type": "string",
-                          "nullable": true,
-                          "format": "uuid",
-                          "description": "ID of this ID document",
-                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
-                        },
-                        "mrz": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "The 'machine-readable zone' entry of this ID document",
-                          "example": "P<GBRDOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<9138625549GBR4503093M1601013<<<<<<<<<<<<<<00"
-                        },
-                        "number": {
-                          "type": "string",
-                          "nullable": true,
-                          "description": "The number of this ID document",
-                          "example": "C1544JKK40"
-                        }
-                      }
-                    },
                     "last_name": {
                       "type": "string",
                       "nullable": true,
@@ -347,6 +250,47 @@
           }
         }
       }
+    },
+    "/identifications/id-document/{id}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "identifications/id-document/{id}",
+        "description": "Returns id-document file uploaded during identification",
+        "operationId": "getIdentificationDocumentById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID of the id-document",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ID document image in JPG format",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error"
+          },
+          "500": {
+            "description": "Error"
+          }
+        }
+      }
     }
   },
   "security": [
@@ -357,9 +301,6 @@
   "servers": [
     {
       "url": "https://verify-u.com/api"
-    },
-    {
-      "url": "http://verify-u.com/api"
     }
   ],
   "components": {
