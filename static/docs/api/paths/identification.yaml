@@ -2,7 +2,8 @@ get:
   tags:
     - identifications
   summary: identifications/{id}
-  description: Returns the client's profile data collected during this identification
+  description: Returns details of identification. Supply the unique identifier of the identification, 
+               received in OAuth response to the redirect URL
   operationId: getIdentificationById
   parameters:
     - in: path
@@ -18,7 +19,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../definitions/profile_data.yaml
+            $ref: ../definitions/identification.yaml
     "404":
       description: Identification for this ID not found
     "500":

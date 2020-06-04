@@ -92,7 +92,7 @@
           "identifications"
         ],
         "summary": "identifications/{id}",
-        "description": "Returns the client's profile data collected during this identification",
+        "description": "Returns details of identification. Supply the unique identifier of the identification, received in OAuth response to the redirect URL",
         "operationId": "getIdentificationById",
         "parameters": [
           {
@@ -114,42 +114,18 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "address": {
+                    "state": {
                       "type": "string",
-                      "nullable": true,
-                      "description": "The client's address",
-                      "example": "40 Mill Road, NEWPORT, NP14 0CV"
+                      "description": "OAuth parameter in format `[client_reference_id]:[uuid]` supplied to identification gateway"
                     },
-                    "created_at": {
-                      "type": "string",
-                      "format": "date",
-                      "description": "Date at which the object was created",
-                      "example": "2020-05-20T05:24:54.930400"
+                    "rejected": {
+                      "type": "boolean",
+                      "description": "Indicates wether identification has been rejected"
                     },
-                    "date_of_birth": {
+                    "rejection_cause": {
                       "type": "string",
-                      "nullable": true,
-                      "format": "date",
-                      "description": "The client's date of birth",
-                      "example": "07.10.1978"
-                    },
-                    "first_name": {
-                      "type": "string",
-                      "nullable": true,
-                      "description": "The client's first name",
-                      "example": "John"
-                    },
-                    "gender": {
-                      "type": "string",
-                      "nullable": true,
-                      "description": "The client's gender",
-                      "example": "M"
-                    },
-                    "id_channel_id": {
-                      "type": "string",
-                      "format": "uuid",
-                      "description": "The ID of the Id channel which was used for identification of the client",
-                      "example": "42b45084-a441-4e48-88e1-8424cae60f3b"
+                      "description": "Identification rejection cause",
+                      "nullable": true
                     },
                     "id_document": {
                       "type": "object",
@@ -203,11 +179,109 @@
                         }
                       }
                     },
-                    "last_name": {
-                      "type": "string",
+                    "id_document_back": {
+                      "type": "object",
                       "nullable": true,
-                      "description": "The client's last name",
-                      "example": "Doe"
+                      "description": "The back side of the ID document",
+                      "properties": {
+                        "country": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Country which issued this ID document",
+                          "example": "UK"
+                        },
+                        "document_type": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Type of this ID document",
+                          "example": "ID_CARD"
+                        },
+                        "expiration_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date at which this ID document expires",
+                          "example": "30.05.2028"
+                        },
+                        "id": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "uuid",
+                          "description": "ID of this ID document",
+                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                        },
+                        "issue_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date at which this ID document was issued",
+                          "example": "30.05.2018"
+                        },
+                        "mrz": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "The 'machine-readable zone' entry of this ID document",
+                          "example": "P<GBRDOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<9138625549GBR4503093M1601013<<<<<<<<<<<<<<00"
+                        },
+                        "number": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "The number of this ID document",
+                          "example": "C1544JKK40"
+                        }
+                      }
+                    },
+                    "id_document_secondary": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "Support document to the primary ID document",
+                      "properties": {
+                        "country": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Country which issued this ID document",
+                          "example": "UK"
+                        },
+                        "document_type": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Type of this ID document",
+                          "example": "ID_CARD"
+                        },
+                        "expiration_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date at which this ID document expires",
+                          "example": "30.05.2028"
+                        },
+                        "id": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "uuid",
+                          "description": "ID of this ID document",
+                          "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                        },
+                        "issue_date": {
+                          "type": "string",
+                          "nullable": true,
+                          "format": "date",
+                          "description": "Date at which this ID document was issued",
+                          "example": "30.05.2018"
+                        },
+                        "mrz": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "The 'machine-readable zone' entry of this ID document",
+                          "example": "P<GBRDOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<9138625549GBR4503093M1601013<<<<<<<<<<<<<<00"
+                        },
+                        "number": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "The number of this ID document",
+                          "example": "C1544JKK40"
+                        }
+                      }
                     },
                     "primary_id_document_number": {
                       "type": "string",
@@ -215,27 +289,40 @@
                       "description": "The document number of the primary ID document",
                       "example": "C1544JKK40"
                     },
-                    "rejected": {
-                      "type": "boolean",
-                      "description": "Wether the client's positive identification was rejected",
-                      "example": true
-                    },
-                    "rejection_cause": {
+                    "first_name": {
                       "type": "string",
                       "nullable": true,
-                      "description": "Reason the client's positive identification was rejected",
-                      "example": "Photo did not match client"
+                      "description": "The client's first name",
+                      "example": "John"
                     },
-                    "state": {
+                    "last_name": {
                       "type": "string",
-                      "description": "The state parameter provided for the client's identification",
-                      "example": "client_reference_id:940af6f8-1180-4f0c-975b-cba770087277"
+                      "nullable": true,
+                      "description": "The client's last name",
+                      "example": "Doe"
                     },
-                    "updated_at": {
+                    "gender": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "The client's gender",
+                      "example": "M"
+                    },
+                    "date_of_birth": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "The client's date of birth as represented in MRZ of ID document"
+                    },
+                    "address": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "The client's address",
+                      "example": "40 Mill Road, NEWPORT, NP14 0CV"
+                    },
+                    "created_at": {
                       "type": "string",
                       "format": "date",
-                      "description": "Date at which the object was last updated",
-                      "example": "2020-05-19T00:00:00.000Z"
+                      "description": "Time at which the object was created. Measured in seconds since the Unix epoch.",
+                      "example": "2020-05-20T05:24:54.930400"
                     }
                   }
                 }

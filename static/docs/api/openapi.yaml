@@ -26,7 +26,7 @@ paths:
   /identifications:
     $ref: paths/identifications.yaml
   /identifications/{id}:
-    $ref: paths/identifications_id.yaml
+    $ref: paths/identification.yaml
   /identifications/id-document/{id}:
     $ref: paths/identifications_id_document_id.yaml    
 security:
