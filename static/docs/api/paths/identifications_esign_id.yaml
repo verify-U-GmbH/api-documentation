@@ -1,7 +1,7 @@
 get:
   tags:
     - identifications
-  summary: identifications/esign/{id}
+  summary: identifications/e-sign/{id}
   description: "Returns the contract document signed by the customer by digital signature"
   operationId: getEsignById
   produces:
