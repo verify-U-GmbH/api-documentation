@@ -1,0 +1,24 @@
+get:
+  tags:
+    - identifications
+  summary: identifications/id-document/{id}
+  description: "Returns id-document file uploaded during identification"
+  operationId: getIdentificationIdDocumentById
+  produces:
+    - image/jpg
+  parameters:
+    - in: path
+      name: id
+      type: string
+      format: uuid
+      required: true
+      description: ID of the id-document
+  responses:
+    "200":
+      description: ID document image in JPG format
+      schema:
+        type: file
+    "422":
+      description: Client side error
+    "500":
+      description: Error
