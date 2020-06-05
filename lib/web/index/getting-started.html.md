@@ -1,7 +1,5 @@
 # Getting started
 
----
-
 ### Register account <a name="register-account"></a>
 
 First, you need a verify-u business account. [Register now](https://app.verify-u.com/auth/register).
@@ -16,8 +14,6 @@ To setup the identification flow to your needs, add [identification channels](ch
 - Your application's backend uses the identification ID as request parameter to retrieve API responses for this identification
 
 <br >
-
----
 
 ### Create authorization request <a name="create-authorization-request"></a>
 
@@ -35,7 +31,6 @@ redirect_uri=https://example-app.com/callback
 
 <br >
 
----
 
 ### Store identification ID <a name="store-identification-id"></a>
 
@@ -53,7 +48,6 @@ Make sure you store the returned identification ID, appended as `code` parameter
 
 <br >
 
----
 
 ### Receive identification details <a name="receive-identification-details"></a>
 

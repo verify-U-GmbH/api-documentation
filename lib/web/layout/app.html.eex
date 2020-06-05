@@ -77,7 +77,7 @@
 
           <div class="mt-16">
             <div class="flex content__view">
-              <div class="w-3/4 content__view-main">
+              <div class="max-w-3xl px-6 mx-0 mx-auto mb-6 ml-0 mr-auto content__view-main markdown-body">
                 <%= render @view_module, @view_template, assigns %>
               </div>
               <div id="content-nav" class="w-1/4 pl-16 content__view-nav">

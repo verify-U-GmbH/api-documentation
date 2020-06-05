@@ -1,6 +1,6 @@
 # Introduction
 
-## Start onboarding clients using our API and client libraries
+#### Start onboarding clients using our API and client libraries
 
 **verify-u** is an online platform for personal identity verification.
 

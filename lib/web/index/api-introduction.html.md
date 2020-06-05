@@ -1,7 +1,5 @@
 # Introduction
 
----
-
 The **verify-u** API is centered around REST principles and organized by resource type.
 
 Methods to retrieve data require a **GET** request.

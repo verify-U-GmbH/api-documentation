@@ -1,7 +1,5 @@
 # Errors
 
----
-
 If your authorization request could not be fulfilled, one of the following error messages is displayed:
 
 ### Client related <a name="client-related"></a>
@@ -13,8 +11,6 @@ If your authorization request could not be fulfilled, one of the following error
 Client id could not be found.
 
 Check the [developer](https://app.verify-u.com/business/developers) page to make sure your API public key is used as Client id.
-
----
 
 ### Channel related <a name="channel-related"></a>
 

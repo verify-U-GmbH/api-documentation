@@ -1,6 +1,5 @@
 # Identification channels
 
----
 
 The identification flow for the client together with its options is an identification channel.  
 Configure your identification options as you need.
@@ -9,7 +8,6 @@ Configure your identification options as you need.
 
 Controls the general identification flow used.
 
----
 
 ### Data Permissions <a name="data-permissions"></a>
 
@@ -25,7 +23,6 @@ The available permissions to request from the client:
 
 <br >
 
----
 
 ### Identification documents <a name="identification-documents"></a>
 

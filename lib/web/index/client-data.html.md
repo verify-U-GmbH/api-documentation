@@ -1,6 +1,5 @@
 # Client data
 
----
 
 You can send additional client data, that is required for identification, via OAuth `extras` field.
 
@@ -8,7 +7,6 @@ You can send additional client data, that is required for identification, via OA
 
 `{"document_id": "b1fd52e4-5211-4d13-afa9-a3b741204579", "msisdn": "+918369110173"}`
 
----
 
 ### Supported fields <a name="supported-fields"></a>
 
