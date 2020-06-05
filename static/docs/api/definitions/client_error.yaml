@@ -1,0 +1,5 @@
+type: object
+properties:
+  error_code:
+    type: string
+    description: Reason

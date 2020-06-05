@@ -20,7 +20,11 @@ get:
         application/json:
           schema:
             $ref: ../definitions/identification.yaml
-    "404":
-      description: Identification for this ID not found
+    "422":
+      description: Client side error
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/client_error.yaml
     "500":
       description: Error
