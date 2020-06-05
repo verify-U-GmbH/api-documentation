@@ -329,8 +329,21 @@
               }
             }
           },
-          "404": {
-            "description": "Identification for this ID not found"
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error_code": {
+                      "type": "string",
+                      "description": "Reason"
+                    }
+                  }
+                }
+              }
+            }
           },
           "500": {
             "description": "Error"
@@ -371,7 +384,20 @@
             }
           },
           "422": {
-            "description": "Client side error"
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error_code": {
+                      "type": "string",
+                      "description": "Reason"
+                    }
+                  }
+                }
+              }
+            }
           },
           "500": {
             "description": "Error"

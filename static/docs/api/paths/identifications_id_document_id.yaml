@@ -22,5 +22,9 @@ get:
             format: binary
     "422":
       description: Client side error
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/client_error.yaml
     "500":
       description: Error
