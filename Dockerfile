@@ -24,6 +24,7 @@ RUN mix deps.get && mix deps.compile
 # build assets
 COPY package.json package.json ./
 COPY brunch-config.js brunch-config.js ./
+COPY tailwind.config.js tailwind.config.js ./
 COPY static static 
 COPY lib lib
 

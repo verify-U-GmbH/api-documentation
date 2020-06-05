@@ -37,6 +37,10 @@ html {
     @apply mx-4;
 }
 
+.container {
+    min-width: 978px;
+}
+
 .content {
     height: 100%;
     overflow-y: scroll;
@@ -46,21 +50,20 @@ html {
 
 .content__view {
     margin-left: 15rem;
-    margin-right: 15rem;
     padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 2rem;
     height: 100%;
     bottom: 0;
+
 }
 
 .content__view-main {
+    width: 800px;
 }
 
 .content__view-nav {
-    position: fixed;
     right: 0px;
-    margin-left: 4rem;
 }
 
 #version {
