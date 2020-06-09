@@ -27,12 +27,14 @@ paths:
     $ref: paths/identifications.yaml
   /identifications/{id}:
     $ref: paths/identification.yaml
-  /identifications/id-document/{id}:
-    $ref: paths/identifications_id_document_id.yaml    
+  /identifications/id-document/{document_id}:
+    $ref: paths/identifications_id_document_id.yaml
+  /identifications/video/{id}:
+    $ref: paths/identifications_video_id.yaml
 security:
   - basicAuth: []
 servers:
-  - url: https://verify-u.com/api  
+  - url: https://verify-u.com/api
 components:
   securitySchemes:
     basicAuth:

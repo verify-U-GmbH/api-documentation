@@ -1,65 +1,5 @@
 type: object
 properties:
-  state: 
-    type: string
-    description: OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway
-  
-  rejected:
-    type: boolean
-    description: Indicates whether identification has been rejected
-  
-  rejection_cause:
-    type: string
-    description: Identification rejection cause
-    nullable: true
-
-  id_document:
-    type: object
-    nullable: true
-    description: Front side of the ID document
-    $ref: ../definitions/id_document.yaml
-
-  id_document_back:
-    type: object
-    nullable: true
-    description: Back side of the ID document
-    $ref: ../definitions/id_document.yaml  
-
-  id_document_secondary:
-    type: object
-    nullable: true
-    description: Support document to the primary ID document
-    $ref: ../definitions/id_document.yaml
-
-  primary_id_document_number:
-    type: string
-    nullable: true
-    description: Number of the primary ID document
-    example: ABC123456
-  
-  first_name:
-    type: string
-    nullable: true
-    description: The client's first name
-    example: John    
-  
-  last_name:
-    type: string
-    nullable: true
-    description: The client's last name
-    example: Doe
-  
-  gender:
-    type: string
-    nullable: true
-    description: The client's gender
-    example: M
-  
-  date_of_birth:
-    type: string
-    nullable: true
-    description: The client's date of birth as represented in MRZ of ID document
-
   address:
     type: string
     nullable: true
@@ -71,4 +11,73 @@ properties:
     format: date-time
     description: Time at which the object was created in notation as defined by RFC 3339, section 5.6
     example: "202017-07-21T17:32:28Z"
-  
+
+  date_of_birth:
+    type: string
+    nullable: true
+    description: The client's date of birth as represented in MRZ of ID document
+    example: 03.05.1976
+
+  first_name:
+    type: string
+    nullable: true
+    description: The client's first name
+    example: John
+
+  gender:
+    type: string
+    nullable: true
+    description: The client's gender
+    example: M
+
+  id:
+    type: string
+    nullable: true
+    format: uuid
+    description: ID of this ID document
+    example: c4d49f29-d351-416b-b261-6b42c46081fb
+
+  id_document:
+    type: object
+    nullable: true
+    description: Front side of the ID document
+    $ref: ../definitions/id_document.yaml
+
+  id_document_back:
+    type: object
+    nullable: true
+    description: Back side of the ID document
+    $ref: ../definitions/id_document.yaml
+
+  id_document_secondary:
+    type: object
+    nullable: true
+    description: Support document to the primary ID document
+    $ref: ../definitions/id_document.yaml
+
+  last_name:
+    type: string
+    nullable: true
+    description: The client's last name
+    example: Doe
+
+  primary_id_document_number:
+    type: string
+    nullable: true
+    description: Number of the primary ID document
+    example: ABC123456
+
+  rejected:
+    type: boolean
+    description: Indicates whether identification has been rejected
+
+  rejection_cause:
+    type: string
+    description: Identification rejection cause
+    nullable: true
+    example: DOCUMENT_MISSING
+
+  state:
+    type: string
+    description: OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway
+    example: demo_client@demo.com:3a837788-6d72-40ce-818c-d92cc6c9b3d8
