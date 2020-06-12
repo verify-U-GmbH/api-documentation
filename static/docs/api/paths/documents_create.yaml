@@ -6,12 +6,8 @@ post:
     "Transfers a contract document PDF to be signed by the customer.\n\n
     Store the returned `document_id` and add it to the identification request for the corresponding user."
   operationId: createDocument
-  consumes:
-    - multipart/form-data
-  produces:
-    - application/json
   parameters:
-    - in: body
+    - in: path
       name: body
       description: contract document pdf file
       required: true
@@ -20,8 +16,14 @@ post:
   responses:
     "200":
       description: document id
-      schema:
-        type: string
-        format: uuid
-    "400":
-      description: Invalid file
+      content:
+        application/json:
+          schema:
+            type: string
+            format: uuid
+    "422":
+      description: Client side error
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/client_error.yaml

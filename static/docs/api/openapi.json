@@ -20,6 +20,37 @@
         "summary": "identifications",
         "description": "Returns the last 10 identifications as a list",
         "operationId": "getIdentificationsList",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "description": "Limits the number of identifications to be returned. Limit can range between 1 and 100, and the default is 10.",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": false,
+            "description": "Specifies the page number of the identifications to be returned. Default is 0.",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "description": "When set, only identifications in this status are returned. Default is `init`.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -251,6 +282,22 @@
                         "example": "demo_client@demo.com:3a837788-6d72-40ce-818c-d92cc6c9b3d8"
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "identification_id": "not found"
                   }
                 }
               }
@@ -638,6 +685,121 @@
           },
           "500": {
             "description": "Error"
+          }
+        }
+      }
+    },
+    "/identifications/esign/{id}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "identifications/e-sign/{id}",
+        "description": "Returns the contract document signed by the customer by digital signature",
+        "operationId": "getEsignById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID of the identification",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Signed contract document in PDF format",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "identification_id": "not found"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/documents/create": {
+      "post": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "documents/create",
+        "description": "Transfers a contract document PDF to be signed by the customer.\n\n Store the returned `document_id` and add it to the identification request for the corresponding user.",
+        "operationId": "createDocument",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "body",
+            "description": "contract document pdf file",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "string",
+                  "format": "binary",
+                  "description": "Contract document in PDF format"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Description or title of the contract document"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "document id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "identification_id": "not found"
+                  }
+                }
+              }
+            }
           }
         }
       }

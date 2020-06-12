@@ -1,0 +1,40 @@
+get:
+  tags:
+    - identifications
+  summary: identifications
+  description: Returns the last 10 identifications as a list
+  operationId: getIdentificationsList
+  parameters:
+    - in: query
+      name: limit
+      required: false
+      description: Limits the number of identifications to be returned. Limit can range between 1 and 100, and the default is 10.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+    - in: query
+      name: offset
+      required: false
+      description: Specifies the page number of the identifications to be returned. Default is 0.
+      schema:
+        type: integer   
+    - in: query
+      name: status
+      required: false
+      description: When set, only identifications in this status are returned. Default is `init`.
+      schema:
+        type: string           
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/identifications_list.yaml
+    "422":
+      description: Client side error
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/client_error.yaml            
