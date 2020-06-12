@@ -6,7 +6,7 @@ qualified electronic signature (QES) on PDF document.
 It consists of two steps which are added to the basic identification flow:
 
 - A video identification session
-- The client proceeds with the verify-u identification
+- Generation of electronic signature by SMS PIN
 
 You can add the Electronic signature service to the identification flow in the [identification channels](channels) section of your business dashboard.
 
