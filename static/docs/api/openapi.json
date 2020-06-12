@@ -780,7 +780,8 @@
               "application/json": {
                 "schema": {
                   "type": "string",
-                  "format": "uuid"
+                  "format": "uuid",
+                  "example": "f415d97b-3fc2-4d45-b314-cce4d126b98d"
                 }
               }
             }
