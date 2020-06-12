@@ -41,6 +41,10 @@
                 Getting started
               </a>
 
+              <a class="sidenav__link" href="/esign">
+                Electronic signature
+              </a>              
+
             </section>
 
             <div class="sidenav__subheader">Oauth</div>

@@ -51,4 +51,4 @@ Make sure you store the returned identification ID, appended as `code` parameter
 
 ### Receive identification details <a name="receive-identification-details"></a>
 
-Make use of the identification ID in your calls to our [API](api-introduction) to receive the user details for this identification .
+Make use of the identification ID in your calls to our [API](api-introduction) to receive the user details for this identification.
