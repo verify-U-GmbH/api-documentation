@@ -3,9 +3,8 @@
 Electronic signature is a process of issuing a short term electronic certificate for applying
 qualified electronic signature (QES) on PDF document.
 
-It consists of two steps which are added to the basic identification flow:
+The following step is added to the basic identification flow:
 
-- A video identification session
 - Generation of electronic signature by SMS PIN
 
 You can add the Electronic signature service to the identification flow in the [identification channels](channels) section of your business dashboard.
@@ -20,6 +19,8 @@ First you need to provide us with the client's contract document file via `docum
 In return you will receive a `document_id` pointing to this contract document.
 
 Refer to the [API reference](api-reference) for details on how to make the API call.
+
+It is possible to repeat this step in order to transfer multiple contract documents for a single client.
 
 <br >
 
