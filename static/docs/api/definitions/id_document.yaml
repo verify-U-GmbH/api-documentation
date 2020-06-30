@@ -20,7 +20,7 @@ properties:
     nullable: true
     format: uuid
     description: ID of this ID document
-    example: c4d49f29-d351-416b-b261-6b42c46081fb 
+    example: c4d49f29-d351-416b-b261-6b42c46081fb
   issue_date:
     type: string
     nullable: true
@@ -37,8 +37,3 @@ properties:
     nullable: true
     description: The number of this ID document
     example: C1544JKK40
-  authority:
-    type: string
-    nullable: true
-    description: The issuing authority of this ID document
-    example: IPS    
