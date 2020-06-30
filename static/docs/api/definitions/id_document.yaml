@@ -37,3 +37,8 @@ properties:
     nullable: true
     description: The number of this ID document
     example: C1544JKK40
+  authority:
+    type: string
+    nullable: true
+    description: The issuing authority of this ID document
+    example: IPS    
