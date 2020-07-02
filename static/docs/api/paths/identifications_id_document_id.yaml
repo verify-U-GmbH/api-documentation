@@ -2,7 +2,7 @@ get:
   tags:
     - identifications
   summary: identifications/id-document/{document_id}
-  description: Returns id-document file uploaded during identification
+  description: Returns the client's id document image used for identification.
   operationId: getIdentificationDocumentById
   parameters:
     - in: path

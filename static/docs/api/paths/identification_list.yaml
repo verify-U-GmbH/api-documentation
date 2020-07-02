@@ -2,7 +2,7 @@ get:
   tags:
     - identifications
   summary: identifications
-  description: Returns the last 10 identifications as a list
+  description: Returns the latest identifications as a list. Most recent identifications appear first. Customize your query with the following parameters.
   operationId: getIdentificationsList
   parameters:
     - in: query
@@ -16,15 +16,21 @@ get:
     - in: query
       name: offset
       required: false
-      description: Specifies the page number of the identifications to be returned. Default is 0.
+      description: Specifies the page number of the identifications to be returned. Default is 0.    
       schema:
-        type: integer   
+        type: integer
     - in: query
       name: status
       required: false
-      description: When set, only identifications in this status are returned. Default is `init`.
+      description: >
+        When set, only identifications of this status are returned. Default is `init`.
+          * `init` - Incomplete Identifications
+          * `complete` - Completed Identifications
       schema:
-        type: string           
+        type: string
+        enum:
+          - init
+          - complete
   responses:
     "200":
       description: successful operation
@@ -37,4 +43,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../definitions/client_error.yaml            
+            $ref: ../definitions/client_error.yaml

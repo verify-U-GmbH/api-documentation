@@ -2,7 +2,7 @@ get:
   tags:
     - identifications
   summary: identifications/video/{id}
-  description: Returns video record
+  description: Returns the client's liveness video recording used for identification.
   operationId: getIdentificationVideoById
   parameters:
     - in: path

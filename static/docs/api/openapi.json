@@ -18,7 +18,7 @@
           "identifications"
         ],
         "summary": "identifications",
-        "description": "Returns the last 10 identifications as a list",
+        "description": "Returns the latest identifications as a list. Most recent identifications appear first. Customize your query with the following parameters.",
         "operationId": "getIdentificationsList",
         "parameters": [
           {
@@ -45,9 +45,13 @@
             "in": "query",
             "name": "status",
             "required": false,
-            "description": "When set, only identifications in this status are returned. Default is `init`.",
+            "description": "When set, only identifications of this status are returned. Default is `init`.\n  * `init` - Incomplete Identifications\n  * `complete` - Completed Identifications\n",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "enum": [
+                "init",
+                "complete"
+              ]
             }
           }
         ],
@@ -312,7 +316,7 @@
           "identifications"
         ],
         "summary": "identifications/{id}",
-        "description": "Returns details of identification. Supply the unique identifier of the identification, received in OAuth response to the redirect URL",
+        "description": "Returns details of a single identification.",
         "operationId": "getIdentificationById",
         "parameters": [
           {
@@ -587,7 +591,7 @@
           "identifications"
         ],
         "summary": "identifications/id-document/{document_id}",
-        "description": "Returns id-document file uploaded during identification",
+        "description": "Returns the client's id document image used for identification.",
         "operationId": "getIdentificationDocumentById",
         "parameters": [
           {
@@ -641,7 +645,7 @@
           "identifications"
         ],
         "summary": "identifications/video/{id}",
-        "description": "Returns video record",
+        "description": "Returns the client's liveness video recording used for identification.",
         "operationId": "getIdentificationVideoById",
         "parameters": [
           {
@@ -695,7 +699,7 @@
           "identifications"
         ],
         "summary": "identifications/e-sign/{id}",
-        "description": "Returns the contract document signed by the customer by digital signature",
+        "description": "Returns the client's contract document, signed by the customer with digital signature.",
         "operationId": "getEsignById",
         "parameters": [
           {

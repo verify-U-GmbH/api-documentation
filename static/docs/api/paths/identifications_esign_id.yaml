@@ -2,7 +2,7 @@ get:
   tags:
     - identifications
   summary: identifications/e-sign/{id}
-  description: "Returns the contract document signed by the customer by digital signature"
+  description: Returns the client's contract document, signed by the customer with digital signature.
   operationId: getEsignById
   parameters:
     - in: path

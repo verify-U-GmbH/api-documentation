@@ -2,8 +2,7 @@ get:
   tags:
     - identifications
   summary: identifications/{id}
-  description: Returns details of identification. Supply the unique identifier of the identification, 
-               received in OAuth response to the redirect URL
+  description: Returns details of a single identification.
   operationId: getIdentificationById
   parameters:
     - in: path
