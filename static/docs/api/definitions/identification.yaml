@@ -81,3 +81,8 @@ properties:
     type: string
     description: OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway
     example: demo_client@demo.com:3a837788-6d72-40ce-818c-d92cc6c9b3d8
+
+  status:
+    type: string
+    description: Identification status
+    example: COMPLETE   
