@@ -19,21 +19,56 @@ h2 {
     @apply pb-2;  
 }
 
-
 p {
     @apply my-4;
     @apply leading-relaxed;
-    @apply text-gray-700;
+    @apply text-gray-800;
 }
 
 p > a {
-    @apply font-semibold;
     @apply text-blue-600;
 }
 
 p > a:hover {
     @apply underline;
 }
+
+ul {
+    @apply text-gray-800;
+    list-style: initial;
+}
+
+ol {
+    @apply text-gray-800;
+    list-style: decimal;
+}
+
+
+.markdown-body .button {
+    @apply bg-blue-600;
+    @apply text-white;
+    @apply rounded;
+    @apply p-4;
+}
+
+.markdown-body .button_success {
+    @apply bg-green-600;
+}
+
+.alert {
+    @apply p-6;
+    border-left: solid 4px;
+    @apply border-blue-600;
+    @apply bg-gray-200;
+    @apply my-6;
+    @apply leading-relaxed;
+}
+
+.markdown-body .button:hover {
+    text-decoration: none;
+    @apply bg-blue-700;
+}
+
 
 :target::before {
     content: '';
