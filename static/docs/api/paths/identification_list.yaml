@@ -24,12 +24,20 @@ get:
       required: false
       description: >
         When set, only identifications of this status are returned. Default is `init`.
-          * `init` - Incomplete Identifications
-          * `complete` - Completed Identifications
+          * `init` - Identification has been initially started
+          * `id_verified` - Id document check completed
+          * `f2f_verified` - Face-to-face check completed
+          * `face_detected` - Face check completed
+          * `liveness_detected` - Liveness check completed
+          * `complete` - Identification has been completed successfully
       schema:
         type: string
         enum:
           - init
+          - id_verified
+          - f2f_verified
+          - face_detected
+          - liveness_detected
           - complete
   responses:
     "200":
