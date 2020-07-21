@@ -34,7 +34,7 @@ properties:
     type: string
     nullable: true
     format: uuid
-    description: ID of this ID document
+    description: Identification Id
     example: c4d49f29-d351-416b-b261-6b42c46081fb
 
   id_document:

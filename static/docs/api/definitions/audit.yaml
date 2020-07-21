@@ -1,0 +1,31 @@
+type: object
+properties:
+  created_at:
+    type: string
+    format: date-time
+    description: Time at which the object was created in notation as defined by RFC 3339, section 5.6
+    example: "202017-07-21T17:32:28Z"
+
+  identification_id:
+    type: string
+    nullable: true
+    format: uuid
+    description: Identification Id
+    example: c4d49f29-d351-416b-b261-6b42c46081fb    
+
+  method:
+    type: string
+    nullable: true
+    description: Executed audit method
+    example: IDENTCHECK
+
+  reference_id:
+    type: string
+    description: Reference ID of the audit
+    nullable: true
+    example: 7073df04171678a505e6142916
+
+  state:
+    type: string
+    description: Audit result
+    example: ACCEPTED

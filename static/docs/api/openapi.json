@@ -103,7 +103,7 @@
                         "type": "string",
                         "nullable": true,
                         "format": "uuid",
-                        "description": "ID of this ID document",
+                        "description": "Identification Id",
                         "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
                       },
                       "id_document": {
@@ -381,7 +381,7 @@
                       "type": "string",
                       "nullable": true,
                       "format": "uuid",
-                      "description": "ID of this ID document",
+                      "description": "Identification Id",
                       "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
                     },
                     "id_document": {
@@ -761,6 +761,91 @@
         }
       }
     },
+    "/identifications/audit/{id}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "identifications/audit/{id}",
+        "description": "Returns the client's audit result.",
+        "operationId": "getAuditById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID of the identification",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "created_at": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Time at which the object was created in notation as defined by RFC 3339, section 5.6",
+                      "example": "202017-07-21T17:32:28Z"
+                    },
+                    "identification_id": {
+                      "type": "string",
+                      "nullable": true,
+                      "format": "uuid",
+                      "description": "Identification Id",
+                      "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                    },
+                    "method": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "Executed audit method",
+                      "example": "IDENTCHECK"
+                    },
+                    "reference_id": {
+                      "type": "string",
+                      "description": "Reference ID of the audit",
+                      "nullable": true,
+                      "example": "7073df04171678a505e6142916"
+                    },
+                    "state": {
+                      "type": "string",
+                      "description": "Audit result",
+                      "example": "ACCEPTED"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "identification_id": "not found"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error"
+          }
+        }
+      }
+    },
     "/documents": {
       "post": {
         "tags": [
@@ -819,6 +904,74 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/audit": {
+      "post": {
+        "tags": [
+          "audit"
+        ],
+        "summary": "audit/{id}",
+        "description": "Creates an audit call for a client's.",
+        "operationId": "createAuditById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID of the identification",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "identification_id": {
+                      "type": "string",
+                      "nullable": true,
+                      "format": "uuid",
+                      "description": "Identification Id",
+                      "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                    },
+                    "state": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "Audit result for client",
+                      "example": "ACCEPTED"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "identification_id": "not found"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error"
           }
         }
       }

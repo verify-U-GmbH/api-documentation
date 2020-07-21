@@ -1,0 +1,30 @@
+get:
+  tags:
+    - identifications
+  summary: identifications/audit/{id}
+  description: Returns the client's audit result.
+  operationId: getAuditById
+  parameters:
+    - in: path
+      name: id
+      required: true
+      description: ID of the identification
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/audit.yaml
+    "422":
+      description: Client side error
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/client_error.yaml
+    "500":
+      description: Error
+

@@ -1,0 +1,29 @@
+post:
+    tags:
+      - audit
+    summary: audit/{id}
+    description: Creates an audit call for a client's.
+    operationId: createAuditById
+    parameters:
+      - in: path
+        name: id
+        required: true
+        description: ID of the identification
+        schema:
+          type: string
+          format: uuid
+    responses:
+      "200":
+        description: successful operation
+        content:
+          application/json:
+            schema:
+              $ref: ../definitions/create_audit.yaml
+      "422":
+        description: Client side error
+        content:
+          application/json:
+            schema:
+              $ref: ../definitions/client_error.yaml
+      "500":
+        description: Error

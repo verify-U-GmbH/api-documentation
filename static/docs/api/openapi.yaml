@@ -33,8 +33,12 @@ paths:
     $ref: paths/identifications_video_id.yaml
   /identifications/esign/{id}:
     $ref: paths/identifications_esign_id.yaml    
+  /identifications/audit/{id}:
+    $ref: paths/identifications_audit_id.yaml      
   /documents:
     $ref: paths/documents.yaml    
+  /audit:
+    $ref: paths/audit.yaml       
 security:
   - basicAuth: []
 servers:
