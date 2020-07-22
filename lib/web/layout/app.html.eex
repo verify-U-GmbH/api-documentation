@@ -49,6 +49,10 @@
             <a class="sidenav__link" href="/giropay">
               Giropay
             </a>
+
+            <a class="sidenav__link" href="/schufa">
+              Schufa
+            </a>            
           </section>
 
           <div class="sidenav__subheader">Oauth</div>
