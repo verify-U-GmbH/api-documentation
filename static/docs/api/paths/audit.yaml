@@ -2,23 +2,22 @@ post:
     tags:
       - audit
     summary: audit/{id}
-    description: Creates an audit call for a client's.
+    description: Creates an audit call for a client.
     operationId: createAuditById
     parameters:
       - in: path
-        name: id
+        name: body
+        description: Address data
         required: true
-        description: ID of the identification
         schema:
-          type: string
-          format: uuid
+          $ref: ../definitions/create_audit_request.yaml
     responses:
       "200":
         description: successful operation
         content:
           application/json:
             schema:
-              $ref: ../definitions/create_audit.yaml
+              $ref: ../definitions/create_audit_response.yaml
       "422":
         description: Client side error
         content:
