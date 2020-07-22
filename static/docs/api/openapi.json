@@ -914,17 +914,34 @@
           "audit"
         ],
         "summary": "audit/{id}",
-        "description": "Creates an audit call for a client's.",
+        "description": "Creates an audit call for a client.",
         "operationId": "createAuditById",
         "parameters": [
           {
             "in": "path",
-            "name": "id",
+            "name": "body",
+            "description": "Address data",
             "required": true,
-            "description": "ID of the identification",
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "object",
+              "properties": {
+                "house_number": {
+                  "type": "string",
+                  "description": "House number"
+                },
+                "street": {
+                  "type": "string",
+                  "description": "Street"
+                },
+                "postal_code": {
+                  "type": "string",
+                  "description": "Postal code"
+                },
+                "city": {
+                  "type": "string",
+                  "description": "City"
+                }
+              }
             }
           }
         ],
