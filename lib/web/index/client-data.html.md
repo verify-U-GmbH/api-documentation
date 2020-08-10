@@ -47,3 +47,11 @@ International Bank Account Number.
 The IBAN must not contain spaces when transmitted electronically.
 
 Example: `DE02120300000000202051`
+
+#### **locale**
+
+Identification process locale.
+
+Switches the template texts for identification to the desired language.
+
+Example: `de`
