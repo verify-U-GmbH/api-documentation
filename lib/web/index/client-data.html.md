@@ -50,7 +50,7 @@ Example: `DE02120300000000202051`
 
 #### **locale**
 
-Identification process locale.
+Identification process language.
 
 Switches the template texts for identification to the desired language.
 
