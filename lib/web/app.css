@@ -9,7 +9,7 @@ hr {
 h1 {
     @apply text-gray-900;
     @apply text-3xl;
-    @apply font-bold;
+    @apply font-semibold;
     @apply pb-3;
 }
 
@@ -56,11 +56,14 @@ ol {
 }
 
 .alert {
-    @apply p-6;
+    @apply flex;
+    @apply p-4;
+    @apply pl-4;
     border-left: solid 4px;
     @apply border-blue-600;
     @apply bg-gray-200;
     @apply my-6;
+    @apply mb-12;
     @apply leading-relaxed;
 }
 
