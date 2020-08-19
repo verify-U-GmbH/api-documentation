@@ -51,6 +51,15 @@ ol {
     @apply p-4;
 }
 
+.markdown-body .button_outline {
+    @apply bg-white;
+    @apply text-blue-600;
+    @apply border;
+    @apply border-blue-600;
+    @apply rounded;
+    @apply p-4;
+}
+
 .markdown-body .button_success {
     @apply bg-green-600;
 }

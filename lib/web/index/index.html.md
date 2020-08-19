@@ -6,7 +6,7 @@ a customizable [OAuth 2.0](https://oauth.net/2/)-based gateway for identificatio
 and a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) for data extraction. 
 For a high level overview of how our identification works, see the diagram below. 
 
-It depicts a process flow for a customer being onboarded via [selfID](https://www.verify-u.com/verify-u-selfid) - our fully automated identification product. To see it in action, skip to [the identification demo](#identification-demo).
+It depicts a process flow for a customer being onboarded via [selfID](https://www.verify-u.com/verify-u-selfid) - our fully automated identification product. To see it in action, follow to [Fintech Bank demo](#identification-demo).  
 
 ### selfID process flow
 
@@ -30,7 +30,10 @@ Explore our [Fintech Bank demo](http://demo.verify-u.com/) to see how easy it is
 
 ---
 
-
+<a href="/getting-started" class="button_outline flex w-full justify-end p-4 rounded-sm mb-16">
+    <span class="flex text-lg">Getting started</span> 
+    <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-narrow-right w-6 h-6 ml-2"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+</a>
 
 <!-- selfID is an automatic identification is a fully automated identification flow used to identify a physical person.
 It consists of three steps:
