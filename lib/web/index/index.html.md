@@ -4,9 +4,10 @@
 It consists of a [Dashboard](https://app.verify-u.com) for account management and configuration, 
 a customizable [OAuth 2.0](https://oauth.net/2/)-based gateway for identification processing 
 and a [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer) for data extraction. 
-For a high level overview of how our identification works, see the diagram below. 
 
-It depicts a process flow for a customer being onboarded via [selfID](https://www.verify-u.com/verify-u-selfid) - our fully automated identification product. To see it in action, follow to [Fintech Bank demo](#identification-demo).  
+See the diagram below for a high level overview of an identification process. It depicts a process flow for a customer being onboarded via [selfID](https://www.verify-u.com/verify-u-selfid) - our fully automated identification product. 
+
+For live demonstration of the product, see [Fintech Bank demo](#identification-demo).  
 
 ### selfID process flow
 
