@@ -7,6 +7,7 @@
     @apply text-sm;
     @apply w-56;
     @apply border-r;
+    @apply bg-white;
 }
 
 .sidenav .list-group {
