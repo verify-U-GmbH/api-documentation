@@ -1,10 +1,22 @@
 # Getting started
 
-### Register account <a name="register-account"></a>
+### Step 1: Register business account <a name="register-account"></a>
 
-First, you need a verify-u business account. [Register now](https://app.verify-u.com/auth/register).
+[Register here](https://app.verify-u.com/auth/register) to create 
+your business account. Successful registration will grant access
+to [dashboard](https://app.verify-u.com/auth/register) with the following functionality:
+ 
+ - Access to API keys
+ - Identification channel creation and management
+ - Identification reports and customer data retreival
+ - Account balance and profile management
 
-To setup the identification flow to your needs, add [identification channels](channels) in your business dashboard.
+### Step 2: Create an identification channel <a name="api-keys"></a>
+
+To setup the identification flow to your needs, add identification channels in your business dashboard. Identification allow you to:
+ - Select either automatic (selfID) or face-to-face (f2f) identification flows
+ - Add acceptable id-document types
+ - Configure demo mode for testing
 
 **verify-u** implements the [OAuth 2.0](https://oauth.net/2/)-standard. The identification flow consists of the following steps:
 
@@ -21,7 +33,7 @@ The parameters described on [authorization](authorization) are used to create th
 Build the target URL like the following and direct the user’s browser to it:
 
 ```
-https://app.verify-u.com/auth?
+https://app.verify-u.com/identification?
 redirect_uri=https://example-app.com/callback
 &client_id=EXAMPLE_ID
 &scope=default
