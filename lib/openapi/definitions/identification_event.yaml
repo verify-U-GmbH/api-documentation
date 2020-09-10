@@ -1,0 +1,52 @@
+type: object
+properties:
+    id:
+        type: string
+        format: uuid
+        description: Identification Id
+        example: c4d49f29-d351-416b-b261-6b42c46081fb
+
+    state:
+        type: string
+        description: OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway
+        example: demo_client@demo.com:3a837788-6d72-40ce-818c-d92cc6c9b3d8
+    
+    status:
+        type: string
+        description: Identification status
+        enum: [ INIT,
+                REJECTED,
+                ABANDONED,
+                COMPLETE,
+                ID_DOCUMENT_FRONT_UPLOADED,
+                ID_DOCUMENT_FRONT_REJECTED,
+                ID_DOCUMENT_BACK_UPLOADED,
+                ID_DOCUMENT_BACK_REJECTED,
+                ID_DOCUMENT_UPLOADED,
+                ID_DOCUMENT_REJECTED,
+                LIVENESS_DETECTED,
+                LIVENESS_REJECTED,
+                FACE_DETECTED,
+                FACE_REJECTED,
+                BANK_ACCOUNT_SAVED,
+                BANK_ACCOUNT_REJECTED,
+                ESIGN_DOCUMENT_UPLOADED,
+                ESIGN_DOCUMENT_REJECTED,
+                ESIGN_ENVELOPE_UPLOADED,
+                ESIGN_ENVELOPE_REJECTED,
+                F2F_ACCEPTED,
+                F2F_REJECTED,
+                SCHUFA_IDENTCHECK_ACCEPTED,
+                SCHUFA_IDENTCHECK_REJECTED,
+                SCHUFA_BANKCHECK_ACCEPTED,
+                SCHUFA_BANKCHECK_REJECTED
+            ]
+        example: COMPLETE   
+
+    event_description:
+        type: string
+        nullable: true
+        description: Additional commentary that we may add describing the cause of event   
+        example: F2F session could not be established due to bad connection   
+
+        

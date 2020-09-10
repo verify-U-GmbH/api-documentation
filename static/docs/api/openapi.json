@@ -1,14 +1,32 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.0.2",
   "info": {
-    "description": "# Introduction\nThis API is documented in **OpenAPI 3.0 format**.\n\nThis API\n* enables a user to retrieve a list of the last 10 identifications\n* enables a user to retrieve profile data of a client's identification\n\n# Basics\n* API calls have to be secured with HTTPS.\n* All data has to be submitted UTF-8 encoded.\n* The reply is sent JSON encoded.\n\n# Authentication\n**verify-u** API uses Basic Authentication with secret key as username only.\n\nDetailed information is provided at [Authentication](authentication)\n",
+    "description": "# Introduction\nThis API is documented in **OpenAPI 3.0 format**.\n\nThis API allowst the following operations:\n* retrieve a list of the last 10 identifications\n* retrieve profile data of a client's identification\n* download media captured during identification\n* upload documents for signing\n* download signed documents\n* receive webhooks notifications regarding identification state changes\n\n# Basics\n* API calls have to be secured with HTTPS.\n* All data has to be submitted UTF-8 encoded.\n* The reply is sent JSON encoded.\n\n# Authentication\n**verify-u** API uses Basic Authentication with secret key as username only.\n\nDetailed information is provided at [Authentication](authentication)\n",
     "version": "1.0.0",
     "title": "verify-u API"
   },
   "tags": [
     {
       "name": "identifications",
-      "description": "Methods to retrieve identification details"
+      "description": "Methods to retrieve identification details",
+      "security": [
+        {
+          "basicAuth": []
+        }
+      ],
+      "servers": [
+        {
+          "url": "https://verify-u.com/api"
+        }
+      ],
+      "components": {
+        "securitySchemes": {
+          "basicAuth": {
+            "type": "http",
+            "scheme": "basic"
+          }
+        }
+      }
     }
   ],
   "paths": {
@@ -994,21 +1012,79 @@
       }
     }
   },
-  "security": [
-    {
-      "basicAuth": []
-    }
-  ],
-  "servers": [
-    {
-      "url": "https://verify-u.com/api"
-    }
-  ],
-  "components": {
-    "securitySchemes": {
-      "basicAuth": {
-        "type": "http",
-        "scheme": "basic"
+  "x-webhooks": {
+    "identification-event": {
+      "post": {
+        "summary": "Identification updates",
+        "operationId": "identification-event",
+        "description": "Updates to the state of identification during customer journey will be sent to your [webhook endpoint](https://docs.verify-u.com/webhooks).\n",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "Identification Id",
+                    "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                  },
+                  "state": {
+                    "type": "string",
+                    "description": "OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway",
+                    "example": "demo_client@demo.com:3a837788-6d72-40ce-818c-d92cc6c9b3d8"
+                  },
+                  "status": {
+                    "type": "string",
+                    "description": "Identification status",
+                    "enum": [
+                      "INIT",
+                      "REJECTED",
+                      "ABANDONED",
+                      "COMPLETE",
+                      "ID_DOCUMENT_FRONT_UPLOADED",
+                      "ID_DOCUMENT_FRONT_REJECTED",
+                      "ID_DOCUMENT_BACK_UPLOADED",
+                      "ID_DOCUMENT_BACK_REJECTED",
+                      "ID_DOCUMENT_UPLOADED",
+                      "ID_DOCUMENT_REJECTED",
+                      "LIVENESS_DETECTED",
+                      "LIVENESS_REJECTED",
+                      "FACE_DETECTED",
+                      "FACE_REJECTED",
+                      "BANK_ACCOUNT_SAVED",
+                      "BANK_ACCOUNT_REJECTED",
+                      "ESIGN_DOCUMENT_UPLOADED",
+                      "ESIGN_DOCUMENT_REJECTED",
+                      "ESIGN_ENVELOPE_UPLOADED",
+                      "ESIGN_ENVELOPE_REJECTED",
+                      "F2F_ACCEPTED",
+                      "F2F_REJECTED",
+                      "SCHUFA_IDENTCHECK_ACCEPTED",
+                      "SCHUFA_IDENTCHECK_REJECTED",
+                      "SCHUFA_BANKCHECK_ACCEPTED",
+                      "SCHUFA_BANKCHECK_REJECTED"
+                    ],
+                    "example": "COMPLETE"
+                  },
+                  "event_description": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Additional commentary that we may add describing the cause of event",
+                    "example": "F2F session could not be established due to bad connection"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Your server must return OK HTTP response if it accepts the webhook request. Any other response will trigger\nmultiple subsequent retries until receipt of a successful response.  \n"
+          }
+        }
       }
     }
   }
