@@ -36,7 +36,7 @@ RUN swagger-cli bundle \
     -o static/docs/api/openapi.json \ 
     -t json \
     -r \
-    static/docs/api/openapi.yaml 
+    lib/openapi/openapi.yaml 
 
 RUN npm run prod \
     && mix phx.digest \
