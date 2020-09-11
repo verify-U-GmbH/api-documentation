@@ -10,8 +10,6 @@ You can send additional client data, that is required for identification, via OA
 
 ### Supported fields <a name="supported-fields"></a>
 
-<br >
-
 #### **document_id**
 
 Document Id of the contract document to be signed by your client.

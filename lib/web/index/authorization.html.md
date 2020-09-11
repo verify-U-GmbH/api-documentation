@@ -6,8 +6,6 @@ To create the authorization request you need to set the following parameters:
 
 ### Request Parameters <a name="request-parameters"></a>
 
-<br >
-
 #### **client_id**
 
 The Public API key for your application.

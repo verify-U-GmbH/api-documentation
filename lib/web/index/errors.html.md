@@ -4,8 +4,6 @@ If your authorization request could not be fulfilled, one of the following error
 
 ### Client related <a name="client-related"></a>
 
-<br >
-
 #### **Client id invalid**
 
 Client id could not be found.
@@ -13,8 +11,6 @@ Client id could not be found.
 Check the [developer](https://app.verify-u.com/business/developers) page to make sure your API public key is used as Client id.
 
 ### Channel related <a name="channel-related"></a>
-
-<br >
 
 #### **ID channel name not found**
 
