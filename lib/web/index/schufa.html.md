@@ -18,8 +18,6 @@ In return you will receive the audit result state as either `ACCEPTED` or `REJEC
 
 Refer to the [API reference](api-reference) for details on how to make the API call.
 
-<br >
-
 ### Receive Schufa audit result <a name="receive-schufa-audit-result"></a>
 
 You will be able to fetch the result of a previous Schufa audit request at any time by calling `identifications/audit/{id}`.

@@ -21,9 +21,6 @@ The available permissions to request from the client:
 - Copy of identification document
 - Address
 
-<br >
-
-
 ### Identification documents <a name="identification-documents"></a>
 
 Available documents the client can choose from as means of identification:

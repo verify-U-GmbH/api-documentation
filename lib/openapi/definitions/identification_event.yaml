@@ -6,10 +6,21 @@ properties:
         description: Identification Id
         example: c4d49f29-d351-416b-b261-6b42c46081fb
 
-    state:
+    client_reference_id:
         type: string
-        description: OAuth parameter in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]` supplied to identification gateway
-        example: demo_client@demo.com:3a837788-6d72-40ce-818c-d92cc6c9b3d8
+        description: 
+            Client reference id extracted from OAuth `state` parameter when the latter is
+            in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]`. If no `SESSION_ID` separator
+            is used, the entire `state` parameter is returned.
+        example: demo_client@demo.com
+
+    session_id:
+        type: string
+        description: 
+            Session id extracted from OAuth `state` parameter when the latter 
+            is in format `[CLIENT_REFERENCE_ID]:[SESSION_ID]`
+        nullable: true
+        example: 3a837788-6d72-40ce-818c-d92cc6c9b3d8    
     
     status:
         type: string
