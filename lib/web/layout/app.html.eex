@@ -18,7 +18,7 @@
         <span class="mx-2 font-bold text-gray-700">DOCUMENTATION</span>
       </a>
 
-      <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/api-reference">
+      <a class="ml-4 font-medium text-blue-600 hover:text-blue-700" href="/api-reference">
         API Reference
       </a>
     </nav>
@@ -52,7 +52,7 @@
 
             <a class="sidenav__link" href="/schufa">
               Schufa
-            </a>            
+            </a>
           </section>
 
           <div class="sidenav__subheader">Oauth</div>

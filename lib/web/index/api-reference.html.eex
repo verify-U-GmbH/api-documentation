@@ -15,7 +15,7 @@
         <span class="mx-2 font-bold text-gray-700">API</span>
       </a>
 
-      <a class="ml-4 font-semibold text-blue-600 hover:text-blue-700" href="/">
+      <a class="ml-4 font-medium text-blue-600 hover:text-blue-700" href="/">
         Documentation
       </a>
 
