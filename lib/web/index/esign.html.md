@@ -9,8 +9,6 @@ The following step is added to the basic identification flow:
 
 You can add the Electronic signature service to the identification flow in the [identification channels](channels) section of your business dashboard.
 
-<br >
-
 In order to make use of the Electronic signature module, you need to follow these required steps:
 
 ### Send contract document <a name="send-contract-document"></a>
@@ -22,15 +20,11 @@ Refer to the [API reference](api-reference) for details on how to make the API c
 
 It is possible to repeat this step in order to transfer multiple contract documents for a single client.
 
-<br >
-
 ### Append document Id to authorization <a name="append-document-id"></a>
 
 Expand your [authorization](authorization) request with the received `document_id`.
 
 For this, add the [client data](client-data) object as an additional parameter named `extras`.
-
-<br >
 
 ### Receive signed document <a name="receive-signed-document"></a>
 

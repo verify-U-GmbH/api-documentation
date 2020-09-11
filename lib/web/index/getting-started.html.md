@@ -25,8 +25,6 @@ To setup the identification flow to your needs, add identification channels in y
 - After identification he is redirected back to your application, with a identification ID parameter appended to the destination URI
 - Your application's backend uses the identification ID as request parameter to retrieve API responses for this identification
 
-<br >
-
 ### Create authorization request <a name="create-authorization-request"></a>
 
 The parameters described on [authorization](authorization) are used to create the authorization request.
@@ -41,9 +39,6 @@ redirect_uri=https://example-app.com/callback
 &state=reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579
 ```
 
-<br >
-
-
 ### Store identification ID <a name="store-identification-id"></a>
 
 After the client finished the identification process, he is redirected back to your application with the following parameters appended:
@@ -57,9 +52,6 @@ token_type=bearer
 ```
 
 Make sure you store the returned identification ID, appended as `code` parameter to your `redirect_uri`.
-
-<br >
-
 
 ### Receive identification details <a name="receive-identification-details"></a>
 
