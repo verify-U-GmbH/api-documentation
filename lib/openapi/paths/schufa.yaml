@@ -1,23 +1,23 @@
 post:
   tags:
-    - audit
-  summary: audit/{id}
-  description: Creates an audit call for a client.
-  operationId: createAuditById
+    - schufa
+  summary: schufa/{id}
+  description: Creates a Schufa call for a client.
+  operationId: createSchufaById
   parameters:
     - in: path
       name: body
       description: Address data
       required: true
       schema:
-        $ref: ../definitions/create_audit_request.yaml
+        $ref: ../definitions/create_schufa_request.yaml
   responses:
     "200":
       description: successful operation
       content:
         application/json:
           schema:
-            $ref: ../definitions/create_audit_response.yaml
+            $ref: ../definitions/create_schufa_response.yaml
     "422":
       description: Client side error
       content:

@@ -10,5 +10,5 @@ properties:
   state:
     type: string
     nullable: true
-    description: Audit result for client
+    description: Schufa result for client
     example: ACCEPTED

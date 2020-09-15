@@ -46,12 +46,12 @@ paths:
     $ref: paths/identifications_video_id.yaml
   /identifications/esign/{id}:
     $ref: paths/identifications_esign_id.yaml    
-  /identifications/audit/{id}:
-    $ref: paths/identifications_audit_id.yaml      
+  /identifications/schufa/{id}:
+    $ref: paths/identifications_schufa_id.yaml      
   /documents:
     $ref: paths/documents.yaml    
-  /audit:
-    $ref: paths/audit.yaml
+  /schufa:
+    $ref: paths/schufa.yaml
 x-webhooks:  
   identification-event:
     post:

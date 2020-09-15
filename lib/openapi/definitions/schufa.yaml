@@ -16,16 +16,16 @@ properties:
   method:
     type: string
     nullable: true
-    description: Executed audit method
+    description: Executed Schufa method
     example: IDENTCHECK
 
   reference_id:
     type: string
-    description: Reference ID of the audit
+    description: Reference ID of the Schufa call
     nullable: true
     example: 7073df04171678a505e6142916
 
   state:
     type: string
-    description: Audit result
+    description: Schufa result
     example: ACCEPTED

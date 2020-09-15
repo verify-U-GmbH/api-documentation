@@ -779,14 +779,14 @@
         }
       }
     },
-    "/identifications/audit/{id}": {
+    "/identifications/schufa/{id}": {
       "get": {
         "tags": [
           "identifications"
         ],
-        "summary": "identifications/audit/{id}",
-        "description": "Returns the client's audit result.",
-        "operationId": "getAuditById",
+        "summary": "identifications/schufa/{id}",
+        "description": "Returns the client's Schufa result.",
+        "operationId": "getSchufaById",
         "parameters": [
           {
             "in": "path",
@@ -823,18 +823,18 @@
                     "method": {
                       "type": "string",
                       "nullable": true,
-                      "description": "Executed audit method",
+                      "description": "Executed Schufa method",
                       "example": "IDENTCHECK"
                     },
                     "reference_id": {
                       "type": "string",
-                      "description": "Reference ID of the audit",
+                      "description": "Reference ID of the Schufa call",
                       "nullable": true,
                       "example": "7073df04171678a505e6142916"
                     },
                     "state": {
                       "type": "string",
-                      "description": "Audit result",
+                      "description": "Schufa result",
                       "example": "ACCEPTED"
                     }
                   }
@@ -926,14 +926,14 @@
         }
       }
     },
-    "/audit": {
+    "/schufa": {
       "post": {
         "tags": [
-          "audit"
+          "schufa"
         ],
-        "summary": "audit/{id}",
-        "description": "Creates an audit call for a client.",
-        "operationId": "createAuditById",
+        "summary": "schufa/{id}",
+        "description": "Creates a Schufa call for a client.",
+        "operationId": "createSchufaById",
         "parameters": [
           {
             "in": "path",
@@ -981,7 +981,7 @@
                     "state": {
                       "type": "string",
                       "nullable": true,
-                      "description": "Audit result for client",
+                      "description": "Schufa result for client",
                       "example": "ACCEPTED"
                     }
                   }
