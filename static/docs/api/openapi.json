@@ -943,6 +943,14 @@
             "schema": {
               "type": "object",
               "properties": {
+                "method": {
+                  "type": "string",
+                  "description": "Schufa check method",
+                  "enum": [
+                    "identcheck",
+                    "bankcheck"
+                  ]
+                },
                 "house_number": {
                   "type": "string",
                   "description": "House number"
@@ -958,6 +966,11 @@
                 "city": {
                   "type": "string",
                   "description": "City"
+                },
+                "iban": {
+                  "type": "string",
+                  "nullable": true,
+                  "description": "Bank account IBAN"
                 }
               }
             }
