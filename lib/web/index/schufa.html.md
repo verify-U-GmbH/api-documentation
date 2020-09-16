@@ -1,25 +1,35 @@
-# Schufa audit
+# Schufa check
 
 Schufa is the General Credit Protection Association in Germany.
 
-It provides fraud detection for **german customers** by comparing the names and addresses of a client with the consumer data stored in the SCHUFA-database.
+It provides fraud detection for **german customers** by comparing client data with the consumer data stored in the SCHUFA-database.
 
-You can enable the Schufa audit service option in the [identification channels](channels) section of your business dashboard.
+You can enable the Schufa check service option in the [identification channels](channels) section of your business dashboard.
 
-<div class="alert">
-    Requires an ID document containing the card holders address. A Passport will not be sufficient.
-</div>
+We offer the following two Schufa check methods:
 
-### Create Schufa audit call <a name="create-schufa-audit-call"></a>
+### Ident check <a name="ident-check"></a>
 
-As soon as the client's address data has been collected by uploading an ID document, you can create the Schufa audit request via `/audit/{id}` call.
+Ident check validates a client's personal data with the SCHUFA-database.
 
-In return you will receive the audit result state as either `ACCEPTED` or `REJECTED`.
+This check requires first name, last name, address and date of birth from the client.
+
+### Bank check <a name="bank-check"></a>
+
+Bank check confirms that a client is actually the sole owner of a given bank account.
+
+Simply add the client's IBAN to the request parameters.
+
+### Create Schufa check call <a name="create-schufa-check-call"></a>
+
+As soon as the client's address data has been collected by uploading an ID document, you can create the Schufa audit request via `/schufa/{id}` call.
+
+In return you will receive the check result state as either `ACCEPTED` or `REJECTED`.
 
 Refer to the [API reference](api-reference) for details on how to make the API call.
 
-### Receive Schufa audit result <a name="receive-schufa-audit-result"></a>
+### Receive Schufa check result <a name="receive-schufa-check-result"></a>
 
-You will be able to fetch the result of a previous Schufa audit request at any time by calling `identifications/audit/{id}`.
+You will be able to fetch the result of a previous Schufa check request at any time by calling `identifications/schufa/{id}`.
 
 Refer to the [API reference](api-reference) for details on how to make the API call.
