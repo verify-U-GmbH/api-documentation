@@ -26,15 +26,16 @@ info:
 tags:
   - name: identifications
     description: Methods to retrieve identification details
-    security:
-      - basicAuth: []
-    servers:
-      - url: https://verify-u.com/api
-    components:
-      securitySchemes:
-        basicAuth:
-          type: http
-          scheme: basic
+
+security:
+  - basicAuth: []
+servers:
+  - url: https://verify-u.com/api
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
 paths:
   /identifications:
     $ref: paths/identification_list.yaml
@@ -45,17 +46,17 @@ paths:
   /identifications/video/{id}:
     $ref: paths/identifications_video_id.yaml
   /identifications/esign/{id}:
-    $ref: paths/identifications_esign_id.yaml    
+    $ref: paths/identifications_esign_id.yaml
   /identifications/schufa/{id}:
-    $ref: paths/identifications_schufa_id.yaml      
+    $ref: paths/identifications_schufa_id.yaml
   /documents:
-    $ref: paths/documents.yaml    
+    $ref: paths/documents.yaml
   /schufa:
     $ref: paths/schufa.yaml
-x-webhooks:  
+x-webhooks:
   identification-event:
     post:
-      summary: Identification updates 
+      summary: Identification updates
       operationId: identification-event
       description: |
         Updates to the state of identification during customer journey will be sent to your [webhook endpoint](https://docs.verify-u.com/webhooks).
@@ -66,7 +67,7 @@ x-webhooks:
             schema:
               $ref: ./definitions/identification_event.yaml
       responses:
-        '200':
+        "200":
           description: |
             Your server must return OK HTTP response if it accepts the webhook request. Any other response will trigger
-            multiple subsequent retries until receipt of a successful response.  
+            multiple subsequent retries until receipt of a successful response.

@@ -8,27 +8,27 @@
   "tags": [
     {
       "name": "identifications",
-      "description": "Methods to retrieve identification details",
-      "security": [
-        {
-          "basicAuth": []
-        }
-      ],
-      "servers": [
-        {
-          "url": "https://verify-u.com/api"
-        }
-      ],
-      "components": {
-        "securitySchemes": {
-          "basicAuth": {
-            "type": "http",
-            "scheme": "basic"
-          }
-        }
-      }
+      "description": "Methods to retrieve identification details"
     }
   ],
+  "security": [
+    {
+      "basicAuth": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://verify-u.com/api"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
   "paths": {
     "/identifications": {
       "get": {
@@ -1109,7 +1109,7 @@
         },
         "responses": {
           "200": {
-            "description": "Your server must return OK HTTP response if it accepts the webhook request. Any other response will trigger\nmultiple subsequent retries until receipt of a successful response.  \n"
+            "description": "Your server must return OK HTTP response if it accepts the webhook request. Any other response will trigger\nmultiple subsequent retries until receipt of a successful response.\n"
           }
         }
       }
