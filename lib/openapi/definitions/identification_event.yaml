@@ -45,6 +45,7 @@ properties:
                 ESIGN_DOCUMENT_REJECTED,
                 ESIGN_ENVELOPE_UPLOADED,
                 ESIGN_ENVELOPE_REJECTED,
+                ESIGN_ENVELOPE_SIGNED
                 F2F_ACCEPTED,
                 F2F_REJECTED,
                 SCHUFA_IDENTCHECK_ACCEPTED,

@@ -63,7 +63,7 @@
             "in": "query",
             "name": "status",
             "required": false,
-            "description": "When set, only identifications of this status are returned. Default is `init`.\n  * `init` - Identification has been initially started\n  * `id_verified` - Id document check completed\n  * `f2f_verified` - Face-to-face check completed\n  * `face_detected` - Face check completed\n  * `liveness_detected` - Liveness check completed\n  * `complete` - Identification has been completed successfully\n",
+            "description": "When set, only identifications of this status are returned. Default is `init`.\n  * `init` - Identification has been initially started\n  * `id_verified` - Id document check completed\n  * `f2f_verified` - Face-to-face check completed\n  * `face_detected` - Face check completed\n  * `liveness_detected` - Liveness check completed\n  * `schufa_ident_verified` - Schufa ident check completed\n  * `schufa_bank_verified` - Schufa bank check completed\n  * `esign_verified` - E-sign document signed\n  * `complete` - Identification has been completed successfully\n",
             "schema": {
               "type": "string",
               "enum": [
@@ -72,6 +72,9 @@
                 "f2f_verified",
                 "face_detected",
                 "liveness_detected",
+                "schufa_ident_verified",
+                "schufa_bank_verified",
+                "esign_verified",
                 "complete"
               ]
             }
@@ -311,6 +314,29 @@
                         "type": "string",
                         "description": "Identification status",
                         "example": "COMPLETE"
+                      },
+                      "audit_documents": {
+                        "type": "array",
+                        "nullable": true,
+                        "description": "Audit documents",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "document_type": {
+                              "type": "string",
+                              "nullable": true,
+                              "description": "Type of this audit document",
+                              "example": "FACE"
+                            },
+                            "id": {
+                              "type": "string",
+                              "nullable": true,
+                              "format": "uuid",
+                              "description": "ID of this audit document",
+                              "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -589,6 +615,29 @@
                       "type": "string",
                       "description": "Identification status",
                       "example": "COMPLETE"
+                    },
+                    "audit_documents": {
+                      "type": "array",
+                      "nullable": true,
+                      "description": "Audit documents",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "document_type": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Type of this audit document",
+                            "example": "FACE"
+                          },
+                          "id": {
+                            "type": "string",
+                            "nullable": true,
+                            "format": "uuid",
+                            "description": "ID of this audit document",
+                            "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -640,6 +689,60 @@
         "responses": {
           "200": {
             "description": "ID document image in JPG format",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Client side error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "example": {
+                    "identification_id": "not found"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/identifications/audit-document/{document_id}": {
+      "get": {
+        "tags": [
+          "identifications"
+        ],
+        "summary": "identifications/audit-document/{document_id}",
+        "description": "Returns the client's audit document image created during identification.",
+        "operationId": "getAuditDocumentById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "document_id",
+            "required": true,
+            "description": "ID of the audit-document",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Audit document image in JPG format",
             "content": {
               "image/jpeg": {
                 "schema": {
@@ -1087,7 +1190,7 @@
                       "ESIGN_DOCUMENT_REJECTED",
                       "ESIGN_ENVELOPE_UPLOADED",
                       "ESIGN_ENVELOPE_REJECTED",
-                      "F2F_ACCEPTED",
+                      "ESIGN_ENVELOPE_SIGNED F2F_ACCEPTED",
                       "F2F_REJECTED",
                       "SCHUFA_IDENTCHECK_ACCEPTED",
                       "SCHUFA_IDENTCHECK_REJECTED",

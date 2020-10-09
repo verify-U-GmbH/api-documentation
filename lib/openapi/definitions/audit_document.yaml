@@ -1,0 +1,12 @@
+properties:
+  document_type:
+    type: string
+    nullable: true
+    description: Type of this audit document
+    example: FACE
+  id:
+    type: string
+    nullable: true
+    format: uuid
+    description: ID of this audit document
+    example: c4d49f29-d351-416b-b261-6b42c46081fb

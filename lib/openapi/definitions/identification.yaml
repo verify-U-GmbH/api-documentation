@@ -85,4 +85,10 @@ properties:
   status:
     type: string
     description: Identification status
-    example: COMPLETE   
+    example: COMPLETE
+
+  audit_documents:
+    type: array
+    nullable: true
+    description: Audit documents
+    $ref: ../definitions/audit_document_list.yaml

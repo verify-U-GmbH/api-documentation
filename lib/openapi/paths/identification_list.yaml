@@ -29,6 +29,9 @@ get:
           * `f2f_verified` - Face-to-face check completed
           * `face_detected` - Face check completed
           * `liveness_detected` - Liveness check completed
+          * `schufa_ident_verified` - Schufa ident check completed
+          * `schufa_bank_verified` - Schufa bank check completed
+          * `esign_verified` - E-sign document signed
           * `complete` - Identification has been completed successfully
       schema:
         type: string
@@ -38,6 +41,9 @@ get:
           - f2f_verified
           - face_detected
           - liveness_detected
+          - schufa_ident_verified
+          - schufa_bank_verified
+          - esign_verified
           - complete
   responses:
     "200":
