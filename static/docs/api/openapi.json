@@ -18,7 +18,7 @@
   ],
   "servers": [
     {
-      "url": "https://verify-u.com/api"
+      "url": "https://app.verify-u.com/api"
     }
   ],
   "components": {
