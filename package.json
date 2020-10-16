@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "prod": "brunch build --production",
+    "prod": "node_modules/brunch/bin/brunch build --production",
     "lint": "standard --fix"
   },
   "dependencies": {
