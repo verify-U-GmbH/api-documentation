@@ -53,6 +53,8 @@ paths:
     $ref: paths/identifications_schufa_id.yaml
   /documents:
     $ref: paths/documents.yaml
+  /queue:
+    $ref: paths/queue.yaml  
   /schufa:
     $ref: paths/schufa.yaml
 x-webhooks:

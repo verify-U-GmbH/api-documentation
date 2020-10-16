@@ -1037,6 +1037,46 @@
         }
       }
     },
+    "/queue": {
+      "get": {
+        "tags": [
+          "queue"
+        ],
+        "summary": "queue",
+        "description": "Returns the state of the primary queue for F2F identification",
+        "operationId": "getQueue",
+        "responses": {
+          "200": {
+            "description": "Queue state",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "agent_count": {
+                      "type": "number",
+                      "description": "Number of agent currently serving F2F queue"
+                    },
+                    "customer_count": {
+                      "type": "number",
+                      "description": "Number of customers currently standing in F2F queue"
+                    },
+                    "expected_wait_period": {
+                      "type": "string",
+                      "description": "Expected wait period in 'MM:SS' format",
+                      "example": "06:30"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error"
+          }
+        }
+      }
+    },
     "/schufa": {
       "post": {
         "tags": [

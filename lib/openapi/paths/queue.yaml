@@ -1,0 +1,15 @@
+get:
+  tags:
+    - queue
+  summary: queue
+  description: Returns the state of the primary queue for F2F identification
+  operationId: getQueue
+  responses:
+    "200":
+      description: Queue state
+      content:
+        application/json:
+          schema:
+            $ref: ../definitions/queue.yaml
+    "500":
+      description: Error

@@ -1,0 +1,12 @@
+type: object
+properties:
+  agent_count:
+    type: number
+    description: Number of agent currently serving F2F queue
+  customer_count:
+    type: number
+    description: Number of customers currently standing in F2F queue
+  expected_wait_period:
+    type: string
+    description: Expected wait period in 'MM:SS' format
+    example: '06:30'
