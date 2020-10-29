@@ -975,28 +975,24 @@
         "summary": "documents",
         "description": "Transfers a contract document PDF to be signed by the client.\n\n Store the returned `document_id` and append it to the identification request for the corresponding client.",
         "operationId": "createDocument",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "body",
-            "description": "Contract document pdf file",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "data": {
-                  "type": "string",
-                  "format": "binary",
-                  "description": "Contract document in PDF format"
-                },
-                "description": {
-                  "type": "string",
-                  "description": "Description or title of the contract document"
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  }
                 }
               }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "document id",
