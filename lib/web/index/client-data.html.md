@@ -22,6 +22,14 @@ If a client needs to sign multiple documents, send all document Ids as an array.
 
 Example: `[‘d1506eb4-051f-4b59-a707-074f28494f25’, ‘436bafe8-b764-4f0c-a77a-6f6b203fda37’]`
 
+### **locale**
+
+Identification process language.
+
+Switches the template texts for identification to the desired language.
+
+Supported values: `de` `en`
+
 ### **email**
 
 Client email address.
@@ -44,10 +52,22 @@ The IBAN must not contain spaces when transmitted electronically.
 
 Example: `DE02120300000000202051`
 
-### **locale**
+### **first_name**
 
-Identification process language.
+`used during signature process`
 
-Switches the template texts for identification to the desired language.
+First name of the designated signee.
 
-Example: `de`
+The given value must match with the first name received from the ID document.
+
+Example: `John`
+
+### **last_name**
+
+`used during signature process`
+
+Last name of the designated signee.
+
+The given value must match with the last name received from the ID document.
+
+Example: `Doe`

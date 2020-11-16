@@ -20,9 +20,9 @@ Refer to the [API reference](api-reference) for details on how to make the API c
 
 It is possible to repeat this step in order to transfer multiple contract documents for a single client.
 
-### Append document Id to authorization <a name="append-document-id"></a>
+### Append client data to authorization <a name="append-client-data"></a>
 
-Expand your [authorization](authorization) request with the received `document_id`.
+Expand your [authorization](authorization) request with the received `document_id`, plus the client's `first_name` and `last_name`.
 
 For this, add the [client data](client-data) object as an additional parameter named `extras`.
 
