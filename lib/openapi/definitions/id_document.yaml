@@ -37,3 +37,8 @@ properties:
     nullable: true
     description: The number of this ID document
     example: C1544JKK40
+  issuer:
+    type: string
+    nullable: true
+    description: Issuing country or organization (ISO 3166-1 alpha-3 code with modifications)
+    example: GB  
