@@ -38,14 +38,14 @@ It is required to add a `uuid` afterwards, separated by a colon.
 
 Example:
 
-client_reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579
+`client_reference_id:b1fd52e4-5211-4d13-afa9-a3b741204579`
 
 A string of your choice that will be returned by **verify-u** as a URI parameter to your application.
 
 The state parameter is used for correlating requests and responses and preventing [cross-site request forgery attacks](https://tools.ietf.org/html/rfc6749#section-10.12).
 
-#### **extras**
+### Additional parameters
 
-Optional value.
+You may add additional parameters to your request.
 
-Additional [client data](client-data) you may need to provide for the identification flow.
+Refer to the list of additional [client data](client-data) you may need to provide for the identification flow.

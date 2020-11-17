@@ -15,7 +15,6 @@ If you have already collected the clients' IBAN, you may provide **verify-u** wi
 
 ### Append IBAN number to authorization <a name="append-iban-number"></a>
 
-Expand your [authorization](authorization) request with the clients' `IBAN`.
+Expand your [authorization](authorization) request with the client's `IBAN`.
 
-For this, add the [client data](client-data) object as an additional parameter named `extras`.
-
+For this, refer to the [client data](client-data) page and add those additional parameter to your request.

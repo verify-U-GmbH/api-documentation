@@ -22,9 +22,9 @@ It is possible to repeat this step in order to transfer multiple contract docume
 
 ### Append client data to authorization <a name="append-client-data"></a>
 
-Expand your [authorization](authorization) request with the received `document_id`, plus the client's `first_name` and `last_name`.
+Expand your [authorization](authorization) request with the received `document_id` the client's `first_name` and `last_name`.
 
-For this, add the [client data](client-data) object as an additional parameter named `extras`.
+For this, refer to the [client data](client-data) page and add those additional parameter to your request.
 
 ### Receive signed document <a name="receive-signed-document"></a>
 
