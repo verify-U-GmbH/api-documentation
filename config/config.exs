@@ -12,7 +12,7 @@ config :server, Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "/j+BEO+5fGIdn+3tb/RZPrm1/q7/opIT5IuMVwo/Vd1WTRtQD8D/3jrsyzEUHJ1N",
   render_errors: [view: Web.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Server.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Server.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

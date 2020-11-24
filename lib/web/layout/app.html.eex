@@ -94,7 +94,7 @@
         <div class="mt-16">
           <div class="flex content__view">
             <div class="w-full px-6 mx-auto mb-6 ml-0 mr-auto content__view-main markdown-body">
-              <%= render @view_module, @view_template, assigns %>
+              <%= @inner_content %>
             </div>
             <div id="content-nav" class="ml-8 content__view-nav">
             </div>
