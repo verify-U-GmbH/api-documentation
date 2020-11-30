@@ -3,7 +3,7 @@ properties:
     type: string
     nullable: true
     description: Country which issued this ID document
-    example: UK
+    example: GBR
   document_type:
     type: string
     nullable: true
@@ -41,7 +41,7 @@ properties:
     type: string
     nullable: true
     description: MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)
-    example: GB  
+    example: GBR  
   nationality:
     type: string
     nullable: true
