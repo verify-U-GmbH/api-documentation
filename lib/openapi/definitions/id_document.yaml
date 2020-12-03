@@ -2,13 +2,13 @@ properties:
   country:
     type: string
     nullable: true
-    description: Country which issued this ID document
-    example: GBR
+    description: Country of ID document (ISO 3166-1 Alpha-2)
+    example: GB
   document_type:
     type: string
     nullable: true
     description: Type of this ID document
-    example: ID_CARD
+    example: PASSPORT
   expiration_date:
     type: string
     nullable: true
@@ -40,9 +40,10 @@ properties:
   issuer:
     type: string
     nullable: true
-    description: MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)
-    example: GBR  
+    description: MRZ Issuing country or organization(ISO 3166-1 Alpha-2)
+    example: GB  
   nationality:
     type: string
     nullable: true
-    description: MRZ nationality (ISO 3166-1 alpha-3 code with modifications)  
+    description: MRZ nationality (ISO 3166-1 Alpha-2)  
+    example: GB
