@@ -30,8 +30,7 @@ module.exports = {
     },
     postcss: {
       processors: [
-        require('tailwindcss'),
-        require('autoprefixer')
+        require('tailwindcss')
       ]
     }
   },
