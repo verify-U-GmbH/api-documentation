@@ -92,3 +92,9 @@ properties:
     nullable: true
     description: Audit documents
     $ref: ../definitions/audit_document_list.yaml
+
+  completed_documents:
+    type: array
+    nullable: true
+    description: Completed documents
+    $ref: ../definitions/completed_documents_list.yaml

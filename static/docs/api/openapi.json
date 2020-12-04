@@ -135,14 +135,14 @@
                           "country": {
                             "type": "string",
                             "nullable": true,
-                            "description": "Country which issued this ID document",
-                            "example": "GBR"
+                            "description": "Country of ID document (ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           },
                           "document_type": {
                             "type": "string",
                             "nullable": true,
                             "description": "Type of this ID document",
-                            "example": "ID_CARD"
+                            "example": "PASSPORT"
                           },
                           "expiration_date": {
                             "type": "string",
@@ -180,13 +180,14 @@
                           "issuer": {
                             "type": "string",
                             "nullable": true,
-                            "description": "MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)",
-                            "example": "GBR"
+                            "description": "MRZ Issuing country or organization(ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           },
                           "nationality": {
                             "type": "string",
                             "nullable": true,
-                            "description": "MRZ nationality (ISO 3166-1 alpha-3 code with modifications)"
+                            "description": "MRZ nationality (ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           }
                         }
                       },
@@ -198,14 +199,14 @@
                           "country": {
                             "type": "string",
                             "nullable": true,
-                            "description": "Country which issued this ID document",
-                            "example": "GBR"
+                            "description": "Country of ID document (ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           },
                           "document_type": {
                             "type": "string",
                             "nullable": true,
                             "description": "Type of this ID document",
-                            "example": "ID_CARD"
+                            "example": "PASSPORT"
                           },
                           "expiration_date": {
                             "type": "string",
@@ -243,13 +244,14 @@
                           "issuer": {
                             "type": "string",
                             "nullable": true,
-                            "description": "MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)",
-                            "example": "GBR"
+                            "description": "MRZ Issuing country or organization(ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           },
                           "nationality": {
                             "type": "string",
                             "nullable": true,
-                            "description": "MRZ nationality (ISO 3166-1 alpha-3 code with modifications)"
+                            "description": "MRZ nationality (ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           }
                         }
                       },
@@ -261,14 +263,14 @@
                           "country": {
                             "type": "string",
                             "nullable": true,
-                            "description": "Country which issued this ID document",
-                            "example": "GBR"
+                            "description": "Country of ID document (ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           },
                           "document_type": {
                             "type": "string",
                             "nullable": true,
                             "description": "Type of this ID document",
-                            "example": "ID_CARD"
+                            "example": "PASSPORT"
                           },
                           "expiration_date": {
                             "type": "string",
@@ -306,13 +308,14 @@
                           "issuer": {
                             "type": "string",
                             "nullable": true,
-                            "description": "MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)",
-                            "example": "GBR"
+                            "description": "MRZ Issuing country or organization(ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           },
                           "nationality": {
                             "type": "string",
                             "nullable": true,
-                            "description": "MRZ nationality (ISO 3166-1 alpha-3 code with modifications)"
+                            "description": "MRZ nationality (ISO 3166-1 Alpha-2)",
+                            "example": "GB"
                           }
                         }
                       },
@@ -366,6 +369,28 @@
                               "nullable": true,
                               "format": "uuid",
                               "description": "ID of this audit document",
+                              "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                            }
+                          }
+                        }
+                      },
+                      "completed_documents": {
+                        "type": "array",
+                        "nullable": true,
+                        "description": "Completed documents",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "created_at": {
+                              "type": "string",
+                              "format": "date-time",
+                              "description": "Time at which the object was created in notation as defined by RFC 3339, section 5.6",
+                              "example": "202017-07-21T17:32:28Z"
+                            },
+                            "id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "description": "ID of this completed document",
                               "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
                             }
                           }
@@ -469,14 +494,14 @@
                         "country": {
                           "type": "string",
                           "nullable": true,
-                          "description": "Country which issued this ID document",
-                          "example": "GBR"
+                          "description": "Country of ID document (ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         },
                         "document_type": {
                           "type": "string",
                           "nullable": true,
                           "description": "Type of this ID document",
-                          "example": "ID_CARD"
+                          "example": "PASSPORT"
                         },
                         "expiration_date": {
                           "type": "string",
@@ -514,13 +539,14 @@
                         "issuer": {
                           "type": "string",
                           "nullable": true,
-                          "description": "MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)",
-                          "example": "GBR"
+                          "description": "MRZ Issuing country or organization(ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         },
                         "nationality": {
                           "type": "string",
                           "nullable": true,
-                          "description": "MRZ nationality (ISO 3166-1 alpha-3 code with modifications)"
+                          "description": "MRZ nationality (ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         }
                       }
                     },
@@ -532,14 +558,14 @@
                         "country": {
                           "type": "string",
                           "nullable": true,
-                          "description": "Country which issued this ID document",
-                          "example": "GBR"
+                          "description": "Country of ID document (ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         },
                         "document_type": {
                           "type": "string",
                           "nullable": true,
                           "description": "Type of this ID document",
-                          "example": "ID_CARD"
+                          "example": "PASSPORT"
                         },
                         "expiration_date": {
                           "type": "string",
@@ -577,13 +603,14 @@
                         "issuer": {
                           "type": "string",
                           "nullable": true,
-                          "description": "MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)",
-                          "example": "GBR"
+                          "description": "MRZ Issuing country or organization(ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         },
                         "nationality": {
                           "type": "string",
                           "nullable": true,
-                          "description": "MRZ nationality (ISO 3166-1 alpha-3 code with modifications)"
+                          "description": "MRZ nationality (ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         }
                       }
                     },
@@ -595,14 +622,14 @@
                         "country": {
                           "type": "string",
                           "nullable": true,
-                          "description": "Country which issued this ID document",
-                          "example": "GBR"
+                          "description": "Country of ID document (ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         },
                         "document_type": {
                           "type": "string",
                           "nullable": true,
                           "description": "Type of this ID document",
-                          "example": "ID_CARD"
+                          "example": "PASSPORT"
                         },
                         "expiration_date": {
                           "type": "string",
@@ -640,13 +667,14 @@
                         "issuer": {
                           "type": "string",
                           "nullable": true,
-                          "description": "MRZ Issuing country or organization(ISO 3166-1 alpha-3 code with modifications)",
-                          "example": "GBR"
+                          "description": "MRZ Issuing country or organization(ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         },
                         "nationality": {
                           "type": "string",
                           "nullable": true,
-                          "description": "MRZ nationality (ISO 3166-1 alpha-3 code with modifications)"
+                          "description": "MRZ nationality (ISO 3166-1 Alpha-2)",
+                          "example": "GB"
                         }
                       }
                     },
@@ -700,6 +728,28 @@
                             "nullable": true,
                             "format": "uuid",
                             "description": "ID of this audit document",
+                            "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
+                          }
+                        }
+                      }
+                    },
+                    "completed_documents": {
+                      "type": "array",
+                      "nullable": true,
+                      "description": "Completed documents",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "created_at": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Time at which the object was created in notation as defined by RFC 3339, section 5.6",
+                            "example": "202017-07-21T17:32:28Z"
+                          },
+                          "id": {
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "ID of this completed document",
                             "example": "c4d49f29-d351-416b-b261-6b42c46081fb"
                           }
                         }
@@ -894,20 +944,20 @@
         }
       }
     },
-    "/identifications/esign/{id}": {
+    "/identifications/esign/{document_id}": {
       "get": {
         "tags": [
           "identifications"
         ],
-        "summary": "identifications/e-sign/{id}",
+        "summary": "identifications/e-sign/{document_id}",
         "description": "Returns the client's contract document, signed by the customer with digital signature.",
         "operationId": "getEsignById",
         "parameters": [
           {
             "in": "path",
-            "name": "id",
+            "name": "document_id",
             "required": true,
-            "description": "ID of the identification",
+            "description": "ID of the document",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -936,7 +986,7 @@
                     "type": "string"
                   },
                   "example": {
-                    "identification_id": "not found"
+                    "document_id": "not found"
                   }
                 }
               }

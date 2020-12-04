@@ -1,14 +1,14 @@
 get:
   tags:
     - identifications
-  summary: identifications/e-sign/{id}
+  summary: identifications/e-sign/{document_id}
   description: Returns the client's contract document, signed by the customer with digital signature.
   operationId: getEsignById
   parameters:
     - in: path
-      name: id
+      name: document_id
       required: true
-      description: ID of the identification
+      description: ID of the document
       schema:
         type: string
         format: uuid
@@ -25,6 +25,6 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../definitions/client_error.yaml
+            $ref: ../definitions/document_error.yaml
     "500":
       description: Error

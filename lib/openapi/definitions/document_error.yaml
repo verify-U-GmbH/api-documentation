@@ -1,0 +1,5 @@
+type: object
+additionalProperties:
+  type: string
+example:
+  document_id: not found
