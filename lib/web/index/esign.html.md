@@ -28,6 +28,6 @@ For this, refer to the [client data](client-data) page and add those additional 
 
 ### Receive signed document <a name="receive-signed-document"></a>
 
-After the client successfully finished the identification with Electronic Signature, you will be able to fetch the signed document by calling `identifications/esign/{id}`.
+After the client successfully finished the identification with Electronic Signature, you will be able to fetch the signed document by calling `identifications/e-sign/{id}`.
 
 Refer to the [API reference](api-reference) for details on how to make the API call.

@@ -944,7 +944,7 @@
         }
       }
     },
-    "/identifications/esign/{document_id}": {
+    "/identifications/e-sign/{document_id}": {
       "get": {
         "tags": [
           "identifications"

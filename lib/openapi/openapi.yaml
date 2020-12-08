@@ -47,7 +47,7 @@ paths:
     $ref: paths/identifications_audit_document_id.yaml
   /identifications/video/{id}:
     $ref: paths/identifications_video_id.yaml
-  /identifications/esign/{document_id}:
+  /identifications/e-sign/{document_id}:
     $ref: paths/identifications_esign_id.yaml
   /identifications/schufa/{id}:
     $ref: paths/identifications_schufa_id.yaml
