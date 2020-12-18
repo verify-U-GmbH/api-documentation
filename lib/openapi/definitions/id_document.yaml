@@ -1,4 +1,9 @@
 properties:
+  authority:
+    type: string
+    nullable: true
+    description: Issuing authority of the ID document
+    example: HMPO
   country:
     type: string
     nullable: true

@@ -132,6 +132,12 @@
                         "nullable": true,
                         "description": "Front side of the ID document",
                         "properties": {
+                          "authority": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Issuing authority of the ID document",
+                            "example": "HMPO"
+                          },
                           "country": {
                             "type": "string",
                             "nullable": true,
@@ -196,6 +202,12 @@
                         "nullable": true,
                         "description": "Back side of the ID document",
                         "properties": {
+                          "authority": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Issuing authority of the ID document",
+                            "example": "HMPO"
+                          },
                           "country": {
                             "type": "string",
                             "nullable": true,
@@ -260,6 +272,12 @@
                         "nullable": true,
                         "description": "Support document to the primary ID document",
                         "properties": {
+                          "authority": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "Issuing authority of the ID document",
+                            "example": "HMPO"
+                          },
                           "country": {
                             "type": "string",
                             "nullable": true,
@@ -491,6 +509,12 @@
                       "nullable": true,
                       "description": "Front side of the ID document",
                       "properties": {
+                        "authority": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Issuing authority of the ID document",
+                          "example": "HMPO"
+                        },
                         "country": {
                           "type": "string",
                           "nullable": true,
@@ -555,6 +579,12 @@
                       "nullable": true,
                       "description": "Back side of the ID document",
                       "properties": {
+                        "authority": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Issuing authority of the ID document",
+                          "example": "HMPO"
+                        },
                         "country": {
                           "type": "string",
                           "nullable": true,
@@ -619,6 +649,12 @@
                       "nullable": true,
                       "description": "Support document to the primary ID document",
                       "properties": {
+                        "authority": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Issuing authority of the ID document",
+                          "example": "HMPO"
+                        },
                         "country": {
                           "type": "string",
                           "nullable": true,
