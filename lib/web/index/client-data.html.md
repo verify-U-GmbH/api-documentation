@@ -42,7 +42,7 @@ Document Id of the contract document to be signed by your client.
 
 The document Id is returned as UUID by **verify-u** after making an API call to /documents/create.
 
-Please refer to our [API reference](reference) for detailed information.
+Please refer to our [API reference](api-reference) for detailed information.
 
 Example: `b1fd52e4-5211-4d13-afa9-a3b741204579`
 
