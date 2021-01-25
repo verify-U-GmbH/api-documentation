@@ -155,7 +155,7 @@
                             "nullable": true,
                             "format": "date",
                             "description": "Date at which this ID document expires",
-                            "example": "30.05.2028"
+                            "example": "1980-01-01"
                           },
                           "id": {
                             "type": "string",
@@ -169,7 +169,7 @@
                             "nullable": true,
                             "format": "date",
                             "description": "Date at which this ID document was issued",
-                            "example": "30.05.2018"
+                            "example": "1980-01-01"
                           },
                           "mrz": {
                             "type": "string",
@@ -225,7 +225,7 @@
                             "nullable": true,
                             "format": "date",
                             "description": "Date at which this ID document expires",
-                            "example": "30.05.2028"
+                            "example": "1980-01-01"
                           },
                           "id": {
                             "type": "string",
@@ -239,7 +239,7 @@
                             "nullable": true,
                             "format": "date",
                             "description": "Date at which this ID document was issued",
-                            "example": "30.05.2018"
+                            "example": "1980-01-01"
                           },
                           "mrz": {
                             "type": "string",
@@ -295,7 +295,7 @@
                             "nullable": true,
                             "format": "date",
                             "description": "Date at which this ID document expires",
-                            "example": "30.05.2028"
+                            "example": "1980-01-01"
                           },
                           "id": {
                             "type": "string",
@@ -309,7 +309,7 @@
                             "nullable": true,
                             "format": "date",
                             "description": "Date at which this ID document was issued",
-                            "example": "30.05.2018"
+                            "example": "1980-01-01"
                           },
                           "mrz": {
                             "type": "string",
@@ -532,7 +532,7 @@
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document expires",
-                          "example": "30.05.2028"
+                          "example": "1980-01-01"
                         },
                         "id": {
                           "type": "string",
@@ -546,7 +546,7 @@
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document was issued",
-                          "example": "30.05.2018"
+                          "example": "1980-01-01"
                         },
                         "mrz": {
                           "type": "string",
@@ -602,7 +602,7 @@
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document expires",
-                          "example": "30.05.2028"
+                          "example": "1980-01-01"
                         },
                         "id": {
                           "type": "string",
@@ -616,7 +616,7 @@
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document was issued",
-                          "example": "30.05.2018"
+                          "example": "1980-01-01"
                         },
                         "mrz": {
                           "type": "string",
@@ -672,7 +672,7 @@
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document expires",
-                          "example": "30.05.2028"
+                          "example": "1980-01-01"
                         },
                         "id": {
                           "type": "string",
@@ -686,7 +686,7 @@
                           "nullable": true,
                           "format": "date",
                           "description": "Date at which this ID document was issued",
-                          "example": "30.05.2018"
+                          "example": "1980-01-01"
                         },
                         "mrz": {
                           "type": "string",
