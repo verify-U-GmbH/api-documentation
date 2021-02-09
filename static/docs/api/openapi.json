@@ -105,8 +105,9 @@
                       "date_of_birth": {
                         "type": "string",
                         "nullable": true,
-                        "description": "The client's date of birth as represented in MRZ of ID document",
-                        "example": "03.05.1976"
+                        "format": "date",
+                        "description": "The client's date of birth contained in MRZ of ID document",
+                        "example": "1980-01-01"
                       },
                       "first_name": {
                         "type": "string",
@@ -482,8 +483,9 @@
                     "date_of_birth": {
                       "type": "string",
                       "nullable": true,
-                      "description": "The client's date of birth as represented in MRZ of ID document",
-                      "example": "03.05.1976"
+                      "format": "date",
+                      "description": "The client's date of birth contained in MRZ of ID document",
+                      "example": "1980-01-01"
                     },
                     "first_name": {
                       "type": "string",
