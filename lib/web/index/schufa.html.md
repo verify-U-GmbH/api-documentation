@@ -8,21 +8,17 @@ You can enable the Schufa check service option in the [identification channels](
 
 We offer the following two Schufa check methods:
 
-### Ident check <a name="ident-check"></a>
-
-Ident check validates a client's personal data with the SCHUFA-database.
-
-This check requires first name, last name, address and date of birth from the client.
+After that, you will be able to store your Schufa account credentials in the **settings** section.
 
 ### Bank check <a name="bank-check"></a>
 
-Bank check confirms that a client is actually the sole owner of a given bank account.
+Bank check confirms during the identification process that a client is actually the sole owner of a given bank account.
 
-Simply add the client's IBAN to the request parameters.
+In order to fulfill the Schufa request, the client needs to additionally provide his address details and IBAN account during the identification process.
 
 ### Create Schufa check call <a name="create-schufa-check-call"></a>
 
-As soon as the client's address data has been collected by uploading an ID document, you can create the Schufa audit request via `/schufa/{id}` call.
+As soon as the client's address data has been collected by uploading an ID document, you can also create the Schufa audit request via `/schufa/{id}` call.
 
 In return you will receive the check result state as either `ACCEPTED` or `REJECTED`.
 
