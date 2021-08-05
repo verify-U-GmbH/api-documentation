@@ -6,9 +6,9 @@ It provides fraud detection for **german customers** by comparing client data wi
 
 You can enable the Schufa check service option in the [identification channels](channels) section of your business dashboard.
 
-We offer the following two Schufa check methods:
-
 After that, you will be able to store your Schufa account credentials in the **settings** section.
+
+We offer the following two Schufa check methods:
 
 ### Bank check <a name="bank-check"></a>
 
