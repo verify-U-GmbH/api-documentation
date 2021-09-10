@@ -6,9 +6,6 @@ properties:
   street:
     type: string
     description: Street
-  country:
-    type: string
-    description: Residence country
   postal_code:
     type: string
     description: Postal code

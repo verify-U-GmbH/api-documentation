@@ -8,7 +8,7 @@ You can enable the Schufa check service option in the [identification channels](
 
 After that, you will be able to store your Schufa account credentials in the **settings** section.
 
-We offer the following two Schufa check methods:
+We offer the following Schufa check methods:
 
 ### Bank check <a name="bank-check"></a>
 

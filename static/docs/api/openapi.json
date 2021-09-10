@@ -1064,11 +1064,40 @@
                 "schema": {
                   "type": "object",
                   "properties": {
+                    "address": {
+                      "type": "object",
+                      "nullable": true,
+                      "description": "The client's address",
+                      "properties": {
+                        "house_number": {
+                          "type": "string",
+                          "description": "House number"
+                        },
+                        "street": {
+                          "type": "string",
+                          "description": "Street"
+                        },
+                        "postal_code": {
+                          "type": "string",
+                          "description": "Postal code"
+                        },
+                        "city": {
+                          "type": "string",
+                          "description": "City"
+                        }
+                      }
+                    },
                     "created_at": {
                       "type": "string",
                       "format": "date-time",
                       "description": "Time at which the object was created in notation as defined by RFC 3339, section 5.6",
                       "example": "202017-07-21T17:32:28Z"
+                    },
+                    "iban": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "The client's IBAN",
+                      "example": "DE02120300000000202051"
                     },
                     "identification_id": {
                       "type": "string",
