@@ -1071,19 +1071,23 @@
                       "properties": {
                         "house_number": {
                           "type": "string",
-                          "description": "House number"
+                          "description": "House number",
+                          "example": 123
                         },
                         "street": {
                           "type": "string",
-                          "description": "Street"
+                          "description": "Street",
+                          "example": "Main Street"
                         },
                         "postal_code": {
                           "type": "string",
-                          "description": "Postal code"
+                          "description": "Postal code",
+                          "example": 17101
                         },
                         "city": {
                           "type": "string",
-                          "description": "City"
+                          "description": "City",
+                          "example": "Anytown"
                         }
                       }
                     },
