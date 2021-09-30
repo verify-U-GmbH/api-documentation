@@ -4,7 +4,7 @@ defmodule Server.MixProject do
   def project do
     [
       app: :server,
-      version: "0.2.7",
+      version: "0.2.8",
       elixir: "~> 1.11.2",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
